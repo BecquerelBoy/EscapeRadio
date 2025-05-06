@@ -25,7 +25,6 @@ func _on_slider_value_changed(value: float) -> void:
 func _process(delta: float) -> void:
 	Global.Frequence = slider.value
 	if abs(Global.Frequence - 82.3) < 0.005: 
-		print("win")
 		if not tracking:
 			tracking = true
 			timer = 0.0
