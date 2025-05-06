@@ -13,10 +13,10 @@ config_version=5
 config/name="radio"
 run/main_scene="res://Scene/Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Assets/icon.svg"
+config/icon="res://Assets/Vrac/icon.svg"
 
 [display]
 
 window/size/viewport_width=1080
 window/size/viewport_height=720
-window/size/mode=2
+window/size/mode=3

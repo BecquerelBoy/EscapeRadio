@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcjl6lvfsa6p0"
-path="res://.godot/imported/Barre_blanche.png-4624da3f7c0568ef337b80f75cc346de.ctex"
+uid="uid://kiyb28ya650g"
+path="res://.godot/imported/h6eau3cc.bmp-24a43ed00eb3da6e14a46c56df6e47f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Barre_blanche.png"
-dest_files=["res://.godot/imported/Barre_blanche.png-4624da3f7c0568ef337b80f75cc346de.ctex"]
+source_file="res://Assets/Djallel/h6eau3cc.bmp"
+dest_files=["res://.godot/imported/h6eau3cc.bmp-24a43ed00eb3da6e14a46c56df6e47f7.ctex"]
 
 [params]
 

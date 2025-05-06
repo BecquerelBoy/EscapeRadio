@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var slider: HSlider = $HSlider
-@onready var label: Label = $Label
+@onready var slider: HSlider = $Radio/HSlider
+@onready var label: Label = $Frequence/Label
 @onready var win: Sprite2D = $win
 
 var timer := 0.0
