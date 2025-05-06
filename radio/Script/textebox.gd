@@ -35,7 +35,6 @@ func _process(delta: float) -> void:
 func afficher(nouveau_texte: String, numero: int) -> void:
 	full_text = nouveau_texte
 	Global.current_text = numero  # <-- Mise à jour du numéro de texte global
-	print(Global.current_text)
 	text.text = ""
 	current_index = 0
 	timer = 0.0

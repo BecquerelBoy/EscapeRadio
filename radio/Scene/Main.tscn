@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=19 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://cgohb3skasevj" path="res://Assets/Vrac/p4u2uzgn.bmp" id="2_b448p"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://jxfjeu5swqwo" path="res://Assets/Vrac/0z94ntf7.bmp" id="11_culd5"]
 [ext_resource type="Script" path="res://Scene/no.gd" id="13_uwmsf"]
 [ext_resource type="AudioStream" uid="uid://cfbrqy0pfhntg" path="res://Assets/sound/Audio_1.wav" id="14_6dljv"]
+[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="15_cvycu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8wql"]
 font = ExtResource("3_0025t")
@@ -178,6 +179,9 @@ pivot_offset = Vector2(240, 95)
 texture_normal = ExtResource("10_7qqw4")
 texture_disabled = ExtResource("11_culd5")
 script = ExtResource("13_uwmsf")
+
+[node name="Click" type="AudioStreamPlayer2D" parent="Bouttons"]
+stream = ExtResource("15_cvycu")
 
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons/Yes" method="_on_pressed"]
