@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=18 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://cgohb3skasevj" path="res://Assets/Vrac/p4u2uzgn.bmp" id="2_b448p"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Scene/yes.gd" id="10_wl2yh"]
 [ext_resource type="Texture2D" uid="uid://jxfjeu5swqwo" path="res://Assets/Vrac/0z94ntf7.bmp" id="11_culd5"]
 [ext_resource type="Script" path="res://Scene/no.gd" id="13_uwmsf"]
+[ext_resource type="AudioStream" uid="uid://cfbrqy0pfhntg" path="res://Assets/sound/Audio_1.wav" id="14_6dljv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8wql"]
 font = ExtResource("3_0025t")
@@ -105,6 +106,9 @@ offset_right = 328.0
 offset_bottom = -137.0
 text = "Hz"
 label_settings = SubResource("LabelSettings_k8dir")
+
+[node name="Audio_1" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("14_6dljv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -23)

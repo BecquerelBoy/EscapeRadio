@@ -6,6 +6,8 @@ extends Node
 @onready var dixieme := $dixieme
 @onready var win: Sprite2D = $"../win"
 
+@onready var audio_1 = $Audio_1
+
 var timer := 0.0
 var tracking := false
 
@@ -24,15 +26,18 @@ func _on_slider_value_changed(value: float) -> void:
 
 func _process(delta: float) -> void:
 	Global.Frequence = slider.value
-	if abs(Global.Frequence - 99.9) < 0.005: 
-		if not tracking:
+
+	if abs(Global.Frequence - 99.9) < 0.05:
+		if not tracking and not Global.ok:
 			tracking = true
 			timer = 0.0
-		else:
+		elif not Global.ok:
 			timer += delta
 			if timer >= 1.0:
 				slider.editable = false
-				Global.ok = true
+				if not audio_1.playing:
+					audio_1.play()
+				Global.ok = true  # Verrou activé ici
 	else:
 		tracking = false
 		timer = 0.0
