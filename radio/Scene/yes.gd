@@ -7,7 +7,6 @@ var reset_delay := 0.1  # Temps avant de remettre la taille normale
 
 func _ready() -> void:
 	original_scale = scale
-	pressed.connect(_on_pressed)
 
 func _on_pressed() -> void:
 	scale = reduced_scale

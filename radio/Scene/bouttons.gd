@@ -1,7 +1,7 @@
 extends Control
 
-@onready var button_yes: Button = $Bouttons/Yes
-@onready var button_no: Button = $Bouttons/No
+@onready var yes = $Yes
+@onready var no = $No
 @onready var click = $Click
 
 
