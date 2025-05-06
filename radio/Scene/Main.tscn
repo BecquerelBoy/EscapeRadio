@@ -39,10 +39,10 @@ offset_bottom = -86.0
 color = Color(0.588235, 0.831373, 0.870588, 1)
 
 [node name="HSlider" type="HSlider" parent="Radio"]
-offset_left = -250.0
-offset_top = 21.0
-offset_right = 258.0
-offset_bottom = 37.0
+offset_left = -254.0
+offset_top = 22.0
+offset_right = 254.0
+offset_bottom = 38.0
 max_value = 99.9
 step = 0.1
 ticks_on_borders = true
@@ -104,17 +104,28 @@ zoom = Vector2(1.73, 1.73)
 
 [node name="win" type="Sprite2D" parent="."]
 visible = false
-z_index = 10
 position = Vector2(12.7501, 11.2499)
 scale = Vector2(9.03515, 6.07422)
 texture = ExtResource("2_kg3f6")
 
-[node name="Textebox" type="Node" parent="."]
+[node name="Textebox" type="Control" parent="."]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("6_rp72t")
 
-[node name="Text" type="Label" parent="Textebox"]
+[node name="MarginContainer" type="ScrollContainer" parent="Textebox"]
+layout_mode = 0
 offset_left = -299.0
-offset_top = -140.0
-offset_right = -247.0
-offset_bottom = -109.0
+offset_top = -154.0
+offset_right = 305.0
+offset_bottom = -17.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Textebox/MarginContainer"]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="Textebox/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
 label_settings = SubResource("LabelSettings_qlyp8")
+autowrap_mode = 2
