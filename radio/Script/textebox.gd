@@ -6,13 +6,15 @@ extends Control
 var full_text := ""
 var current_index := 0
 var letter_delay := 0.05
-var timer := 0.0
-var displaying := false
-var texte_deja_lance := false  # Pour éviter de redémarrer le texte à chaque frame
+var timer = 0.0
+var displaying = false
+var texte_deja_lance = false
+
+func _ready() -> void:
+	Global.texte_en_cours = true
 
 func _process(delta: float) -> void:
 	if Global.ok and not texte_deja_lance:
-		full_text = Global.textes[1]
 		afficher(Global.textes[1])
 		texte_deja_lance = true
 
@@ -23,8 +25,12 @@ func _process(delta: float) -> void:
 			current_index += 1
 			timer = 0.0
 
-			await get_tree().process_frame  # Attente de la mise à jour du texte
+			await get_tree().process_frame
 			scroll.scroll_vertical = scroll.get_v_scroll_bar().max_value
+
+			if current_index == full_text.length():
+				displaying = false
+				Global.texte_en_cours = false  # Texte terminé
 
 func afficher(nouveau_texte: String) -> void:
 	full_text = nouveau_texte
@@ -32,3 +38,4 @@ func afficher(nouveau_texte: String) -> void:
 	current_index = 0
 	timer = 0.0
 	displaying = true
+	Global.texte_en_cours = true  # Texte en cours d'écriture
