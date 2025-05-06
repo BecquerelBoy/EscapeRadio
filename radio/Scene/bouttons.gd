@@ -1,10 +1,12 @@
 extends Control
 
-@onready var button: Button = $Bouttons/Yes  # Assure-toi que ce chemin est correct
+@onready var button_yes: Button = $Bouttons/Yes
+@onready var button_no: Button = $Bouttons/No
 
 func _on_yes_pressed() -> void:
-	Global.afficher_texte_par_numero(2)
-
+	var next = Global.current_text * 2
+	Global.afficher_texte_par_numero(next)
 
 func _on_no_pressed() -> void:
-	Global.afficher_texte_par_numero(3)
+	var next = Global.current_text * 2 + 1
+	Global.afficher_texte_par_numero(next)

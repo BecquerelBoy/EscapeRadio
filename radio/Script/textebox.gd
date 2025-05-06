@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Global.ok and not texte_deja_lance:
-		afficher(Global.textes[1])
+		afficher(Global.textes[1], 1)
 		texte_deja_lance = true
 
 	if displaying:
@@ -30,12 +30,14 @@ func _process(delta: float) -> void:
 
 			if current_index == full_text.length():
 				displaying = false
-				Global.texte_en_cours = false  # Texte terminé
+				Global.texte_en_cours = false
 
-func afficher(nouveau_texte: String) -> void:
+func afficher(nouveau_texte: String, numero: int) -> void:
 	full_text = nouveau_texte
+	Global.current_text = numero  # <-- Mise à jour du numéro de texte global
+	print(Global.current_text)
 	text.text = ""
 	current_index = 0
 	timer = 0.0
 	displaying = true
-	Global.texte_en_cours = true  # Texte en cours d'écriture
+	Global.texte_en_cours = true
