@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=33 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://cgohb3skasevj" path="res://Assets/Vrac/p4u2uzgn.bmp" id="2_b448p"]
@@ -19,6 +19,8 @@
 [ext_resource type="Script" path="res://Script/date_heure.gd" id="16_qxq5r"]
 [ext_resource type="Texture2D" uid="uid://doh7fkbihdnhv" path="res://Assets/quit selectionné.png" id="17_7chyn"]
 [ext_resource type="Texture2D" uid="uid://b1sw7nt1sossj" path="res://Assets/quit.png" id="18_hyorc"]
+[ext_resource type="Texture2D" uid="uid://dnuws1r5l0jyk" path="res://Assets/reume.png" id="19_ahauq"]
+[ext_resource type="Texture2D" uid="uid://n75m6oa6lrgw" path="res://Assets/reume selectionné.png" id="20_emv7t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8wql"]
 font = ExtResource("3_0025t")
@@ -325,15 +327,28 @@ label_settings = SubResource("LabelSettings_tadko")
 
 [node name="quit" type="Sprite2D" parent="Pause_Menu"]
 z_index = 1
-position = Vector2(-239, -100)
-scale = Vector2(0.21831, 0.21831)
+position = Vector2(-243.019, -71.875)
+scale = Vector2(0.198368, 0.198944)
 texture = ExtResource("17_7chyn")
 
 [node name="quit_select" type="Sprite2D" parent="Pause_Menu"]
+visible = false
 z_index = 1
-position = Vector2(-239, -100)
+position = Vector2(-243.039, -71.75)
 scale = Vector2(0.197183, 0.197183)
 texture = ExtResource("18_hyorc")
+
+[node name="resume" type="Sprite2D" parent="Pause_Menu"]
+z_index = 1
+position = Vector2(-242.907, -103.688)
+scale = Vector2(0.197722, 0.242568)
+texture = ExtResource("19_ahauq")
+
+[node name="resume_select" type="Sprite2D" parent="Pause_Menu"]
+z_index = 1
+position = Vector2(-243.093, -103.377)
+scale = Vector2(0.198083, 0.235691)
+texture = ExtResource("20_emv7t")
 
 [node name="Pause_buttons" type="Control" parent="."]
 layout_mode = 3
