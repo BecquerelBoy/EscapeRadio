@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://cfbrqy0pfhntg" path="res://Assets/sound/Audio_1.wav" id="14_6dljv"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="15_cvycu"]
 [ext_resource type="Script" path="res://Script/buttons/pause_buttons.gd" id="16_16tje"]
-[ext_resource type="Script" path="res://Scene/pause_menu.gd" id="16_g6huw"]
+[ext_resource type="Script" path="res://Script/pause_menu.gd" id="16_g6huw"]
 [ext_resource type="Script" path="res://Script/date_heure.gd" id="16_qxq5r"]
 [ext_resource type="Texture2D" uid="uid://doh7fkbihdnhv" path="res://Assets/quit selectionné.png" id="17_7chyn"]
 [ext_resource type="Texture2D" uid="uid://b1sw7nt1sossj" path="res://Assets/quit.png" id="18_hyorc"]
@@ -298,7 +298,8 @@ text = "☼"
 label_settings = SubResource("LabelSettings_hqsx6")
 
 [node name="Pause_Menu" type="Control" parent="."]
-process_mode = 2
+process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -332,6 +333,7 @@ scale = Vector2(0.198368, 0.198944)
 texture = ExtResource("17_7chyn")
 
 [node name="quit_select" type="Sprite2D" parent="Pause_Menu"]
+visible = false
 z_index = 1
 position = Vector2(-243.039, -71.75)
 scale = Vector2(0.197183, 0.197183)
@@ -344,12 +346,14 @@ scale = Vector2(0.197722, 0.242568)
 texture = ExtResource("19_ahauq")
 
 [node name="resume_select" type="Sprite2D" parent="Pause_Menu"]
+visible = false
 z_index = 1
 position = Vector2(-243.093, -103.377)
 scale = Vector2(0.198083, 0.235691)
 texture = ExtResource("20_emv7t")
 
 [node name="Pause_buttons" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -359,9 +363,9 @@ script = ExtResource("16_16tje")
 [node name="Fleche_haut" type="Button" parent="Pause_buttons"]
 z_index = 1
 layout_mode = 0
-offset_left = -391.0
-offset_top = -147.0
-offset_right = -374.0
+offset_left = -395.0
+offset_top = -148.0
+offset_right = -375.0
 offset_bottom = -116.0
 scale = Vector2(2, 2)
 text = "⬆"
@@ -369,24 +373,37 @@ text = "⬆"
 [node name="Fleche_bas" type="Button" parent="Pause_buttons"]
 z_index = 1
 layout_mode = 0
-offset_left = -391.0
-offset_top = -78.0
+offset_left = -394.0
+offset_top = -25.0
 offset_right = -374.0
-offset_bottom = -47.0
+offset_bottom = 6.0
 scale = Vector2(2, 2)
 text = "⬇"
 
 [node name="Pause" type="Button" parent="Pause_buttons"]
 z_index = 1
 layout_mode = 0
-offset_left = 345.0
+offset_left = 338.0
 offset_top = -270.0
-offset_right = 371.0
+offset_right = 370.0
 offset_bottom = -239.0
 scale = Vector2(1.2, 1.2)
 text = "||"
 
+[node name="ok" type="Button" parent="Pause_buttons"]
+z_index = 1
+layout_mode = 0
+offset_left = -394.0
+offset_top = -73.0
+offset_right = -356.0
+offset_bottom = -35.0
+text = "OK"
+
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons/Yes" method="_on_pressed"]
+[connection signal="pressed" from="Bouttons/Yes" to="Pause_Menu" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/No" to="Bouttons" method="_on_no_pressed"]
+[connection signal="pressed" from="Pause_buttons/Fleche_haut" to="Pause_Menu" method="_on_fleche_haut_pressed"]
+[connection signal="pressed" from="Pause_buttons/Fleche_bas" to="Pause_Menu" method="_on_fleche_bas_pressed"]
 [connection signal="pressed" from="Pause_buttons/Pause" to="Pause_buttons" method="_on_pause_pressed"]
+[connection signal="pressed" from="Pause_buttons/ok" to="Pause_Menu" method="_on_ok_pressed"]

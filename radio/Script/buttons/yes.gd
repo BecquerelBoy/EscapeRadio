@@ -1,5 +1,7 @@
 extends TextureButton
 
+@onready var yes: TextureButton = $"."
+
 # Taille normale du bouton
 var original_scale := Vector2.ONE * 0.47
 var reduced_scale := Vector2(0.95, 0.95) * 0.47 # Taille réduite à 90%
