@@ -4,7 +4,6 @@ extends Node
 @onready var dizaine := $Dizaine
 @onready var unite := $unité
 @onready var dixieme := $dixieme
-@onready var win: Sprite2D = $"../win"
 
 @onready var audio_1 = $Audio_1
 
@@ -14,7 +13,6 @@ var tracking := false
 func _ready():
 	slider.value_changed.connect(_on_slider_value_changed)
 	_on_slider_value_changed(slider.value)  # initialise l'affichage
-	win.visible = false
 
 func _on_slider_value_changed(value: float) -> void:
 	var int_part := int(value)
