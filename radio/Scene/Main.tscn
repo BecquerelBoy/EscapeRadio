@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=31 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://cgohb3skasevj" path="res://Assets/Vrac/p4u2uzgn.bmp" id="2_b448p"]
@@ -17,6 +17,8 @@
 [ext_resource type="Script" path="res://Script/buttons/pause_buttons.gd" id="16_16tje"]
 [ext_resource type="Script" path="res://Scene/pause_menu.gd" id="16_g6huw"]
 [ext_resource type="Script" path="res://Script/date_heure.gd" id="16_qxq5r"]
+[ext_resource type="Texture2D" uid="uid://doh7fkbihdnhv" path="res://Assets/quit selectionné.png" id="17_7chyn"]
+[ext_resource type="Texture2D" uid="uid://b1sw7nt1sossj" path="res://Assets/quit.png" id="18_hyorc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8wql"]
 font = ExtResource("3_0025t")
@@ -157,7 +159,7 @@ label_settings = SubResource("LabelSettings_k8dir")
 stream = ExtResource("14_6dljv")
 
 [node name="Textebox" type="Control" parent="."]
-z_index = 10
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("6_rp72t")
@@ -295,7 +297,6 @@ label_settings = SubResource("LabelSettings_hqsx6")
 
 [node name="Pause_Menu" type="Control" parent="."]
 process_mode = 2
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -322,23 +323,17 @@ offset_bottom = -119.0
 text = "Pause"
 label_settings = SubResource("LabelSettings_tadko")
 
-[node name="Resume" type="Button" parent="Pause_Menu"]
+[node name="quit" type="Sprite2D" parent="Pause_Menu"]
 z_index = 1
-layout_mode = 0
-offset_left = -293.0
-offset_top = -116.0
-offset_right = -221.0
-offset_bottom = -85.0
-text = "RESUME"
+position = Vector2(-239, -100)
+scale = Vector2(0.21831, 0.21831)
+texture = ExtResource("17_7chyn")
 
-[node name="Quit" type="Button" parent="Pause_Menu"]
+[node name="quit_select" type="Sprite2D" parent="Pause_Menu"]
 z_index = 1
-layout_mode = 0
-offset_left = -293.0
-offset_top = -80.0
-offset_right = -246.0
-offset_bottom = -49.0
-text = "QUIT"
+position = Vector2(-239, -100)
+scale = Vector2(0.197183, 0.197183)
+texture = ExtResource("18_hyorc")
 
 [node name="Pause_buttons" type="Control" parent="."]
 layout_mode = 3
@@ -380,6 +375,4 @@ text = "||"
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons/Yes" method="_on_pressed"]
 [connection signal="pressed" from="Bouttons/No" to="Bouttons" method="_on_no_pressed"]
-[connection signal="pressed" from="Pause_Menu/Resume" to="Pause_Menu" method="_on_resume_pressed"]
-[connection signal="pressed" from="Pause_Menu/Quit" to="Pause_Menu" method="_on_quit_pressed"]
 [connection signal="pressed" from="Pause_buttons/Pause" to="Pause_buttons" method="_on_pause_pressed"]

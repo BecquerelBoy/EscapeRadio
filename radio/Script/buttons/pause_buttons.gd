@@ -4,19 +4,20 @@ extends Control
 @onready var fleche_bas: Button = $Fleche_bas
 @onready var pause: Button = $Pause
 @onready var pause_menu: Control = $"../Pause_Menu"
+@onready var resume: Button = $"../Pause_Menu/Resume"
+@onready var quit: Button = $"../Pause_Menu/Quit"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	fleche_haut.disabled = true
 	fleche_bas.disabled = true
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
-
 func _on_pause_pressed() -> void:
 	pause_menu.visible = true
 	get_tree().paused = true
+	resume.grab_focus()  # Focus initial
+
+func _on_fleche_haut_pressed() -> void:
+	resume.grab_focus()
+
+func _on_fleche_bas_pressed() -> void:
+	quit.grab_focus()

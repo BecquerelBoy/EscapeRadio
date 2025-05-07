@@ -4,6 +4,7 @@ var Frequence : float
 var ok : bool = false
 var texte_en_cours : bool = false
 var current_text : int = 0
+var is_pausing : bool = false
 var textes : Dictionary = {
 	1: "En gros luden c'est un mythique euhh passive mythique",
 	2: "Voici un autre texte à afficher.", #choix 1, oui
@@ -15,7 +16,7 @@ var textes : Dictionary = {
 }
 
 func _process(_delta: float) -> void:
-	# Activer/désactiver tous les nœuds du groupe "soirr" selon texte_en_cours
+	# Activer/désactiver tous les nœuds du groupe "Bouttons" selon texte_en_cours
 	for node in get_tree().get_nodes_in_group("Bouttons"):
 		if node.has_method("set_disabled"):
 			node.set_disabled(texte_en_cours)

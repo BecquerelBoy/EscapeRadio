@@ -6,6 +6,7 @@ extends Node2D
 
 
 func _ready():
+	Global.ok = false
 	yes.disabled = true
 	no.disabled = true
 	update_value(slider.value)
