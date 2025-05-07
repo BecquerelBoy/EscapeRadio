@@ -332,7 +332,6 @@ scale = Vector2(0.198368, 0.198944)
 texture = ExtResource("17_7chyn")
 
 [node name="quit_select" type="Sprite2D" parent="Pause_Menu"]
-visible = false
 z_index = 1
 position = Vector2(-243.039, -71.75)
 scale = Vector2(0.197183, 0.197183)
