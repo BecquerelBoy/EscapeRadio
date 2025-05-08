@@ -9,22 +9,28 @@ var dialogues := {
 	1: {
 		"text": "En gros luden c'est un mythique euhh passive mythique",
 		"yes": 2,
-		"no": 3
+		"no": 3,
+		"choice_yes": "bonne ref mdr",
+		"choice_no": "vrmt ntm"
 	},
 	2: {
-		"text": "Voici un autre texte à afficher.",
+		"text": "perso je prend shadowflame",
 		"yes": 4,
-		"no": 5
+		"no": 5,
+		"choice_yes": "et les rm ?",
+		"choice_no": "change d'item"
 	},
 	3: {
-		"text": "Un texte supplémentaire que tu veux afficher sur le label.",
+		"text": "Rooh aller c'est pas si mal surtout qu'avec shadowflame ca monte a 14, comme j'ai les botte ca fait 14+16 ca fait 30",
 		"yes": 6,
-		"no": 7
+		"no": 7,
+		"choice_yes": ":/",
+		"choice_no": "tro rigolo"
 	},
-	4: {"text": "oui j'adore la vie :D"},
+	4: {"text": "je prend +10 de rm et je prend la bot"},
 	5: {"text": "Nope la vie ca pue sa mere"},
-	6: {"text": "youhou"},
-	7: {"text": "KMS"}
+	6: {"text": "t'es pas drole"},
+	7: {"text": "KYS"}
 }
 
 

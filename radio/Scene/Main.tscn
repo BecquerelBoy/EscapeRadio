@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=35 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://cgohb3skasevj" path="res://Assets/Vrac/p4u2uzgn.bmp" id="2_b448p"]
@@ -35,6 +35,16 @@ font_color = Color(0.207843, 0.219608, 0.478431, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_qlyp8"]
 font = ExtResource("3_0025t")
 font_size = 30
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kd5l"]
+font = ExtResource("3_0025t")
+font_size = 20
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t4wbh"]
+font = ExtResource("3_0025t")
+font_size = 20
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_x4c1q"]
@@ -182,6 +192,24 @@ custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 label_settings = SubResource("LabelSettings_qlyp8")
 autowrap_mode = 2
+
+[node name="choix_1" type="Label" parent="Textebox"]
+layout_mode = 0
+offset_left = -195.0
+offset_top = -20.0
+offset_right = -112.0
+offset_bottom = 3.0
+text = "333333333"
+label_settings = SubResource("LabelSettings_0kd5l")
+
+[node name="choix_2" type="Label" parent="Textebox"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = -20.0
+offset_right = 167.0
+offset_bottom = 3.0
+text = "3333333"
+label_settings = SubResource("LabelSettings_t4wbh")
 
 [node name="Bouttons" type="Control" parent="."]
 z_index = 1
