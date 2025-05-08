@@ -7,11 +7,21 @@ extends Control
 @onready var resume_select: Sprite2D = $resume_select
 @onready var click: AudioStreamPlayer2D = $"../Bouttons/Click"
 @onready var bouttons: Control = $"../Bouttons"
+@onready var ok = $"../Pause_buttons/ok"
 
 func _ready() -> void:
-	fleche_haut.disabled = false
-	fleche_bas.disabled = false
-	Global.is_pausing = true
+	fleche_haut.disabled = true
+	fleche_bas.disabled = true
+
+func _process(_delta):
+	if Global.is_pausing:
+		fleche_haut.disabled = false
+		fleche_bas.disabled = false
+		ok.disabled = false
+	else:
+		fleche_haut.disabled = true
+		fleche_bas.disabled = true
+		ok.disabled = true
 
 func _on_fleche_haut_pressed() -> void:
 	resume_select.visible = true

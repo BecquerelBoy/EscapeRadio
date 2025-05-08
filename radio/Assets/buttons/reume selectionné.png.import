@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2xasu0844vmy"
-path="res://.godot/imported/ed2p1csr.bmp-6a7a508dbcc350c72b89d91ff992b98c.ctex"
+uid="uid://n75m6oa6lrgw"
+path="res://.godot/imported/reume selectionné.png-baca88c8a82403b336a68c0ffd56d52f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vrac/ed2p1csr.bmp"
-dest_files=["res://.godot/imported/ed2p1csr.bmp-6a7a508dbcc350c72b89d91ff992b98c.ctex"]
+source_file="res://Assets/buttons/reume selectionné.png"
+dest_files=["res://.godot/imported/reume selectionné.png-baca88c8a82403b336a68c0ffd56d52f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnuws1r5l0jyk"
-path="res://.godot/imported/reume.png-bb50845a2c85cf3fea66c882da803384.ctex"
+uid="uid://c2xasu0844vmy"
+path="res://.godot/imported/ed2p1csr.bmp-d04b372b295457d9a6d7fa78d5886bda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/reume.png"
-dest_files=["res://.godot/imported/reume.png-bb50845a2c85cf3fea66c882da803384.ctex"]
+source_file="res://Assets/buttons/ed2p1csr.bmp"
+dest_files=["res://.godot/imported/ed2p1csr.bmp-d04b372b295457d9a6d7fa78d5886bda.ctex"]
 
 [params]
 

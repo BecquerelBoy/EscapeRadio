@@ -9,3 +9,4 @@ extends Control
 func _on_pause_pressed() -> void:
 	pause_menu.visible = true
 	get_tree().paused = true
+	Global.is_pausing = true
