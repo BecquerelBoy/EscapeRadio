@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Global.ok and not texte_deja_lance:
-		afficher(Global.textes[1], 1)
+		afficher(Global.dialogues[1]["text"], 1)
 		texte_deja_lance = true
 
 	if displaying:
