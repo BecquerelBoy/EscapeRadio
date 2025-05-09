@@ -12,6 +12,7 @@ extends Control
 func _ready() -> void:
 	fleche_haut.disabled = true
 	fleche_bas.disabled = true
+	resume_select.visible = true
 
 func _process(_delta):
 	if Global.is_pausing:
