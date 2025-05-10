@@ -1,8 +1,9 @@
 extends TextureButton
 
+
 # Taille normale du bouton
-var original_scale := Vector2.ONE * 0.47
-var reduced_scale := Vector2(0.95, 0.95) * 0.47 # Taille réduite à 90%
+var original_scale := Vector2.ONE * 0.022
+var reduced_scale := Vector2(0.95, 0.95) * 0.022 # Taille réduite à 90%
 var reset_delay := 0.1  # Temps avant de remettre la taille normale
 
 func _ready() -> void:

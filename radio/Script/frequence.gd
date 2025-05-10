@@ -33,6 +33,7 @@ func _process(delta: float) -> void:
 			timer += delta
 			if timer >= 1.0:
 				slider.editable = false
+				Global.slider_modifiable = false
 				if not audio_1.playing:
 					audio_1.play()
 				Global.ok = true  # Verrou activé ici

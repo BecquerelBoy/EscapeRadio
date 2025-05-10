@@ -5,6 +5,7 @@ var ok : bool = false
 var texte_en_cours : bool = false
 var current_text : int = 0
 var is_pausing : bool = false
+var slider_modifiable = true
 var dialogues := {
 	1: {
 		"text": "En gros luden c'est un mythique euhh passive mythique",

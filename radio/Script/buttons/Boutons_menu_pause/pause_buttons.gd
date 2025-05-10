@@ -1,8 +1,8 @@
 extends Control
 
-@onready var fleche_haut: Button = $Fleche_haut
-@onready var fleche_bas: Button = $Fleche_bas
-@onready var pause: Button = $Pause
+@onready var fleche_haut = $Fleche_haut
+@onready var fleche_bas = $Fleche_bas
+@onready var pause = $Pause
 @onready var pause_menu: Control = $"../Pause_Menu"
 
 

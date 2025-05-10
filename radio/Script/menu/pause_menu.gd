@@ -1,11 +1,11 @@
 extends Control
 
 @onready var pause_menu: Control = $"."
-@onready var fleche_haut: Button = $"../Pause_buttons/Fleche_haut"
-@onready var fleche_bas: Button = $"../Pause_buttons/Fleche_bas"
+@onready var fleche_haut = $"../Pause_buttons/Fleche_haut"
+@onready var fleche_bas = $"../Pause_buttons/Fleche_bas"
 @onready var quit_select: Sprite2D = $quit_select
 @onready var resume_select: Sprite2D = $resume_select
-@onready var click: AudioStreamPlayer2D = $"../Bouttons/Click"
+@onready var click = $"../Bouttons/Click"
 @onready var bouttons: Control = $"../Bouttons"
 @onready var ok = $"../Pause_buttons/ok"
 
@@ -25,10 +25,12 @@ func _process(_delta):
 		ok.disabled = true
 
 func _on_fleche_haut_pressed() -> void:
+	click.play()
 	resume_select.visible = true
 	quit_select.visible = false
 
 func _on_fleche_bas_pressed() -> void:
+	click.play()
 	resume_select.visible = false
 	quit_select.visible = true
 
