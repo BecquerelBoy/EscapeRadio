@@ -1,5 +1,7 @@
 extends TextureButton
 
+@onready var no = $"."
+
 # Taille normale du bouton
 var original_scale := Vector2.ONE * 0.47
 var reduced_scale := Vector2(0.95, 0.95) * 0.47 # Taille réduite à 90%
@@ -16,6 +18,8 @@ func _on_pressed() -> void:
 
 func _process(_delta: float) -> void:
 	update_cursor()
+	if Global.is_pausing:
+		no.disabled = true
 
 func update_cursor() -> void:
 	if disabled:

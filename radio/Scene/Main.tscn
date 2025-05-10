@@ -224,6 +224,7 @@ offset_bottom = 267.0
 script = ExtResource("7_mao8n")
 
 [node name="Yes" type="TextureButton" parent="Bouttons" groups=["Bouttons"]]
+process_mode = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.222
@@ -245,6 +246,7 @@ texture_disabled = ExtResource("9_sicws")
 script = ExtResource("10_wl2yh")
 
 [node name="No" type="TextureButton" parent="Bouttons" groups=["Bouttons"]]
+process_mode = 3
 layout_mode = 0
 offset_left = 268.0
 offset_top = -14.0
@@ -257,6 +259,7 @@ texture_disabled = ExtResource("11_culd5")
 script = ExtResource("13_uwmsf")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="Bouttons"]
+process_mode = 3
 position = Vector2(305, -136)
 stream = ExtResource("15_cvycu")
 
@@ -426,6 +429,7 @@ texture_normal = ExtResource("22_ebwv5")
 script = ExtResource("24_ha01m")
 
 [node name="Pause" type="TextureButton" parent="Pause_buttons"]
+process_mode = 3
 z_index = 1
 layout_mode = 0
 offset_left = -998.0
