@@ -1,10 +1,11 @@
-[gd_scene load_steps=43 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=44 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_0025t"]
 [ext_resource type="Script" path="res://Script/frequence.gd" id="3_rggcm"]
 [ext_resource type="Script" path="res://Script/buttons/h_slider.gd" id="3_ro4ie"]
+[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="4_ex7u2"]
 [ext_resource type="Script" path="res://Script/textebox.gd" id="6_rp72t"]
 [ext_resource type="Script" path="res://Script/buttons/bouttons.gd" id="7_mao8n"]
 [ext_resource type="Texture2D" uid="uid://dwol7p4n45qe5" path="res://Assets/buttons/464rll7x.bmp" id="8_qlvkl"]
@@ -116,6 +117,14 @@ max_value = 99.9
 step = 0.1
 ticks_on_borders = true
 script = ExtResource("3_ro4ie")
+
+[node name="FondLabel" type="Sprite2D" parent="Radio"]
+position = Vector2(0, 40)
+scale = Vector2(0.148562, 0.148562)
+texture = ExtResource("4_ex7u2")
+
+[node name="Marker2D" type="Marker2D" parent="Radio"]
+position = Vector2(0, 38)
 
 [node name="Frequence" type="Node" parent="."]
 script = ExtResource("3_rggcm")
