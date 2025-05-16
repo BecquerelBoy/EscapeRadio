@@ -371,27 +371,27 @@ label_settings = SubResource("LabelSettings_tadko")
 
 [node name="quit" type="Sprite2D" parent="Pause_Menu"]
 z_index = 1
-position = Vector2(-419, -149)
+position = Vector2(-302.324, -170.875)
 scale = Vector2(0.198368, 0.198944)
 texture = ExtResource("17_7chyn")
 
 [node name="quit_select" type="Sprite2D" parent="Pause_Menu"]
 visible = false
 z_index = 1
-position = Vector2(-419.338, -149)
+position = Vector2(-302.662, -170.875)
 scale = Vector2(0.199759, 0.197183)
 texture = ExtResource("18_hyorc")
 
 [node name="resume" type="Sprite2D" parent="Pause_Menu"]
 z_index = 1
-position = Vector2(-419.093, -180.688)
+position = Vector2(-420.093, -170.688)
 scale = Vector2(0.197722, 0.242568)
 texture = ExtResource("19_ahauq")
 
 [node name="resume_select" type="Sprite2D" parent="Pause_Menu"]
 visible = false
 z_index = 1
-position = Vector2(-419.093, -180.688)
+position = Vector2(-420.093, -170.688)
 scale = Vector2(0.198083, 0.235691)
 texture = ExtResource("20_emv7t")
 
@@ -406,10 +406,11 @@ script = ExtResource("16_16tje")
 [node name="Fleche_haut" type="TextureButton" parent="Pause_buttons"]
 z_index = 1
 layout_mode = 0
-offset_left = -504.0
-offset_top = 89.0
-offset_right = -332.0
-offset_bottom = 189.0
+offset_left = -561.0
+offset_top = 146.0
+offset_right = -389.0
+offset_bottom = 246.0
+rotation = -1.5708
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(86, 49)
 texture_normal = ExtResource("22_ebwv5")
@@ -418,11 +419,11 @@ script = ExtResource("23_kagl8")
 [node name="Fleche_bas" type="TextureButton" parent="Pause_buttons"]
 z_index = 1
 layout_mode = 0
-offset_left = -505.0
-offset_top = 203.0
-offset_right = -333.0
-offset_bottom = 303.0
-rotation = 3.14159
+offset_left = -449.0
+offset_top = 147.0
+offset_right = -277.0
+offset_bottom = 247.0
+rotation = 1.5708
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(86, 49)
 texture_normal = ExtResource("22_ebwv5")
