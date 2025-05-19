@@ -31,11 +31,19 @@ func _on_right_pressed() -> void:
 
 func _on_ok_pressed() -> void:
 	var label_central = labels[current_index]
-	var dialogue_id = int(str(label_central.name))  # Le nom du label doit être un chiffre
-	if Global.dialogues.has(dialogue_id):
-		var texte = Global.dialogues[dialogue_id].get("text", "")
-		print("Dialogue ID : ", dialogue_id, " → Texte : ", texte)
-		Global.afficher_texte_par_numero(dialogue_id)
+	var rep_index = int(str(label_central.name))  # Le nom du label = numéro de réponse : 1, 2, 3, ...
+
+	var current_id = Global.current_text
+	var current_data = Global.dialogues.get(current_id, {})
+	var rep_key = "Rep" + str(rep_index)
+
+	if current_data.has(rep_key):
+		var next_id = current_data[rep_key]
+		Global.reponses_joueur.append(rep_index)  # Enregistrer la réponse
+		Global.afficher_texte_par_numero(next_id)
+	else:
+		push_error("Réponse non trouvée : " + rep_key + " pour le dialogue " + str(current_id))
+
 
 func update_visible_labels():
 	for label in labels:

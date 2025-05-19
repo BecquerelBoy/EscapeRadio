@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckudx25bk86w5"]
+[gd_scene load_steps=9 format=3 uid="uid://dih3rfy43oe7v"]
 
-[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_v2v11"]
-[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_n5exa"]
-[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="3_ivq04"]
-[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="4_n00gb"]
+[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_176ng"]
+[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_qa8sg"]
+[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="3_xiluy"]
+[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="4_twenu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ik26b"]
 
@@ -22,12 +22,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_v2v11")
+script = ExtResource("1_176ng")
 
 [node name="FondLabel" type="Sprite2D" parent="."]
 position = Vector2(0, 40)
 scale = Vector2(0.148562, 0.148562)
-texture = ExtResource("2_n5exa")
+texture = ExtResource("2_qa8sg")
 
 [node name="Label" type="Control" parent="."]
 anchors_preset = 0
@@ -127,7 +127,7 @@ offset_bottom = 246.0
 rotation = -1.5708
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("3_ivq04")
+texture_normal = ExtResource("3_xiluy")
 
 [node name="Fleche_droite" type="TextureButton" parent="Buttons"]
 process_mode = 3
@@ -140,7 +140,7 @@ offset_bottom = 247.0
 rotation = 1.5708
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("3_ivq04")
+texture_normal = ExtResource("3_xiluy")
 
 [node name="ok" type="TextureButton" parent="Buttons"]
 z_index = 1
@@ -151,7 +151,7 @@ offset_right = 607.0
 offset_bottom = 1220.0
 scale = Vector2(0.022, 0.022)
 pivot_offset = Vector2(1022, 1022)
-texture_normal = ExtResource("4_n00gb")
+texture_normal = ExtResource("4_twenu")
 
 [connection signal="pressed" from="Buttons/Fleche_gauche" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="Buttons/Fleche_droite" to="." method="_on_right_pressed"]

@@ -58,15 +58,10 @@ var dialogues := {
 	},
 	5: {
 		"text": "C'est bon j'ai tout activé je vais voir si il se passe qelques chose",
+		"Rep1": 6,
 	},
 	6: {
 		"text": "Lessgo c'est bon :D",
-	},
-	7: {
-		"text": "ok mais t'as oublié les MR mec",
-	},
-	8: {
-		"text": "tu forces là fréro",
 	}
 }
 
@@ -80,17 +75,17 @@ func _process(_delta: float) -> void:
 
 func afficher_texte_par_numero(numero: int) -> void:
 	if dialogues.has(numero):
-		# Gère les choix précédents (ne rien faire au tout début)
+		# Réinitialise si on revient au début
 		if numero == 1:
 			reponses_joueur.clear()
 
-		# Après le texte 5, on vérifie la combinaison
-		if current_text == 5:
+		# Si on s’apprête à afficher le texte 5, on vérifie la combinaison
+		if numero == 5:
 			if reponses_joueur == [8, 4, 7, 6]:
 				numero = 6
 			else:
 				numero = 1
-			reponses_joueur.clear()  # Réinitialiser pour une nouvelle séquence
+			reponses_joueur.clear()
 
 		var textebox = get_node("/root/Main/Textebox")
 		if textebox == null:
