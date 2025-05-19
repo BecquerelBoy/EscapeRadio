@@ -83,6 +83,7 @@ offset_bottom = 40.0
 [node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
 process_mode = 3
 z_index = 1
+layout_mode = 0
 offset_left = -561.0
 offset_top = 146.0
 offset_right = -389.0
@@ -95,6 +96,7 @@ texture_normal = ExtResource("3_ivq04")
 [node name="Fleche_droite" type="TextureButton" parent="Buttons"]
 process_mode = 3
 z_index = 1
+layout_mode = 0
 offset_left = -449.0
 offset_top = 147.0
 offset_right = -277.0
@@ -106,6 +108,7 @@ texture_normal = ExtResource("3_ivq04")
 
 [node name="ok" type="TextureButton" parent="Buttons"]
 z_index = 1
+layout_mode = 0
 offset_left = -1441.0
 offset_top = -828.0
 offset_right = 607.0
