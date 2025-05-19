@@ -1,19 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://cebak65p4v7ym"]
+[gd_scene load_steps=7 format=3 uid="uid://ckudx25bk86w5"]
 
-[ext_resource type="Script" path="res://Scene/label_reponse.gd" id="1_1mcmn"]
+[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_56wik"]
+[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_rx52n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ik26b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_livpp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ehv46"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_37fy8"]
 
 [node name="label_reponse" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 374.0
-offset_top = 104.0
-offset_right = 374.0
-offset_bottom = 104.0
+offset_left = 472.0
+offset_top = 185.0
+offset_right = 472.0
+offset_bottom = 185.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1mcmn")
+script = ExtResource("1_56wik")
+
+[node name="FondLabel" type="Sprite2D" parent="."]
+position = Vector2(0, 40)
+scale = Vector2(0.148562, 0.148562)
+texture = ExtResource("2_rx52n")
 
 [node name="Control" type="Control" parent="."]
 anchors_preset = 0
@@ -25,24 +39,28 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "oui"
+label_settings = SubResource("LabelSettings_ik26b")
 
 [node name="Rep2" type="Label" parent="Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "non"
+label_settings = SubResource("LabelSettings_livpp")
 
 [node name="Rep3" type="Label" parent="Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "jamais"
+label_settings = SubResource("LabelSettings_ehv46")
 
 [node name="Rep4" type="Label" parent="Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Toujours"
+label_settings = SubResource("LabelSettings_37fy8")
 
 [node name="Control2" type="Control" parent="."]
 anchors_preset = 0
