@@ -34,6 +34,8 @@ func _process(_delta: float) -> void:
 	for node in get_tree().get_nodes_in_group("Bouttons"):
 		if node.has_method("set_disabled"):
 			node.set_disabled(texte_en_cours)
+	
+	print(is_pausing)
 
 func afficher_texte_par_numero(numero: int) -> void:
 	if dialogues.has(numero):

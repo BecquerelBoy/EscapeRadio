@@ -250,6 +250,11 @@ texture_normal = ExtResource("10_7qqw4")
 texture_disabled = ExtResource("11_culd5")
 script = ExtResource("13_uwmsf")
 
+[node name="Click" type="AudioStreamPlayer2D" parent="Bouttons"]
+process_mode = 3
+position = Vector2(305, -136)
+stream = ExtResource("15_cvycu")
+
 [node name="Pause" type="TextureButton" parent="Bouttons"]
 process_mode = 3
 z_index = 1
@@ -262,11 +267,6 @@ scale = Vector2(0.022, 0.022)
 pivot_offset = Vector2(1022, 1022)
 texture_normal = ExtResource("23_4m8er")
 script = ExtResource("26_6gsyx")
-
-[node name="Click" type="AudioStreamPlayer2D" parent="Bouttons"]
-process_mode = 3
-position = Vector2(305, -136)
-stream = ExtResource("15_cvycu")
 
 [node name="date_heure" type="Control" parent="."]
 layout_mode = 3
