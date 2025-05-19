@@ -1,17 +1,12 @@
 extends Node
 
 @onready var label_container := $Control
-@onready var markers := [
-	$Control2/M1,
-	$Control2/M2,
-	$Control2/M3
-]
+@onready var markers := [$Control2/M1, $Control2/M2, $Control2/M3]
 
 var labels: Array[Label] = []
-var current_index := 0  # index du label principal (centré sur Marker2)
+var current_index := 0
 
 func _ready():
-	# Récupère tous les labels dans l'ordre
 	for child in label_container.get_children():
 		if child is Label:
 			labels.append(child)
@@ -34,22 +29,29 @@ func _input(event):
 				if current_index < labels.size() - 1:
 					current_index += 1
 					update_visible_labels()
+			KEY_SPACE:
+				var label_central = labels[current_index]
+				var dialogue_id = int(str(label_central.name))  # Le nom du label doit être un chiffre
+				if Global.dialogues.has(dialogue_id):
+					var texte = Global.dialogues[dialogue_id].get("text", "")
+					print("Dialogue ID : ", dialogue_id, " → Texte : ", texte)
+					Global.afficher_texte_par_numero(dialogue_id)
 
 func update_visible_labels():
-	# Cache tous les labels
 	for label in labels:
 		label.visible = false
 
 	for i in range(3):
 		var label_index = current_index + i - 1
 		if label_index < 0 or label_index >= labels.size():
-			continue  # Pas de label à afficher pour ce marker hors bornes
+			continue
 
 		var label = labels[label_index]
 		label.global_position = markers[i].global_position
 		label.visible = true
 
 		if i == 1:
-			label.set("theme_override_colors/font_color", Color("#96E5DE"))  # bleu clair
+			label.set("theme_override_colors/font_color", Color("#96E5DE"))
+			print("Label central sélectionné : ", label.name)
 		else:
-			label.set("theme_override_colors/font_color", Color("#35387A"))  # bleu foncé
+			label.set("theme_override_colors/font_color", Color("#35387A"))

@@ -197,6 +197,7 @@ label_settings = SubResource("LabelSettings_qlyp8")
 autowrap_mode = 2
 
 [node name="choix_1" type="Label" parent="Textebox"]
+visible = false
 layout_mode = 0
 offset_left = -288.0
 offset_top = 109.0
@@ -207,6 +208,7 @@ text = "333333333"
 label_settings = SubResource("LabelSettings_0kd5l")
 
 [node name="choix_2" type="Label" parent="Textebox"]
+visible = false
 layout_mode = 0
 offset_left = 69.0
 offset_top = 109.0
@@ -228,6 +230,7 @@ script = ExtResource("7_mao8n")
 
 [node name="Yes" type="TextureButton" parent="Bouttons" groups=["Bouttons"]]
 process_mode = 3
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.222
@@ -250,6 +253,7 @@ script = ExtResource("10_wl2yh")
 
 [node name="No" type="TextureButton" parent="Bouttons" groups=["Bouttons"]]
 process_mode = 3
+visible = false
 layout_mode = 0
 offset_left = 268.0
 offset_top = -14.0
@@ -407,6 +411,7 @@ offset_bottom = 40.0
 script = ExtResource("16_16tje")
 
 [node name="Fleche_haut" type="TextureButton" parent="Pause_buttons"]
+process_mode = 3
 z_index = 1
 layout_mode = 0
 offset_left = -561.0
@@ -420,6 +425,7 @@ texture_normal = ExtResource("22_ebwv5")
 script = ExtResource("23_kagl8")
 
 [node name="Fleche_bas" type="TextureButton" parent="Pause_buttons"]
+process_mode = 3
 z_index = 1
 layout_mode = 0
 offset_left = -449.0

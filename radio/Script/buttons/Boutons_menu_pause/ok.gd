@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	scale = reduced_scale
-	await get_tree().create_timer(reset_delay).timeout
+#	await get_tree().create_timer(reset_delay).timeout
 	scale = original_scale
 
 func _process(_delta: float) -> void:

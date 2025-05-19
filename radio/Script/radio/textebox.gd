@@ -2,8 +2,6 @@ extends Control
 
 @onready var text: Label = $MarginContainer/VBoxContainer/Text
 @onready var scroll: ScrollContainer = $MarginContainer
-@onready var choix_1 = $choix_1
-@onready var choix_2 = $choix_2
 
 var full_text := ""
 var current_index := 0
@@ -14,8 +12,8 @@ var texte_deja_lance = false
 
 func _ready() -> void:
 	Global.texte_en_cours = true
-	choix_1.text = ""
-	choix_2.text = ""
+
+signal texte_termine
 
 func _process(delta: float) -> void:
 	if Global.ok and not texte_deja_lance:
@@ -35,7 +33,8 @@ func _process(delta: float) -> void:
 		if current_index == full_text.length() and displaying:
 			displaying = false
 			Global.texte_en_cours = false
-			_afficher_choix()
+			emit_signal("texte_termine")  # Signal émis ici
+
 
 func afficher(nouveau_texte: String, numero: int) -> void:
 	full_text = nouveau_texte
@@ -45,11 +44,3 @@ func afficher(nouveau_texte: String, numero: int) -> void:
 	timer = 0.0
 	displaying = true
 	Global.texte_en_cours = true
-	choix_1.text = ""
-	choix_2.text = ""
-
-func _afficher_choix() -> void:
-	var data = Global.dialogues.get(Global.current_text, {})
-
-	choix_1.text = data.get("choice_yes", "")
-	choix_2.text = data.get("choice_no", "")
