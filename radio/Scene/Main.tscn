@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=32 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
@@ -16,19 +16,9 @@
 [ext_resource type="AudioStream" uid="uid://cfbrqy0pfhntg" path="res://Assets/sound/Audio_1.wav" id="14_6dljv"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="15_cvycu"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause_buttons.gd" id="16_16tje"]
-[ext_resource type="Script" path="res://Script/menu/pause_menu.gd" id="16_g6huw"]
 [ext_resource type="Script" path="res://Script/radio/date_heure.gd" id="16_qxq5r"]
-[ext_resource type="Texture2D" uid="uid://doh7fkbihdnhv" path="res://Assets/buttons/quit selectionné.png" id="17_7chyn"]
-[ext_resource type="Texture2D" uid="uid://b1sw7nt1sossj" path="res://Assets/buttons/quit.png" id="18_hyorc"]
-[ext_resource type="Texture2D" uid="uid://dnuws1r5l0jyk" path="res://Assets/buttons/reume.png" id="19_ahauq"]
-[ext_resource type="Texture2D" uid="uid://n75m6oa6lrgw" path="res://Assets/buttons/reume selectionné.png" id="20_emv7t"]
-[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="22_ebwv5"]
 [ext_resource type="Texture2D" uid="uid://bke3w7wwvompn" path="res://Assets/buttons/IMG_2904.png" id="23_4m8er"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="23_kagl8"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="24_ha01m"]
-[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="24_sk3nr"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="28_g1kdx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8wql"]
 font = ExtResource("3_0025t")
@@ -87,11 +77,6 @@ font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_hqsx6"]
 font_size = 20
-font_color = Color(0.207843, 0.219608, 0.478431, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_tadko"]
-font = ExtResource("3_0025t")
-font_size = 40
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [node name="Main" type="Node2D"]
@@ -347,61 +332,6 @@ offset_bottom = -220.0
 text = "☼"
 label_settings = SubResource("LabelSettings_hqsx6")
 
-[node name="Pause_Menu" type="Control" parent="."]
-process_mode = 3
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("16_g6huw")
-
-[node name="ColorRect" type="ColorRect" parent="Pause_Menu"]
-z_index = 1
-layout_mode = 0
-offset_left = -473.0
-offset_top = -202.0
-offset_right = -4.0
-offset_bottom = -74.0
-scale = Vector2(2, 2)
-color = Color(0.588235, 0.835294, 0.870588, 1)
-
-[node name="Label" type="Label" parent="Pause_Menu"]
-z_index = 1
-layout_mode = 0
-offset_left = -471.0
-offset_top = -228.0
-offset_right = -383.0
-offset_bottom = -188.0
-text = "Pause"
-label_settings = SubResource("LabelSettings_tadko")
-
-[node name="quit" type="Sprite2D" parent="Pause_Menu"]
-z_index = 1
-position = Vector2(-302.324, -170.875)
-scale = Vector2(0.198368, 0.198944)
-texture = ExtResource("17_7chyn")
-
-[node name="quit_select" type="Sprite2D" parent="Pause_Menu"]
-visible = false
-z_index = 1
-position = Vector2(-302.662, -170.875)
-scale = Vector2(0.199759, 0.197183)
-texture = ExtResource("18_hyorc")
-
-[node name="resume" type="Sprite2D" parent="Pause_Menu"]
-z_index = 1
-position = Vector2(-420.093, -170.688)
-scale = Vector2(0.197722, 0.242568)
-texture = ExtResource("19_ahauq")
-
-[node name="resume_select" type="Sprite2D" parent="Pause_Menu"]
-visible = false
-z_index = 1
-position = Vector2(-420.093, -170.688)
-scale = Vector2(0.198083, 0.235691)
-texture = ExtResource("20_emv7t")
-
 [node name="Pause_buttons" type="Control" parent="."]
 process_mode = 3
 layout_mode = 3
@@ -409,32 +339,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("16_16tje")
-
-[node name="Fleche_haut" type="TextureButton" parent="Pause_buttons"]
-z_index = 1
-layout_mode = 0
-offset_left = -561.0
-offset_top = 146.0
-offset_right = -389.0
-offset_bottom = 246.0
-rotation = -1.5708
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("22_ebwv5")
-script = ExtResource("23_kagl8")
-
-[node name="Fleche_bas" type="TextureButton" parent="Pause_buttons"]
-z_index = 1
-layout_mode = 0
-offset_left = -449.0
-offset_top = 147.0
-offset_right = -277.0
-offset_bottom = 247.0
-rotation = 1.5708
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("22_ebwv5")
-script = ExtResource("24_ha01m")
 
 [node name="Pause" type="TextureButton" parent="Pause_buttons"]
 process_mode = 3
@@ -449,27 +353,8 @@ pivot_offset = Vector2(1022, 1022)
 texture_normal = ExtResource("23_4m8er")
 script = ExtResource("26_6gsyx")
 
-[node name="ok" type="TextureButton" parent="Pause_buttons"]
-z_index = 1
-layout_mode = 0
-offset_left = -1441.0
-offset_top = -828.0
-offset_right = 607.0
-offset_bottom = 1220.0
-scale = Vector2(0.022, 0.022)
-pivot_offset = Vector2(1022, 1022)
-texture_normal = ExtResource("24_sk3nr")
-script = ExtResource("28_g1kdx")
-
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons/Yes" method="_on_pressed"]
-[connection signal="pressed" from="Bouttons/Yes" to="Pause_Menu" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/No" to="Bouttons" method="_on_no_pressed"]
-[connection signal="pressed" from="Pause_buttons/Fleche_haut" to="Pause_Menu" method="_on_fleche_haut_pressed"]
-[connection signal="pressed" from="Pause_buttons/Fleche_haut" to="Pause_buttons/Fleche_haut" method="_on_pressed"]
-[connection signal="pressed" from="Pause_buttons/Fleche_bas" to="Pause_Menu" method="_on_fleche_bas_pressed"]
-[connection signal="pressed" from="Pause_buttons/Fleche_bas" to="Pause_buttons/Fleche_bas" method="_on_pressed"]
 [connection signal="pressed" from="Pause_buttons/Pause" to="Pause_buttons" method="_on_pause_pressed"]
 [connection signal="pressed" from="Pause_buttons/Pause" to="Pause_buttons/Pause" method="_on_pressed"]
-[connection signal="pressed" from="Pause_buttons/ok" to="Pause_Menu" method="_on_ok_pressed"]
-[connection signal="pressed" from="Pause_buttons/ok" to="Pause_buttons/ok" method="_on_pressed"]

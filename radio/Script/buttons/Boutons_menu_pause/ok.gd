@@ -1,5 +1,6 @@
 extends TextureButton
 
+@onready var click: AudioStreamPlayer2D = $"../../Click"
 
 # Taille normale du bouton
 var original_scale := Vector2.ONE * 0.022
@@ -11,8 +12,9 @@ func _ready() -> void:
 	update_cursor()
 
 func _on_pressed() -> void:
+	click.play()
 	scale = reduced_scale
-#	await get_tree().create_timer(reset_delay).timeout
+	await get_tree().create_timer(reset_delay).timeout
 	scale = original_scale
 
 func _process(_delta: float) -> void:

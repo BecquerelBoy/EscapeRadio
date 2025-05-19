@@ -1,6 +1,6 @@
 extends TextureButton
 
-@onready var click = $"../../Bouttons/Click"
+@onready var click: AudioStreamPlayer2D = $"../../Click"
 
 # Taille normale du bouton
 var original_scale := Vector2.ONE * 0.47

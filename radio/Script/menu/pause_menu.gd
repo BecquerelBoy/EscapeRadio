@@ -1,12 +1,11 @@
 extends Control
 
 @onready var pause_menu: Control = $"."
-@onready var fleche_haut = $"../Pause_buttons/Fleche_haut"
-@onready var fleche_bas = $"../Pause_buttons/Fleche_bas"
+@onready var fleche_haut: TextureButton = $"../Pause_buttons/Fleche_haut"
+@onready var fleche_bas: TextureButton = $"../Pause_buttons/Fleche_bas"
 @onready var quit_select: Sprite2D = $quit_select
 @onready var resume_select: Sprite2D = $resume_select
-@onready var click = $"../Bouttons/Click"
-@onready var bouttons: Control = $"../Bouttons"
+@onready var click: AudioStreamPlayer2D = $"../Click"
 @onready var ok = $"../Pause_buttons/ok"
 
 func _ready() -> void:
