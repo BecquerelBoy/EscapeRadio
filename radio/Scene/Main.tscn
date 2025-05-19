@@ -411,7 +411,6 @@ offset_bottom = 40.0
 script = ExtResource("16_16tje")
 
 [node name="Fleche_haut" type="TextureButton" parent="Pause_buttons"]
-process_mode = 3
 z_index = 1
 layout_mode = 0
 offset_left = -561.0
@@ -425,7 +424,6 @@ texture_normal = ExtResource("22_ebwv5")
 script = ExtResource("23_kagl8")
 
 [node name="Fleche_bas" type="TextureButton" parent="Pause_buttons"]
-process_mode = 3
 z_index = 1
 layout_mode = 0
 offset_left = -449.0

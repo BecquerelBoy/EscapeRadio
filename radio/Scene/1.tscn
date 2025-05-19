@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckudx25bk86w5"]
+[gd_scene load_steps=9 format=3 uid="uid://ckudx25bk86w5"]
 
 [ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_v2v11"]
 [ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_n5exa"]
+[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="3_ivq04"]
+[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="4_n00gb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ik26b"]
 
@@ -26,49 +28,92 @@ position = Vector2(0, 40)
 scale = Vector2(0.148562, 0.148562)
 texture = ExtResource("2_n5exa")
 
-[node name="Control" type="Control" parent="."]
+[node name="Label" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Rep1" type="Label" parent="Control"]
+[node name="Rep1" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "oui"
 label_settings = SubResource("LabelSettings_ik26b")
 
-[node name="Rep2" type="Label" parent="Control"]
+[node name="Rep2" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "non"
 label_settings = SubResource("LabelSettings_livpp")
 
-[node name="Rep3" type="Label" parent="Control"]
+[node name="Rep3" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "jamais"
 label_settings = SubResource("LabelSettings_ehv46")
 
-[node name="Rep4" type="Label" parent="Control"]
+[node name="Rep4" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Toujours"
 label_settings = SubResource("LabelSettings_37fy8")
 
-[node name="Control2" type="Control" parent="."]
+[node name="Marker" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="M1" type="Marker2D" parent="Control2"]
+[node name="M1" type="Marker2D" parent="Marker"]
 position = Vector2(-250, 38)
 
-[node name="M2" type="Marker2D" parent="Control2"]
+[node name="M2" type="Marker2D" parent="Marker"]
 position = Vector2(0, 38)
 
-[node name="M3" type="Marker2D" parent="Control2"]
+[node name="M3" type="Marker2D" parent="Marker"]
 position = Vector2(250, 38)
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+offset_left = -561.0
+offset_top = 146.0
+offset_right = -389.0
+offset_bottom = 246.0
+rotation = -1.5708
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(86, 49)
+texture_normal = ExtResource("3_ivq04")
+
+[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+offset_left = -449.0
+offset_top = 147.0
+offset_right = -277.0
+offset_bottom = 247.0
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(86, 49)
+texture_normal = ExtResource("3_ivq04")
+
+[node name="ok" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = -1441.0
+offset_top = -828.0
+offset_right = 607.0
+offset_bottom = 1220.0
+scale = Vector2(0.022, 0.022)
+pivot_offset = Vector2(1022, 1022)
+texture_normal = ExtResource("4_n00gb")
+
+[connection signal="pressed" from="Buttons/Fleche_gauche" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Buttons/Fleche_droite" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Buttons/ok" to="." method="_on_ok_pressed"]

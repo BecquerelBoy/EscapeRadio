@@ -1,12 +1,13 @@
 extends Node
 
-@onready var label_container := $Control
-@onready var markers := [$Control2/M1, $Control2/M2, $Control2/M3]
+@onready var label_container := $Label
+@onready var markers := [$Marker/M1, $Marker/M2, $Marker/M3]
 
 var labels: Array[Label] = []
 var current_index := 0
 
 func _ready():
+	# Récupérer tous les labels et les cacher
 	for child in label_container.get_children():
 		if child is Label:
 			labels.append(child)
@@ -18,24 +19,23 @@ func _ready():
 
 	update_visible_labels()
 
-func _input(event):
-	if event is InputEventKey and event.pressed:
-		match event.keycode:
-			KEY_LEFT:
-				if current_index > 0:
-					current_index -= 1
-					update_visible_labels()
-			KEY_RIGHT:
-				if current_index < labels.size() - 1:
-					current_index += 1
-					update_visible_labels()
-			KEY_SPACE:
-				var label_central = labels[current_index]
-				var dialogue_id = int(str(label_central.name))  # Le nom du label doit être un chiffre
-				if Global.dialogues.has(dialogue_id):
-					var texte = Global.dialogues[dialogue_id].get("text", "")
-					print("Dialogue ID : ", dialogue_id, " → Texte : ", texte)
-					Global.afficher_texte_par_numero(dialogue_id)
+func _on_left_pressed() -> void:
+	if current_index > 0:
+		current_index -= 1
+		update_visible_labels()
+
+func _on_right_pressed() -> void:
+	if current_index < labels.size() - 1:
+		current_index += 1
+		update_visible_labels()
+
+func _on_ok_pressed() -> void:
+	var label_central = labels[current_index]
+	var dialogue_id = int(str(label_central.name))  # Le nom du label doit être un chiffre
+	if Global.dialogues.has(dialogue_id):
+		var texte = Global.dialogues[dialogue_id].get("text", "")
+		print("Dialogue ID : ", dialogue_id, " → Texte : ", texte)
+		Global.afficher_texte_par_numero(dialogue_id)
 
 func update_visible_labels():
 	for label in labels:
