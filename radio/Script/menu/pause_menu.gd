@@ -7,7 +7,6 @@ extends Control
 @onready var resume_select: Sprite2D = $resume_select
 @onready var click: AudioStreamPlayer2D = $"../Click"
 @onready var ok = $"../Pause_buttons/ok"
-@onready var pause: TextureButton = $Pause_buttons/Pause
 
 func _ready() -> void:
 	fleche_haut.disabled = true
@@ -46,4 +45,5 @@ func _on_ok_pressed() -> void:
 	elif quit_select.visible:
 		Global.is_pausing = false
 		get_tree().paused = false
+		pause_menu.queue_free()        # 3. Supprimer la scène pause
 		get_tree().change_scene_to_file("res://Scene/main_menu.tscn")

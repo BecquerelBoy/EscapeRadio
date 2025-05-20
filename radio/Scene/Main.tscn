@@ -169,8 +169,8 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 0
 offset_left = -467.0
 offset_top = -183.0
-offset_right = 461.0
-offset_bottom = 42.0
+offset_right = 483.0
+offset_bottom = -1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Textebox/MarginContainer"]
 layout_mode = 2

@@ -9,7 +9,10 @@ var slider_modifiable = true
 var reponses_joueur: Array = []
 var dialogues := {
 	1: {
-		"text": "Alors j'ai un code a 4 chiffre je commence par quoi ?",
+		"text": "J'suis dans une pièce avec quatre grandes statues. 
+		Aphrodite, Apollon, Hadès et Zeus. Au centre, y'a dix boutons gravés en chiffres romains 
+		I à X. Ils s'allument quand je les touche. On dirait qu'on peut en presser quatre.
+		Je presse lequelle en premier ?",
 		"Rep1": 2,
 		"Rep2": 2,
 		"Rep3": 2,
@@ -70,8 +73,6 @@ func _process(_delta: float) -> void:
 	for node in get_tree().get_nodes_in_group("Bouttons"):
 		if node.has_method("set_disabled"):
 			node.set_disabled(texte_en_cours)
-	
-	print(is_pausing)
 
 func afficher_texte_par_numero(numero: int) -> void:
 	if dialogues.has(numero):

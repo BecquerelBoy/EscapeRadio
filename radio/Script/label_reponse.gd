@@ -3,25 +3,35 @@ extends Node
 @onready var label_container := $Label
 @onready var markers := [$Marker/M1, $Marker/M2, $Marker/M3]
 
+@onready var flecheG: Label = $FlecheG
+@onready var flecheD: Label = $FlecheD
+
 var labels: Array[Label] = []
 var current_index := 0
 
 func _ready():
+	reset_labels()
+	update_visible_labels()
+
+
+func reset_labels():
+	labels.clear()
+	current_index = 0
 	
-	var custom_font := preload("res://Assets/Fonts/Technology.ttf")  # chemin vers ta police
+	var custom_font := preload("res://Assets/Fonts/Technology.ttf")
 	
 	for child in label_container.get_children():
 		if child is Label:
 			child.label_settings = LabelSettings.new()
 			child.label_settings.font = custom_font
+			child.label_settings.font_size = 25
 			labels.append(child)
 			child.visible = false
-			
+	
 	if labels.size() == 0:
 		push_error("Aucun label trouvé.")
 		return
 
-	update_visible_labels()
 
 func _on_left_pressed() -> void:
 	if current_index > 0:
@@ -43,7 +53,7 @@ func _on_ok_pressed() -> void:
 
 	if current_data.has(rep_key):
 		var next_id = current_data[rep_key]
-		Global.reponses_joueur.append(rep_index)  # Enregistrer la réponse
+		Global.reponses_joueur.append(rep_index)
 		Global.afficher_texte_par_numero(next_id)
 	else:
 		push_error("Réponse non trouvée : " + rep_key + " pour le dialogue " + str(current_id))
@@ -63,9 +73,19 @@ func update_visible_labels():
 		label.visible = true
 
 		if i == 1:
-			label.label_settings.font_color = Color("#96E5DE")  # label sélectionné
+			label.label_settings.font_color = Color("#96E5DE")
 		else:
-			label.label_settings.font_color = Color("#35387A")  # autres
+			label.label_settings.font_color = Color("#35387A")
 
-			
 		label.queue_redraw()
+
+	# Gérer visibilité des flèches
+	if current_index == 0:
+		flecheD.visible = true
+		flecheG.visible = false
+	elif current_index == labels.size() - 1:
+		flecheD.visible = false
+		flecheG.visible = true
+	else:
+		flecheD.visible = true
+		flecheG.visible = true

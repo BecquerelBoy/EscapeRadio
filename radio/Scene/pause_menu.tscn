@@ -133,5 +133,8 @@ texture_normal = ExtResource("11_5rwxe")
 script = ExtResource("12_w6mpp")
 
 [connection signal="pressed" from="Pause_buttons/Fleche_haut" to="Pause_Menu" method="_on_fleche_haut_pressed"]
+[connection signal="pressed" from="Pause_buttons/Fleche_haut" to="Pause_buttons/Fleche_haut" method="_on_pressed"]
 [connection signal="pressed" from="Pause_buttons/Fleche_bas" to="Pause_Menu" method="_on_fleche_bas_pressed"]
+[connection signal="pressed" from="Pause_buttons/Fleche_bas" to="Pause_buttons/Fleche_bas" method="_on_pressed"]
 [connection signal="pressed" from="Pause_buttons/ok" to="Pause_Menu" method="_on_ok_pressed"]
+[connection signal="pressed" from="Pause_buttons/ok" to="Pause_buttons/ok" method="_on_pressed"]
