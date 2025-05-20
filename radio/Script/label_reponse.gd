@@ -6,12 +6,20 @@ extends Node
 @onready var flecheG: Label = $FlecheG
 @onready var flecheD: Label = $FlecheD
 
+@onready var fleche_gauche: TextureButton = $Buttons/Fleche_gauche
+@onready var fleche_droite: TextureButton = $Buttons/Fleche_droite
+@onready var ok: TextureButton = $Buttons/ok
+
 var labels: Array[Label] = []
 var current_index := 0
 
 func _ready():
 	reset_labels()
 	update_visible_labels()
+	fleche_gauche.pressed.connect(_on_left_pressed)
+	fleche_droite.pressed.connect(_on_right_pressed)
+	ok.pressed.connect(_on_ok_pressed)
+
 
 
 func reset_labels():
