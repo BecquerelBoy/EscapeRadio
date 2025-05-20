@@ -24,8 +24,6 @@ func on_texte_termine() -> void:
 	instantiate_scene_for_text(Global.current_text)
 
 func instantiate_scene_for_text(text_id: int) -> void:
-	if current_scene:
-		current_scene.queue_free()
 
 	if text_id <= 0:
 		return  # Pas de scène pour texte 0 ou négatif

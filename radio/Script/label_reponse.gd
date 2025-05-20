@@ -2,6 +2,7 @@ extends Node
 
 @onready var label_container := $Label
 @onready var markers := [$Marker/M1, $Marker/M2, $Marker/M3]
+@onready var label_reponse: Control = $"."
 
 @onready var flecheG: Label = $FlecheG
 @onready var flecheD: Label = $FlecheD
@@ -63,6 +64,7 @@ func _on_ok_pressed() -> void:
 		var next_id = current_data[rep_key]
 		Global.reponses_joueur.append(rep_index)
 		Global.afficher_texte_par_numero(next_id)
+		label_reponse.queue_free()
 	else:
 		push_error("Réponse non trouvée : " + rep_key + " pour le dialogue " + str(current_id))
 
