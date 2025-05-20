@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=32 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://cfbrqy0pfhntg" path="res://Assets/sound/Audio_1.wav" id="14_6dljv"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="15_cvycu"]
 [ext_resource type="Script" path="res://Script/radio/date_heure.gd" id="16_qxq5r"]
+[ext_resource type="PackedScene" uid="uid://c230622myff4x" path="res://Scene/volume.tscn" id="19_ayjky"]
 [ext_resource type="Texture2D" uid="uid://bke3w7wwvompn" path="res://Assets/buttons/IMG_2904.png" id="23_4m8er"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
 
@@ -344,6 +345,15 @@ offset_right = 346.0
 offset_bottom = -220.0
 text = "☼"
 label_settings = SubResource("LabelSettings_hqsx6")
+
+[node name="Volume" parent="." instance=ExtResource("19_ayjky")]
+z_index = 1
+offset_left = 361.0
+offset_top = 100.0
+offset_right = 509.0
+offset_bottom = 116.0
+value = 1.0
+bus_name = "Master"
 
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons/Yes" method="_on_pressed"]
