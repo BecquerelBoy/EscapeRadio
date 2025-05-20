@@ -1,27 +1,27 @@
-[gd_scene load_steps=13 format=3 uid="uid://drmc1c488r0rx"]
+[gd_scene load_steps=13 format=3 uid="uid://cmqulu6tehtvq"]
 
-[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_h4tpe"]
-[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_dmr3d"]
-[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_rw27y"]
-[ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_372ij"]
-[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="5_py047"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_l8xa1"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_0a1ba"]
-[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="8_4f5gs"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_p3yaf"]
+[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_3wobv"]
+[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_3t80r"]
+[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_lhyk2"]
+[ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_hq7ji"]
+[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="5_ds4fw"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_mg3ml"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_ompdk"]
+[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="8_tlgy5"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_ij8b4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dsitm"]
-font = ExtResource("4_372ij")
+font = ExtResource("4_hq7ji")
 font_size = 30
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vtwql"]
-font = ExtResource("4_372ij")
+font = ExtResource("4_hq7ji")
 font_size = 30
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_tjaxf"]
-font = ExtResource("4_372ij")
+[sub_resource type="LabelSettings" id="LabelSettings_e8gwf"]
+font = ExtResource("4_hq7ji")
 font_size = 20
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
@@ -34,17 +34,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h4tpe")
+script = ExtResource("1_3wobv")
 
 [node name="FondLabel" type="Sprite2D" parent="."]
 position = Vector2(0, 44)
 scale = Vector2(0.148562, 0.148562)
-texture = ExtResource("2_dmr3d")
+texture = ExtResource("2_3t80r")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("3_rw27y")
+stream = ExtResource("3_lhyk2")
 
 [node name="FlecheG" type="Label" parent="."]
 layout_mode = 0
@@ -77,8 +77,28 @@ offset_top = 27.0
 offset_right = 65.0
 offset_bottom = 50.0
 pivot_offset = Vector2(64, 11)
-text = "Reessayons"
-label_settings = SubResource("LabelSettings_tjaxf")
+text = "Gauche"
+label_settings = SubResource("LabelSettings_e8gwf")
+
+[node name="Rep2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "Tout droit"
+label_settings = SubResource("LabelSettings_e8gwf")
+
+[node name="Rep3" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "Droite"
+label_settings = SubResource("LabelSettings_e8gwf")
 
 [node name="Marker" type="Control" parent="."]
 anchors_preset = 0
@@ -111,8 +131,8 @@ offset_bottom = 246.0
 rotation = -1.5708
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("5_py047")
-script = ExtResource("6_l8xa1")
+texture_normal = ExtResource("5_ds4fw")
+script = ExtResource("6_mg3ml")
 
 [node name="Fleche_droite" type="TextureButton" parent="Buttons"]
 process_mode = 3
@@ -125,8 +145,8 @@ offset_bottom = 247.0
 rotation = 1.5708
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("5_py047")
-script = ExtResource("7_0a1ba")
+texture_normal = ExtResource("5_ds4fw")
+script = ExtResource("7_ompdk")
 
 [node name="ok" type="TextureButton" parent="Buttons"]
 z_index = 1
@@ -137,8 +157,8 @@ offset_right = 607.0
 offset_bottom = 1220.0
 scale = Vector2(0.022, 0.022)
 pivot_offset = Vector2(1022, 1022)
-texture_normal = ExtResource("8_4f5gs")
-script = ExtResource("9_p3yaf")
+texture_normal = ExtResource("8_tlgy5")
+script = ExtResource("9_ij8b4")
 
 [connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]

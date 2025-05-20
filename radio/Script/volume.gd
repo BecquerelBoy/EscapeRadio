@@ -13,6 +13,7 @@ func _ready() -> void:
 	
 	value_changed.connect(_on_value_changed)
 
+@warning_ignore("shadowed_variable_base_class")
 func _on_value_changed(value: float) -> void:
 	if bus_index != -1:
 		AudioServer.set_bus_volume_db(
