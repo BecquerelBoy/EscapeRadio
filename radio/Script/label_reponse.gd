@@ -7,12 +7,16 @@ var labels: Array[Label] = []
 var current_index := 0
 
 func _ready():
-	# Récupérer tous les labels et les cacher
+	
+	var custom_font := preload("res://Assets/Fonts/Technology.ttf")  # chemin vers ta police
+	
 	for child in label_container.get_children():
 		if child is Label:
+			child.label_settings = LabelSettings.new()
+			child.label_settings.font = custom_font
 			labels.append(child)
 			child.visible = false
-
+			
 	if labels.size() == 0:
 		push_error("Aucun label trouvé.")
 		return
@@ -59,7 +63,9 @@ func update_visible_labels():
 		label.visible = true
 
 		if i == 1:
-			label.set("theme_override_colors/font_color", Color("#96E5DE"))
-			print("Label central sélectionné : ", label.name)
+			label.label_settings.font_color = Color("#96E5DE")  # label sélectionné
 		else:
-			label.set("theme_override_colors/font_color", Color("#35387A"))
+			label.label_settings.font_color = Color("#35387A")  # autres
+
+			
+		label.queue_redraw()
