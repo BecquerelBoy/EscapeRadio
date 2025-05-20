@@ -28,7 +28,7 @@ func instantiate_scene_for_text(text_id: int) -> void:
 	if text_id <= 0:
 		return  # Pas de scène pour texte 0 ou négatif
 
-	var scene_path := "res://Scene/%d.tscn" % text_id
+	var scene_path := "res://Scene/choix/%d.tscn" % text_id
 	if ResourceLoader.exists(scene_path):
 		var packed_scene := load(scene_path)
 		current_scene = packed_scene.instantiate()
@@ -41,4 +41,3 @@ func _process(_delta: float) -> void:
 		get_tree().paused = true
 	else:
 		get_tree().paused = false
-	

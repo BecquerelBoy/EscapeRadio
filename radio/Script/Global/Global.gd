@@ -7,12 +7,11 @@ var current_text: int = 0
 var is_pausing: bool = false
 var slider_modifiable = true
 var reponses_joueur: Array = []
+var code_correct := false
+
 var dialogues := {
 	1: {
-		"text": "J'suis dans une pièce avec quatre grandes statues. 
-		Aphrodite, Apollon, Hadès et Zeus. Au centre, y'a dix boutons gravés en chiffres romains 
-		I à X. Ils s'allument quand je les touche. On dirait qu'on peut en presser quatre.
-		Je presse lequelle en premier ?",
+		"text": "J'suis dans une pièce avec quatre grandes statues. Aphrodite, Apollon, Hadès et Zeus. Au centre, y'a dix boutons gravés en chiffres romains I à X. Ils s'allument quand je les touche. On dirait qu'on peut en presser quatre. Je presse lequelle en premier ?",
 		"Rep1": 2,
 		"Rep2": 2,
 		"Rep3": 2,
@@ -48,7 +47,7 @@ var dialogues := {
 		"Rep9": 4
 	},
 	4: {
-		"text": "Tres bien et pour le dernier ?",
+		"text": "Très bien, et pour le dernier ?",
 		"Rep1": 5,
 		"Rep2": 5,
 		"Rep3": 5,
@@ -60,33 +59,43 @@ var dialogues := {
 		"Rep9": 5
 	},
 	5: {
-		"text": "C'est bon j'ai tout activé je vais voir si il se passe qelques chose",
+		"text": "C'est bon j'ai tout activé, je vais voir si il se passe quelque chose",
 		"Rep1": 6,
 	},
 	6: {
-		"text": "Lessgo c'est bon :D",
+		"text": "Lessgo c'est bon :D\nLa pièce dans laquelle je me trouve a une rose des vents au sol.\nLe nord est indiqué face à moi.\nIl y a trois portes devant moi. Je prends laquelle ?"
+	},
+	7: {
+		"text": "Ça ne marche pas.",
+		"Rep1": 1
 	}
 }
 
 func _process(_delta: float) -> void:
-	# Activer/désactiver tous les nœuds du groupe "Bouttons" selon texte_en_cours
 	for node in get_tree().get_nodes_in_group("Bouttons"):
 		if node.has_method("set_disabled"):
 			node.set_disabled(texte_en_cours)
 
 func afficher_texte_par_numero(numero: int) -> void:
 	if dialogues.has(numero):
-		# Réinitialise si on revient au début
+
+		# Si on revient au tout début
 		if numero == 1:
 			reponses_joueur.clear()
+			code_correct = false
 
-		# Si on s’apprête à afficher le texte 5, on vérifie la combinaison
+		# Texte 5 toujours affiché après les 4 entrées
 		if numero == 5:
-			if reponses_joueur == [8, 4, 7, 6]:
-				numero = 6
-			else:
-				numero = 1
-			reponses_joueur.clear()
+			code_correct = reponses_joueur == [8, 4, 7, 6]
+			reponses_joueur.clear()  # On réinitialise les réponses
+
+		# Si on vient de valider le texte 5 par bouton
+		if numero == 6 or numero == 7:
+			current_text = numero
+		elif numero == 5 and current_text == 4:
+			current_text = 5
+		else:
+			current_text = numero
 
 		var textebox = get_node("/root/Main/Textebox")
 		if textebox == null:
@@ -94,6 +103,13 @@ func afficher_texte_par_numero(numero: int) -> void:
 			return
 
 		var data = dialogues[numero]
+
+		# Redirection dynamique pour texte 5 vers 6 ou 7
+		if numero == 5:
+			if code_correct:
+				data["Rep1"] = 6
+			else:
+				data["Rep1"] = 7
+
 		var text = data.get("text", "")
 		textebox.afficher(text, numero)
-		current_text = numero

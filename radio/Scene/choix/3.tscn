@@ -1,42 +1,42 @@
-[gd_scene load_steps=16 format=3 uid="uid://dih3rfy43oe7v"]
+[gd_scene load_steps=16 format=3 uid="uid://c0pt7ohpwcc0e"]
 
-[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_176ng"]
-[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_qa8sg"]
-[ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_i8yr1"]
-[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_kcwv1"]
-[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="3_xiluy"]
-[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="4_twenu"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="5_0mbwo"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="6_b40pb"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="8_msrrg"]
+[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_pnl00"]
+[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_hvhk6"]
+[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_0renn"]
+[ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_amxoh"]
+[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="5_4kbdl"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_hetln"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_wu6vd"]
+[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="8_arh5s"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_cq4ap"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_oat5k"]
-font = ExtResource("3_i8yr1")
+[sub_resource type="LabelSettings" id="LabelSettings_kn531"]
+font = ExtResource("4_amxoh")
 font_size = 30
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_n6cxk"]
-font = ExtResource("3_i8yr1")
+[sub_resource type="LabelSettings" id="LabelSettings_dtfpl"]
+font = ExtResource("4_amxoh")
 font_size = 30
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_mdds6"]
-font = ExtResource("3_i8yr1")
+[sub_resource type="LabelSettings" id="LabelSettings_1ph4q"]
+font = ExtResource("4_amxoh")
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_pulf4"]
-font = ExtResource("3_i8yr1")
+[sub_resource type="LabelSettings" id="LabelSettings_6yy3s"]
+font = ExtResource("4_amxoh")
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_h8ku3"]
-font = ExtResource("3_i8yr1")
+[sub_resource type="LabelSettings" id="LabelSettings_qo3ml"]
+font = ExtResource("4_amxoh")
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_gn2uy"]
-font = ExtResource("3_i8yr1")
+[sub_resource type="LabelSettings" id="LabelSettings_hvrio"]
+font = ExtResource("4_amxoh")
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
@@ -49,17 +49,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_176ng")
+script = ExtResource("1_pnl00")
 
 [node name="FondLabel" type="Sprite2D" parent="."]
 position = Vector2(0, 44)
 scale = Vector2(0.148562, 0.148562)
-texture = ExtResource("2_qa8sg")
+texture = ExtResource("2_hvhk6")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("3_kcwv1")
+stream = ExtResource("3_0renn")
 
 [node name="FlecheG" type="Label" parent="."]
 layout_mode = 0
@@ -68,7 +68,7 @@ offset_top = 15.0
 offset_right = -320.0
 offset_bottom = 56.0
 text = "<"
-label_settings = SubResource("LabelSettings_oat5k")
+label_settings = SubResource("LabelSettings_kn531")
 
 [node name="FlecheD" type="Label" parent="."]
 layout_mode = 0
@@ -77,7 +77,7 @@ offset_top = 15.0
 offset_right = 400.0
 offset_bottom = 56.0
 text = ">"
-label_settings = SubResource("LabelSettings_n6cxk")
+label_settings = SubResource("LabelSettings_dtfpl")
 
 [node name="Label" type="Control" parent="."]
 layout_mode = 3
@@ -90,63 +90,63 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "I"
-label_settings = SubResource("LabelSettings_mdds6")
+label_settings = SubResource("LabelSettings_1ph4q")
 
 [node name="Rep2" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "II"
-label_settings = SubResource("LabelSettings_pulf4")
+label_settings = SubResource("LabelSettings_6yy3s")
 
 [node name="Rep3" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "III"
-label_settings = SubResource("LabelSettings_h8ku3")
+label_settings = SubResource("LabelSettings_qo3ml")
 
 [node name="Rep4" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "IV"
-label_settings = SubResource("LabelSettings_gn2uy")
+label_settings = SubResource("LabelSettings_hvrio")
 
 [node name="Rep5" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "V"
-label_settings = SubResource("LabelSettings_mdds6")
+label_settings = SubResource("LabelSettings_1ph4q")
 
 [node name="Rep6" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "VI"
-label_settings = SubResource("LabelSettings_pulf4")
+label_settings = SubResource("LabelSettings_6yy3s")
 
 [node name="Rep7" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "VII"
-label_settings = SubResource("LabelSettings_h8ku3")
+label_settings = SubResource("LabelSettings_qo3ml")
 
 [node name="Rep8" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "VIII"
-label_settings = SubResource("LabelSettings_gn2uy")
+label_settings = SubResource("LabelSettings_hvrio")
 
 [node name="Rep9" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "IX"
-label_settings = SubResource("LabelSettings_mdds6")
+label_settings = SubResource("LabelSettings_1ph4q")
 
 [node name="Marker" type="Control" parent="."]
 anchors_preset = 0
@@ -179,8 +179,8 @@ offset_bottom = 246.0
 rotation = -1.5708
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("3_xiluy")
-script = ExtResource("5_0mbwo")
+texture_normal = ExtResource("5_4kbdl")
+script = ExtResource("6_hetln")
 
 [node name="Fleche_droite" type="TextureButton" parent="Buttons"]
 process_mode = 3
@@ -193,8 +193,8 @@ offset_bottom = 247.0
 rotation = 1.5708
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("3_xiluy")
-script = ExtResource("6_b40pb")
+texture_normal = ExtResource("5_4kbdl")
+script = ExtResource("7_wu6vd")
 
 [node name="ok" type="TextureButton" parent="Buttons"]
 z_index = 1
@@ -205,8 +205,8 @@ offset_right = 607.0
 offset_bottom = 1220.0
 scale = Vector2(0.022, 0.022)
 pivot_offset = Vector2(1022, 1022)
-texture_normal = ExtResource("4_twenu")
-script = ExtResource("8_msrrg")
+texture_normal = ExtResource("8_arh5s")
+script = ExtResource("9_cq4ap")
 
 [connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]
