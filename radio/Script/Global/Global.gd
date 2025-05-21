@@ -116,11 +116,5 @@ func afficher_texte_par_numero(numero: int) -> void:
 			else:
 				data["Rep1"] = 6
 
-		# Gestion des choix de direction après texte 6
-		if numero == 6:
-			data["Rep1"] = 9  # gauche → erreur
-			data["Rep2"] = 8  # tout droit → correct
-			data["Rep3"] = 9  # droite → erreur
-
 		var text = data.get("text", "")
 		textebox.afficher(text, numero)
