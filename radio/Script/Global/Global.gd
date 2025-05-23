@@ -11,15 +11,17 @@ var code_correct := false
 
 var dialogues := {
 	1: {
-		"text": "J'suis dans une pièce avec quatre grandes statues. Aphrodite, Apollon, Hadès et Zeus. Au centre, y'a dix boutons gravés en chiffres romains I à X. Ils s'allument quand je les touche. On dirait qu'on peut en presser quatre. Je presse lequel en premier ?",
+		"text": "Je suis dans une pièce avec quatre grandes statues. 
+		Aphrodite, Apollon, Hadès et Zeus.
+		Au centre, y'a dix boutons gravés en chiffres romains I à X. Ils s'allument quand je les touche. On dirait qu'on peut en presser quatre. Je presse lequel en premier ?",
 		"Rep1": 2, "Rep2": 2, "Rep3": 2, "Rep4": 2, "Rep5": 2, "Rep6": 2, "Rep7": 2, "Rep8": 2, "Rep9": 2
 	},
 	2: {
-		"text": "Ok et maintenant ?",
+		"text": "Ok je met quel nombre pour le deuxieme ?",
 		"Rep1": 3, "Rep2": 3, "Rep3": 3, "Rep4": 3, "Rep5": 3, "Rep6": 3, "Rep7": 3, "Rep8": 3, "Rep9": 3
 	},
 	3: {
-		"text": "C'est fait, maintenant quoi ?",
+		"text": "C'est fait, maintenant quoi pour le troisieme ?",
 		"Rep1": 4, "Rep2": 4, "Rep3": 4, "Rep4": 4, "Rep5": 4, "Rep6": 4, "Rep7": 4, "Rep8": 4, "Rep9": 4
 	},
 	4: {
@@ -35,8 +37,11 @@ var dialogues := {
 		"Rep1": 1
 	},
 	7: {
-		"text": "Tu as pris la mauvaise porte. Tu te retrouves à nouveau dans la salle de la rose des vents.",
-		"Rep1": 8
+		"text": "Je comprend pas je viens de passer par la porte, et la je suis de retour dans la salle de la rose des vents.
+		Qu'est-ce que je fais, je prend quelle porte ?",
+		"Rep1": 7,    # mauvaise
+		"Rep2": 9,    # correcte
+		"Rep3": 7     # mauvaise
 	},
 	8: {
 		"text": "Lessgo c'est bon :D\nLa pièce dans laquelle je me trouve a une rose des vents au sol.\nLe nord est indiqué face à moi.\nIl y a trois portes devant moi.\nJe prends laquelle ?",

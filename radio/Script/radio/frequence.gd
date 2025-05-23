@@ -25,7 +25,7 @@ func _on_slider_value_changed(value: float) -> void:
 func _process(delta: float) -> void:
 	Global.Frequence = slider.value
 
-	if abs(Global.Frequence - 99.9) < 0.05:
+	if abs(Global.Frequence - 1.6) < 0.05:
 		if not tracking and not Global.ok:
 			tracking = true
 			timer = 0.0
@@ -34,8 +34,6 @@ func _process(delta: float) -> void:
 			if timer >= 1.0:
 				slider.editable = false
 				Global.slider_modifiable = false
-				if not audio_1.playing:
-					audio_1.play()
 				Global.ok = true  # Verrou activé ici
 	else:
 		tracking = false

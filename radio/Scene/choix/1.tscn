@@ -21,22 +21,18 @@ font_size = 30
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_fcfh3"]
-font = ExtResource("4_16pbr")
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_5f0wl"]
-font = ExtResource("4_16pbr")
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_m480w"]
-font = ExtResource("4_16pbr")
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_5fhov"]
-font = ExtResource("4_16pbr")
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
@@ -156,13 +152,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="M1" type="Marker2D" parent="Marker"]
-position = Vector2(-250, 38)
+position = Vector2(-250, 30)
 
 [node name="M2" type="Marker2D" parent="Marker"]
-position = Vector2(0, 38)
+position = Vector2(-3, 28)
 
 [node name="M3" type="Marker2D" parent="Marker"]
-position = Vector2(250, 38)
+position = Vector2(250, 30)
 
 [node name="Buttons" type="Control" parent="."]
 anchors_preset = 0

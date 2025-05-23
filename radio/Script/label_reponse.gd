@@ -21,26 +21,19 @@ func _ready():
 	fleche_droite.pressed.connect(_on_right_pressed)
 	ok.pressed.connect(_on_ok_pressed)
 
-
-
 func reset_labels():
 	labels.clear()
 	current_index = 0
-	
-	var custom_font := preload("res://Assets/Fonts/Technology.ttf")
-	
+
 	for child in label_container.get_children():
 		if child is Label:
 			child.label_settings = LabelSettings.new()
-			child.label_settings.font = custom_font
-			child.label_settings.font_size = 25
 			labels.append(child)
 			child.visible = false
-	
+
 	if labels.size() == 0:
 		push_error("Aucun label trouvé.")
 		return
-
 
 func _on_left_pressed() -> void:
 	if current_index > 0:
@@ -67,7 +60,6 @@ func _on_ok_pressed() -> void:
 		label_reponse.queue_free()
 	else:
 		push_error("Réponse non trouvée : " + rep_key + " pour le dialogue " + str(current_id))
-
 
 func update_visible_labels():
 	for label in labels:
