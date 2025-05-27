@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://c0pt7ohpwcc0e"]
 
-[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_pnl00"]
+[ext_resource type="Script" uid="uid://bnvewj3i5c1o6" path="res://Script/label_reponse.gd" id="1_pnl00"]
 [ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_hvhk6"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_0renn"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_amxoh"]
 [ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="5_4kbdl"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_hetln"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_wu6vd"]
+[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_hetln"]
+[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_wu6vd"]
 [ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="8_arh5s"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_cq4ap"]
+[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_cq4ap"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kn531"]
 font = ExtResource("4_amxoh")

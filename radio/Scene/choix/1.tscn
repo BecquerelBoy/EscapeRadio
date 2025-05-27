@@ -1,14 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckudx25bk86w5"]
+[gd_scene load_steps=13 format=3 uid="uid://ckudx25bk86w5"]
 
-[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_ne3m5"]
+[ext_resource type="Script" uid="uid://bnvewj3i5c1o6" path="res://Script/label_reponse.gd" id="1_ne3m5"]
 [ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_lf4yp"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_c01ak"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_16pbr"]
 [ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="5_s5bun"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_l2jpv"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_3m53r"]
+[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_l2jpv"]
+[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_3m53r"]
 [ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="8_dub3r"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_jfqah"]
+[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_jfqah"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kjsxk"]
 font = ExtResource("4_16pbr")
@@ -21,18 +21,6 @@ font_size = 30
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_fcfh3"]
-font_size = 25
-font_color = Color(0.207843, 0.219608, 0.478431, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_5f0wl"]
-font_size = 25
-font_color = Color(0.207843, 0.219608, 0.478431, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_m480w"]
-font_size = 25
-font_color = Color(0.207843, 0.219608, 0.478431, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_5fhov"]
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
@@ -85,65 +73,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 44.0
 offset_bottom = 26.0
-text = "I"
-label_settings = SubResource("LabelSettings_fcfh3")
-
-[node name="Rep2" type="Label" parent="Label"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "II"
-label_settings = SubResource("LabelSettings_5f0wl")
-
-[node name="Rep3" type="Label" parent="Label"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "III"
-label_settings = SubResource("LabelSettings_m480w")
-
-[node name="Rep4" type="Label" parent="Label"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "IV"
-label_settings = SubResource("LabelSettings_5fhov")
-
-[node name="Rep5" type="Label" parent="Label"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "V"
-label_settings = SubResource("LabelSettings_fcfh3")
-
-[node name="Rep6" type="Label" parent="Label"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "VI"
-label_settings = SubResource("LabelSettings_5f0wl")
-
-[node name="Rep7" type="Label" parent="Label"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "VII"
-label_settings = SubResource("LabelSettings_m480w")
-
-[node name="Rep8" type="Label" parent="Label"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "VIII"
-label_settings = SubResource("LabelSettings_5fhov")
-
-[node name="Rep9" type="Label" parent="Label"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = -28.0
-offset_right = 42.0
-offset_bottom = -2.0
-text = "IX"
+text = "Décris moi ce que tu vois."
 label_settings = SubResource("LabelSettings_fcfh3")
 
 [node name="Marker" type="Control" parent="."]

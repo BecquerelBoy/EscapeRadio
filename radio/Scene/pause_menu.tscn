@@ -1,17 +1,17 @@
 [gd_scene load_steps=14 format=3 uid="uid://gxvohpa4f114"]
 
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="1_mcuat"]
-[ext_resource type="Script" path="res://Script/menu/pause_menu.gd" id="2_py5ll"]
+[ext_resource type="Script" uid="uid://wxdxka1redyh" path="res://Script/menu/pause_menu.gd" id="2_py5ll"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_fq7b7"]
 [ext_resource type="Texture2D" uid="uid://doh7fkbihdnhv" path="res://Assets/buttons/quit selectionné.png" id="4_my743"]
 [ext_resource type="Texture2D" uid="uid://b1sw7nt1sossj" path="res://Assets/buttons/quit.png" id="5_uagcs"]
 [ext_resource type="Texture2D" uid="uid://dnuws1r5l0jyk" path="res://Assets/buttons/reume.png" id="6_sguqs"]
 [ext_resource type="Texture2D" uid="uid://n75m6oa6lrgw" path="res://Assets/buttons/reume selectionné.png" id="7_relgg"]
 [ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="8_3orc0"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="9_63xou"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="10_8b7vq"]
+[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="9_63xou"]
+[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="10_8b7vq"]
 [ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="11_5rwxe"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="12_w6mpp"]
+[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="12_w6mpp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4k84c"]
 font = ExtResource("3_fq7b7")

@@ -11,10 +11,8 @@ var code_correct := false
 
 var dialogues := {
 	1: {
-		"text": "Je suis dans une pièce avec quatre grandes statues. 
-		Aphrodite, Apollon, Hadès et Zeus.
-		Au centre, y'a dix boutons gravés en chiffres romains I à X. Ils s'allument quand je les touche. On dirait qu'on peut en presser quatre. Je presse lequel en premier ?",
-		"Rep1": 2, "Rep2": 2, "Rep3": 2, "Rep4": 2, "Rep5": 2, "Rep6": 2, "Rep7": 2, "Rep8": 2, "Rep9": 2
+		"text": "Allô ? Tu m'entends ? ... Ah ! Enfin. J'ai cru que j'étais seul ici.\n J'suis descendu il y a un petit moment déja. Je vois enfin le temple.",
+		"Rep1": 2
 	},
 	2: {
 		"text": "Ok je met quel nombre pour le deuxieme ?",
