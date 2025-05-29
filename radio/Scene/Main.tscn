@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=41 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bgg7ddnxr83j" path="res://Assets/Djallel/Curseur.png" id="4_p3bkf"]
 [ext_resource type="Texture2D" uid="uid://cfi32dvdd8yno" path="res://Assets/Djallel/Juste l'ecran.png" id="4_yhjfg"]
 [ext_resource type="Script" path="res://Script/radio/textebox.gd" id="6_rp72t"]
+[ext_resource type="Shader" path="res://Script/Shader/Crt.gdshader" id="7_iep7b"]
 [ext_resource type="Script" path="res://Script/buttons/bouttons.gd" id="7_mao8n"]
 [ext_resource type="Texture2D" uid="uid://dwol7p4n45qe5" path="res://Assets/buttons/464rll7x.bmp" id="8_qlvkl"]
 [ext_resource type="Texture2D" uid="uid://c2xasu0844vmy" path="res://Assets/buttons/ed2p1csr.bmp" id="9_sicws"]
@@ -27,6 +28,12 @@
 font_color = Color(0.0980392, 0.133333, 0.168627, 1)
 
 [sub_resource type="Theme" id="Theme_ptuc3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_akys4"]
+shader = ExtResource("7_iep7b")
+
+[sub_resource type="QuadMesh" id="QuadMesh_hhgdo"]
+size = Vector2(962.08, 554.695)
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8wql"]
 font = ExtResource("3_0025t")
@@ -120,12 +127,6 @@ offset_bottom = 95.0
 text = "Hz"
 label_settings = SubResource("LabelSettings_yn4y2")
 
-[node name="Img" type="Sprite2D" parent="Radio"]
-self_modulate = Color(1.2, 1.2, 1.2, 1)
-position = Vector2(2.33329, -1)
-scale = Vector2(0.64132, 0.638889)
-texture = ExtResource("4_yhjfg")
-
 [node name="HSlider" type="HSlider" parent="Radio"]
 offset_left = 550.0
 offset_top = 86.0
@@ -140,6 +141,21 @@ max_value = 99.9
 step = 0.1
 ticks_on_borders = true
 script = ExtResource("3_ro4ie")
+
+[node name="CanvasLayer" type="Control" parent="Radio"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Img" type="Sprite2D" parent="Radio/CanvasLayer"]
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(2.33329, -1)
+scale = Vector2(0.64132, 0.638889)
+texture = ExtResource("4_yhjfg")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Radio/CanvasLayer"]
+material = SubResource("ShaderMaterial_akys4")
+position = Vector2(6, -2)
+mesh = SubResource("QuadMesh_hhgdo")
 
 [node name="Frequence" type="Node" parent="."]
 script = ExtResource("3_rggcm")
