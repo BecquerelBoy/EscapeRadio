@@ -58,6 +58,7 @@ position = Vector2(305, -136)
 stream = ExtResource("3_swrc6")
 
 [node name="FlecheG" type="Label" parent="."]
+layout_mode = 0
 offset_left = -378.0
 offset_top = -260.0
 offset_right = -344.0
@@ -67,6 +68,7 @@ text = "<"
 label_settings = SubResource("LabelSettings_1447f")
 
 [node name="FlecheD" type="Label" parent="."]
+layout_mode = 0
 offset_left = -378.0
 offset_top = 240.0
 offset_right = -344.0
@@ -74,6 +76,72 @@ offset_bottom = 307.0
 rotation = 1.5708
 text = ">"
 label_settings = SubResource("LabelSettings_dc127")
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+layout_mode = 0
+offset_left = -575.0
+offset_top = -298.0
+offset_right = -471.0
+offset_bottom = -106.0
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(54.37, 94.35)
+texture_normal = ExtResource("5_egfgi")
+script = ExtResource("5_qnwmt")
+
+[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+layout_mode = 0
+offset_left = -572.0
+offset_top = -86.0
+offset_right = -468.0
+offset_bottom = 106.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(53.57, 97.755)
+texture_normal = ExtResource("5_egfgi")
+script = ExtResource("6_tkjuk")
+
+[node name="ok" type="TextureButton" parent="Buttons"]
+z_index = 1
+layout_mode = 0
+offset_left = -572.0
+offset_top = -148.0
+offset_right = -469.0
+offset_bottom = -45.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(51.5, 52.185)
+texture_normal = ExtResource("8_64jpx")
+script = ExtResource("8_lcjjh")
+
+[node name="Marker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="M1" type="Marker2D" parent="Marker"]
+position = Vector2(-428, -200)
+
+[node name="M2" type="Marker2D" parent="Marker"]
+position = Vector2(-428, -100)
+
+[node name="M3" type="Marker2D" parent="Marker"]
+position = Vector2(-428, 0)
+
+[node name="M4" type="Marker2D" parent="Marker"]
+position = Vector2(-428, 100)
+
+[node name="M5" type="Marker2D" parent="Marker"]
+position = Vector2(-425, 200)
 
 [node name="Label" type="Control" parent="."]
 layout_mode = 3
@@ -145,72 +213,6 @@ offset_right = 42.0
 offset_bottom = -2.0
 text = "IX"
 label_settings = SubResource("LabelSettings_u734q")
-
-[node name="Buttons" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
-process_mode = 3
-z_index = 1
-layout_mode = 0
-offset_left = -575.0
-offset_top = -298.0
-offset_right = -471.0
-offset_bottom = -106.0
-rotation = 3.14159
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(54.37, 94.35)
-texture_normal = ExtResource("5_egfgi")
-script = ExtResource("5_qnwmt")
-
-[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
-process_mode = 3
-z_index = 1
-layout_mode = 0
-offset_left = -572.0
-offset_top = -86.0
-offset_right = -468.0
-offset_bottom = 106.0
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(53.57, 97.755)
-texture_normal = ExtResource("5_egfgi")
-script = ExtResource("6_tkjuk")
-
-[node name="ok" type="TextureButton" parent="Buttons"]
-z_index = 1
-layout_mode = 0
-offset_left = -572.0
-offset_top = -148.0
-offset_right = -469.0
-offset_bottom = -45.0
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(51.5, 52.185)
-texture_normal = ExtResource("8_64jpx")
-script = ExtResource("8_lcjjh")
-
-[node name="Marker" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="M1" type="Marker2D" parent="Marker"]
-position = Vector2(-428, -200)
-
-[node name="M2" type="Marker2D" parent="Marker"]
-position = Vector2(-428, -100)
-
-[node name="M3" type="Marker2D" parent="Marker"]
-position = Vector2(-428, 0)
-
-[node name="M4" type="Marker2D" parent="Marker"]
-position = Vector2(-428, 100)
-
-[node name="M5" type="Marker2D" parent="Marker"]
-position = Vector2(-425, 200)
 
 [connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]

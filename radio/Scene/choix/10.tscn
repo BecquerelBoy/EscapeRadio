@@ -1,23 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://vmtr3i5mycpe"]
+[gd_scene load_steps=9 format=3 uid="uid://vmtr3i5mycpe"]
 
 [ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_ofeno"]
 [ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_raexj"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_dmsym"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_hyarm"]
-[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="5_xo4ol"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_sr0jg"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_dqns5"]
-[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="8_eu4il"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_6dw1e"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_dsitm"]
+[sub_resource type="LabelSettings" id="LabelSettings_nj3sy"]
 font = ExtResource("4_hyarm")
-font_size = 30
+font_size = 50
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_vtwql"]
+[sub_resource type="LabelSettings" id="LabelSettings_5iq28"]
 font = ExtResource("4_hyarm")
-font_size = 30
+font_size = 50
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aj28t"]
+font = ExtResource("4_hyarm")
+font_size = 20
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_e8gwf"]
@@ -37,8 +37,8 @@ grow_vertical = 2
 script = ExtResource("1_ofeno")
 
 [node name="FondLabel" type="Sprite2D" parent="."]
-position = Vector2(0, 44)
-scale = Vector2(0.148562, 0.148562)
+position = Vector2(-371.643, 4)
+scale = Vector2(0.122644, 0.148562)
 texture = ExtResource("2_raexj")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
@@ -47,22 +47,79 @@ position = Vector2(305, -136)
 stream = ExtResource("3_dmsym")
 
 [node name="FlecheG" type="Label" parent="."]
-layout_mode = 0
-offset_left = -360.0
-offset_top = 15.0
-offset_right = -320.0
-offset_bottom = 56.0
+offset_left = -378.0
+offset_top = -260.0
+offset_right = -344.0
+offset_bottom = -193.0
+rotation = 1.5708
 text = "<"
-label_settings = SubResource("LabelSettings_dsitm")
+label_settings = SubResource("LabelSettings_nj3sy")
 
 [node name="FlecheD" type="Label" parent="."]
-layout_mode = 0
-offset_left = 360.0
-offset_top = 15.0
-offset_right = 400.0
-offset_bottom = 56.0
+offset_left = -378.0
+offset_top = 240.0
+offset_right = -344.0
+offset_bottom = 307.0
+rotation = 1.5708
 text = ">"
-label_settings = SubResource("LabelSettings_vtwql")
+label_settings = SubResource("LabelSettings_5iq28")
+
+[node name="Marker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="M1" type="Marker2D" parent="Marker"]
+position = Vector2(-428, -200)
+
+[node name="M2" type="Marker2D" parent="Marker"]
+position = Vector2(-428, -100)
+
+[node name="M3" type="Marker2D" parent="Marker"]
+position = Vector2(-433, -8)
+
+[node name="M4" type="Marker2D" parent="Marker"]
+position = Vector2(-428, 100)
+
+[node name="M5" type="Marker2D" parent="Marker"]
+position = Vector2(-425, 200)
+
+[node name="Label2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Rep1" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "Gauche"
+label_settings = SubResource("LabelSettings_aj28t")
+
+[node name="Rep2" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "Tout droit"
+label_settings = SubResource("LabelSettings_aj28t")
+
+[node name="Rep3" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "Droite"
+label_settings = SubResource("LabelSettings_aj28t")
 
 [node name="Label" type="Control" parent="."]
 layout_mode = 3
@@ -99,67 +156,3 @@ offset_bottom = 50.0
 pivot_offset = Vector2(64, 11)
 text = "Droite"
 label_settings = SubResource("LabelSettings_e8gwf")
-
-[node name="Marker" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="M1" type="Marker2D" parent="Marker"]
-position = Vector2(-250, 38)
-
-[node name="M2" type="Marker2D" parent="Marker"]
-position = Vector2(0, 38)
-
-[node name="M3" type="Marker2D" parent="Marker"]
-position = Vector2(250, 38)
-
-[node name="Buttons" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
-process_mode = 3
-z_index = 1
-layout_mode = 0
-offset_left = -561.0
-offset_top = 146.0
-offset_right = -389.0
-offset_bottom = 246.0
-rotation = -1.5708
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("5_xo4ol")
-script = ExtResource("6_sr0jg")
-
-[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
-process_mode = 3
-z_index = 1
-layout_mode = 0
-offset_left = -449.0
-offset_top = 147.0
-offset_right = -277.0
-offset_bottom = 247.0
-rotation = 1.5708
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("5_xo4ol")
-script = ExtResource("7_dqns5")
-
-[node name="ok" type="TextureButton" parent="Buttons"]
-z_index = 1
-layout_mode = 0
-offset_left = -1441.0
-offset_top = -828.0
-offset_right = 607.0
-offset_bottom = 1220.0
-scale = Vector2(0.022, 0.022)
-pivot_offset = Vector2(1022, 1022)
-texture_normal = ExtResource("8_eu4il")
-script = ExtResource("9_6dw1e")
-
-[connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
-[connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]
-[connection signal="pressed" from="Buttons/ok" to="Buttons/ok" method="_on_pressed"]

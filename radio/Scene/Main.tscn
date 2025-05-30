@@ -454,15 +454,13 @@ visible = false
 [node name="FondLabel" parent="label_reponse" index="0"]
 position = Vector2(-380, 6)
 
-[node name="FlecheG" parent="label_reponse" index="3"]
-layout_mode = 0
+[node name="FlecheG" parent="label_reponse" index="2"]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 40.0
 offset_bottom = 41.0
 
-[node name="FlecheD" parent="label_reponse" index="4"]
-layout_mode = 0
+[node name="FlecheD" parent="label_reponse" index="3"]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 40.0

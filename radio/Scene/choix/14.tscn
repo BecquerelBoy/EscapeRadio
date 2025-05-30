@@ -31,12 +31,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3wobv")
 
-[node name="Label" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="FondLabel" type="Sprite2D" parent="."]
 position = Vector2(-371.643, 4)
 scale = Vector2(0.122644, 0.148562)
@@ -48,6 +42,7 @@ position = Vector2(305, -136)
 stream = ExtResource("3_lhyk2")
 
 [node name="FlecheG" type="Label" parent="."]
+layout_mode = 0
 offset_left = -378.0
 offset_top = -260.0
 offset_right = -344.0
@@ -57,6 +52,7 @@ text = "<"
 label_settings = SubResource("LabelSettings_nhi5n")
 
 [node name="FlecheD" type="Label" parent="."]
+layout_mode = 0
 offset_left = -378.0
 offset_top = 240.0
 offset_right = -344.0
@@ -130,6 +126,12 @@ position = Vector2(-428, 100)
 
 [node name="M5" type="Marker2D" parent="Marker"]
 position = Vector2(-425, 200)
+
+[node name="Label" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]

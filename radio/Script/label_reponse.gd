@@ -77,20 +77,27 @@ func update_visible_labels():
 		label.visible = false
 
 	for i in range(5):
-		var label_index = current_index + i - 2  # Centré sur index 2 (M3)
+		var label_index = current_index + i - 2
 		if label_index < 0 or label_index >= labels.size():
 			continue
 
 		var label = labels[label_index]
+		if not is_instance_valid(label):
+			continue
+
+		if i >= markers.size() or not is_instance_valid(markers[i]):
+			continue
+
 		label.global_position = markers[i].global_position
 		label.visible = true
 
 		if i == 2:
-			label.label_settings.font_color = Color("#96E5DE")  # Sélection
+			label.label_settings.font_color = Color("#96E5DE")
 		else:
 			label.label_settings.font_color = Color("#35387A")
 
 		label.queue_redraw()
+
 
 	# visibilité des fleche : 
 	
