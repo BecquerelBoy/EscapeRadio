@@ -1,4 +1,4 @@
-extends HSlider
+extends VSlider
 
 @export var bus_name: String
 

@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" path="res://Script/volume.gd" id="1_7pfhg"]
 
-[node name="Volume" type="HSlider"]
+[node name="Volume" type="VSlider"]
+offset_top = -179.0
 offset_right = 225.0
 offset_bottom = 16.0
 max_value = 1.0

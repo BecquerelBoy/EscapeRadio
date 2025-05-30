@@ -2,37 +2,37 @@
 
 [ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_mme17"]
 [ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_4kpj5"]
-[ext_resource type="Texture2D" uid="uid://biymg5nonu66r" path="res://Assets/buttons/IMG_2903.png" id="3_pvx2o"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_qsy7c"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_swrc6"]
-[ext_resource type="Texture2D" uid="uid://rft3m16046e0" path="res://Assets/buttons/IMG_2905.png" id="4_dxvee"]
+[ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_egfgi"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="5_qnwmt"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="6_tkjuk"]
+[ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="8_64jpx"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="8_lcjjh"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_dsitm"]
+[sub_resource type="LabelSettings" id="LabelSettings_1447f"]
 font = ExtResource("3_qsy7c")
-font_size = 30
+font_size = 50
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_vtwql"]
+[sub_resource type="LabelSettings" id="LabelSettings_dc127"]
 font = ExtResource("3_qsy7c")
-font_size = 30
+font_size = 50
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_tjaxf"]
+[sub_resource type="LabelSettings" id="LabelSettings_u734q"]
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_3p1ye"]
+[sub_resource type="LabelSettings" id="LabelSettings_plhwh"]
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_nmcds"]
+[sub_resource type="LabelSettings" id="LabelSettings_ynmjd"]
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_6ncqs"]
+[sub_resource type="LabelSettings" id="LabelSettings_ytqmr"]
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
@@ -48,8 +48,8 @@ grow_vertical = 2
 script = ExtResource("1_mme17")
 
 [node name="FondLabel" type="Sprite2D" parent="."]
-position = Vector2(0, 44)
-scale = Vector2(0.148562, 0.148562)
+position = Vector2(-410, 4)
+scale = Vector2(0.0560519, 0.148562)
 texture = ExtResource("2_4kpj5")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
@@ -58,22 +58,22 @@ position = Vector2(305, -136)
 stream = ExtResource("3_swrc6")
 
 [node name="FlecheG" type="Label" parent="."]
-layout_mode = 0
-offset_left = -360.0
-offset_top = 15.0
-offset_right = -320.0
-offset_bottom = 56.0
+offset_left = -378.0
+offset_top = -260.0
+offset_right = -344.0
+offset_bottom = -193.0
+rotation = 1.5708
 text = "<"
-label_settings = SubResource("LabelSettings_dsitm")
+label_settings = SubResource("LabelSettings_1447f")
 
 [node name="FlecheD" type="Label" parent="."]
-layout_mode = 0
-offset_left = 360.0
-offset_top = 15.0
-offset_right = 400.0
-offset_bottom = 56.0
+offset_left = -378.0
+offset_top = 240.0
+offset_right = -344.0
+offset_bottom = 307.0
+rotation = 1.5708
 text = ">"
-label_settings = SubResource("LabelSettings_vtwql")
+label_settings = SubResource("LabelSettings_dc127")
 
 [node name="Label" type="Control" parent="."]
 layout_mode = 3
@@ -83,80 +83,68 @@ offset_bottom = 40.0
 
 [node name="Rep1" type="Label" parent="Label"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 44.0
+offset_bottom = 26.0
 text = "I"
-label_settings = SubResource("LabelSettings_tjaxf")
+label_settings = SubResource("LabelSettings_u734q")
 
 [node name="Rep2" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "II"
-label_settings = SubResource("LabelSettings_3p1ye")
+label_settings = SubResource("LabelSettings_plhwh")
 
 [node name="Rep3" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "III"
-label_settings = SubResource("LabelSettings_nmcds")
+label_settings = SubResource("LabelSettings_ynmjd")
 
 [node name="Rep4" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "IV"
-label_settings = SubResource("LabelSettings_6ncqs")
+label_settings = SubResource("LabelSettings_ytqmr")
 
 [node name="Rep5" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "V"
-label_settings = SubResource("LabelSettings_tjaxf")
+label_settings = SubResource("LabelSettings_u734q")
 
 [node name="Rep6" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "VI"
-label_settings = SubResource("LabelSettings_3p1ye")
+label_settings = SubResource("LabelSettings_plhwh")
 
 [node name="Rep7" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "VII"
-label_settings = SubResource("LabelSettings_nmcds")
+label_settings = SubResource("LabelSettings_ynmjd")
 
 [node name="Rep8" type="Label" parent="Label"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "VIII"
-label_settings = SubResource("LabelSettings_6ncqs")
+label_settings = SubResource("LabelSettings_ytqmr")
 
 [node name="Rep9" type="Label" parent="Label"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 2.0
+offset_top = -28.0
+offset_right = 42.0
+offset_bottom = -2.0
 text = "IX"
-label_settings = SubResource("LabelSettings_tjaxf")
-
-[node name="Marker" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="M1" type="Marker2D" parent="Marker"]
-position = Vector2(-250, 30)
-
-[node name="M2" type="Marker2D" parent="Marker"]
-position = Vector2(0, 28)
-
-[node name="M3" type="Marker2D" parent="Marker"]
-position = Vector2(250, 30)
+label_settings = SubResource("LabelSettings_u734q")
 
 [node name="Buttons" type="Control" parent="."]
 layout_mode = 3
@@ -168,41 +156,61 @@ offset_bottom = 40.0
 process_mode = 3
 z_index = 1
 layout_mode = 0
-offset_left = -561.0
-offset_top = 146.0
-offset_right = -389.0
-offset_bottom = 246.0
-rotation = -1.5708
+offset_left = -575.0
+offset_top = -298.0
+offset_right = -471.0
+offset_bottom = -106.0
+rotation = 3.14159
 scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("3_pvx2o")
+pivot_offset = Vector2(54.37, 94.35)
+texture_normal = ExtResource("5_egfgi")
 script = ExtResource("5_qnwmt")
 
 [node name="Fleche_droite" type="TextureButton" parent="Buttons"]
 process_mode = 3
 z_index = 1
 layout_mode = 0
-offset_left = -449.0
-offset_top = 147.0
-offset_right = -277.0
-offset_bottom = 247.0
-rotation = 1.5708
+offset_left = -572.0
+offset_top = -86.0
+offset_right = -468.0
+offset_bottom = 106.0
 scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(86, 49)
-texture_normal = ExtResource("3_pvx2o")
+pivot_offset = Vector2(53.57, 97.755)
+texture_normal = ExtResource("5_egfgi")
 script = ExtResource("6_tkjuk")
 
 [node name="ok" type="TextureButton" parent="Buttons"]
 z_index = 1
 layout_mode = 0
-offset_left = -1441.0
-offset_top = -828.0
-offset_right = 607.0
-offset_bottom = 1220.0
-scale = Vector2(0.022, 0.022)
-pivot_offset = Vector2(1022, 1022)
-texture_normal = ExtResource("4_dxvee")
+offset_left = -572.0
+offset_top = -148.0
+offset_right = -469.0
+offset_bottom = -45.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(51.5, 52.185)
+texture_normal = ExtResource("8_64jpx")
 script = ExtResource("8_lcjjh")
+
+[node name="Marker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="M1" type="Marker2D" parent="Marker"]
+position = Vector2(-428, -200)
+
+[node name="M2" type="Marker2D" parent="Marker"]
+position = Vector2(-428, -100)
+
+[node name="M3" type="Marker2D" parent="Marker"]
+position = Vector2(-428, 0)
+
+[node name="M4" type="Marker2D" parent="Marker"]
+position = Vector2(-428, 100)
+
+[node name="M5" type="Marker2D" parent="Marker"]
+position = Vector2(-425, 200)
 
 [connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]

@@ -3,6 +3,7 @@ extends Node2D
 @onready var slider: HSlider = $Radio/HSlider
 @onready var yes: TextureButton = $Bouttons/Yes
 @onready var no: TextureButton = $Bouttons/No
+@onready var frequence: Control = $Frequence
 
 var current_scene: Node = null
 

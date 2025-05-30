@@ -1,8 +1,8 @@
 extends Node
 
 @onready var label_container := $Label
-@onready var markers := [$Marker/M1, $Marker/M2, $Marker/M3]
-@onready var label_reponse: Control = $"."
+@onready var markers := [$Marker/M1, $Marker/M2, $Marker/M3, $Marker/M4, $Marker/M5]
+@onready var label_reponse: Control = $"."  # À vérifier si c'est bien un Control
 
 @onready var flecheG: Label = $FlecheG
 @onready var flecheD: Label = $FlecheD
@@ -31,7 +31,7 @@ func reset_labels():
 			labels.append(child)
 			child.visible = false
 
-	if labels.size() == 0:
+	if labels.is_empty():
 		push_error("Aucun label trouvé.")
 		return
 
@@ -46,8 +46,13 @@ func _on_right_pressed() -> void:
 		update_visible_labels()
 
 func _on_ok_pressed() -> void:
-	var label_central = labels[current_index]
-	var rep_index = int(str(label_central.name))  # Le nom du label = numéro de réponse : 1, 2, 3, ...
+	var central_index = current_index  # Déjà le label sélectionné
+	if central_index < 0 or central_index >= labels.size():
+		push_error("Index central hors limites.")
+		return
+
+	var label_central = labels[central_index]
+	var rep_index = int(str(label_central.name))  # Nom du label = numéro de réponse
 
 	var current_id = Global.current_text
 	var current_data = Global.dialogues.get(current_id, {})
@@ -55,18 +60,24 @@ func _on_ok_pressed() -> void:
 
 	if current_data.has(rep_key):
 		var next_id = current_data[rep_key]
-		Global.reponses_joueur.append(rep_index)
-		Global.afficher_texte_par_numero(next_id)
+
+		if typeof(next_id) == TYPE_STRING:
+			Global.traiter_choix_direction(next_id)
+		else:
+			Global.reponses_joueur.append(rep_index)
+			Global.afficher_texte_par_numero(next_id)
+
 		label_reponse.queue_free()
 	else:
 		push_error("Réponse non trouvée : " + rep_key + " pour le dialogue " + str(current_id))
+
 
 func update_visible_labels():
 	for label in labels:
 		label.visible = false
 
-	for i in range(3):
-		var label_index = current_index + i - 1
+	for i in range(5):
+		var label_index = current_index + i - 2  # Centré sur index 2 (M3)
 		if label_index < 0 or label_index >= labels.size():
 			continue
 
@@ -74,20 +85,18 @@ func update_visible_labels():
 		label.global_position = markers[i].global_position
 		label.visible = true
 
-		if i == 1:
-			label.label_settings.font_color = Color("#96E5DE")
+		if i == 2:
+			label.label_settings.font_color = Color("#96E5DE")  # Sélection
 		else:
 			label.label_settings.font_color = Color("#35387A")
 
 		label.queue_redraw()
 
-	# Gérer visibilité des flèches
-	if current_index == 0:
-		flecheD.visible = true
-		flecheG.visible = false
-	elif current_index == labels.size() - 1:
-		flecheD.visible = false
-		flecheG.visible = true
-	else:
-		flecheD.visible = true
-		flecheG.visible = true
+	# visibilité des fleche : 
+	
+	var visible_count := markers.size() # par exemple 5
+	var half_window := visible_count / 2
+	var total_labels := labels.size()
+
+	flecheG.visible = current_index > 0
+	flecheD.visible = current_index < total_labels - 1
