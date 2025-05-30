@@ -62,6 +62,7 @@ position = Vector2(305, -136)
 stream = ExtResource("3_85eq8")
 
 [node name="FlecheG" type="Label" parent="."]
+layout_mode = 0
 offset_left = -378.0
 offset_top = -260.0
 offset_right = -344.0
@@ -71,6 +72,7 @@ text = "<"
 label_settings = SubResource("LabelSettings_pn11m")
 
 [node name="FlecheD" type="Label" parent="."]
+layout_mode = 0
 offset_left = -378.0
 offset_top = 240.0
 offset_right = -344.0
