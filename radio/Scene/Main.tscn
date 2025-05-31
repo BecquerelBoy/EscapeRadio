@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=51 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://Script/radio/date_heure.gd" id="16_qxq5r"]
 [ext_resource type="Texture2D" uid="uid://4amxw33q07dr" path="res://Assets/Djallel/bouton Menu.png" id="16_xsqdr"]
 [ext_resource type="PackedScene" uid="uid://c230622myff4x" path="res://Scene/volume.tscn" id="19_ayjky"]
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="21_5rxtn"]
 [ext_resource type="PackedScene" uid="uid://ckudx25bk86w5" path="res://Scene/choix/1.tscn" id="24_sw2hk"]
 [ext_resource type="Texture2D" uid="uid://d3dtmpca2ey1x" path="res://Assets/Djallel/Diode Rouge.png" id="25_1qddf"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
@@ -39,8 +40,15 @@ font_color = Color(0.0980392, 0.133333, 0.168627, 1)
 [sub_resource type="Theme" id="Theme_ptuc3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygq50"]
-bg_color = Color(0.164706, 0.164706, 0.164706, 1)
 border_width_top = 26
+border_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72ouq"]
+
+[sub_resource type="Theme" id="Theme_e0rp1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3kji"]
+bg_color = Color(0.8, 1, 1, 1)
 border_color = Color(0.164706, 0.164706, 0.164706, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_akys4"]
@@ -72,6 +80,12 @@ font_color = Color(0.207843, 0.219608, 0.478431, 1)
 font = ExtResource("3_0025t")
 font_size = 30
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s6ble"]
+shader = ExtResource("21_5rxtn")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
 
 [sub_resource type="LabelSettings" id="LabelSettings_x4c1q"]
 font = ExtResource("3_0025t")
@@ -139,18 +153,18 @@ offset_bottom = 95.0
 text = "Hz"
 label_settings = SubResource("LabelSettings_yn4y2")
 
-[node name="HSlider" type="HSlider" parent="Radio"]
+[node name="HSlider" type="VSlider" parent="Radio"]
 z_index = 11
-offset_left = 547.0
-offset_top = 88.0
-offset_right = 1212.0
-offset_bottom = 125.0
-rotation = -1.57079
-scale = Vector2(0.480909, 0.258903)
+offset_left = 543.0
+offset_top = -233.0
+offset_right = 561.0
+offset_bottom = 89.0
 theme = SubResource("Theme_ptuc3")
 theme_override_icons/grabber = ExtResource("4_p3bkf")
 theme_override_icons/grabber_highlight = ExtResource("4_p3bkf")
+theme_override_icons/grabber_disabled = ExtResource("4_p3bkf")
 theme_override_styles/slider = SubResource("StyleBoxFlat_ygq50")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_72ouq")
 max_value = 99.9
 step = 0.1
 ticks_on_borders = true
@@ -163,6 +177,10 @@ offset_top = 89.0
 offset_right = -540.0
 offset_bottom = 275.0
 scale = Vector2(0.8, 1)
+theme = SubResource("Theme_e0rp1")
+theme_override_icons/grabber = ExtResource("4_p3bkf")
+theme_override_icons/grabber_highlight = ExtResource("4_p3bkf")
+theme_override_styles/slider = SubResource("StyleBoxFlat_j3kji")
 value = 1.0
 bus_name = "Master"
 
@@ -349,6 +367,7 @@ script = ExtResource("13_uwmsf")
 [node name="Pause" type="TextureButton" parent="Bouttons"]
 process_mode = 3
 z_index = 10
+material = SubResource("ShaderMaterial_s6ble")
 layout_mode = 0
 offset_left = 666.0
 offset_top = -461.0

@@ -72,6 +72,7 @@ text = ">"
 label_settings = SubResource("LabelSettings_dc127")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.207843, 0.219608, 0.478431, 1)
