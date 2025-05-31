@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=50 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://4amxw33q07dr" path="res://Assets/Djallel/bouton Menu.png" id="16_xsqdr"]
 [ext_resource type="PackedScene" uid="uid://c230622myff4x" path="res://Scene/volume.tscn" id="19_ayjky"]
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="21_5rxtn"]
-[ext_resource type="PackedScene" uid="uid://ckudx25bk86w5" path="res://Scene/choix/1.tscn" id="24_sw2hk"]
 [ext_resource type="Texture2D" uid="uid://d3dtmpca2ey1x" path="res://Assets/Djallel/Diode Rouge.png" id="25_1qddf"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
 [ext_resource type="Texture2D" uid="uid://rtnrwvto2nfp" path="res://Assets/Djallel/Diode verte.png" id="26_u13ku"]
@@ -460,36 +459,6 @@ offset_bottom = -238.0
 text = "☼"
 label_settings = SubResource("LabelSettings_hqsx6")
 
-[node name="label_reponse" parent="." instance=ExtResource("24_sw2hk")]
-visible = false
-
-[node name="FlecheG" parent="label_reponse" index="1"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 40.0
-offset_bottom = 41.0
-
-[node name="FlecheD" parent="label_reponse" index="2"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 40.0
-offset_bottom = 41.0
-
-[node name="M1" parent="label_reponse/Marker" index="0"]
-position = Vector2(-400, -200)
-
-[node name="M2" parent="label_reponse/Marker" index="1"]
-position = Vector2(-400, -100)
-
-[node name="M3" parent="label_reponse/Marker" index="2"]
-position = Vector2(-400, 0)
-
-[node name="M4" parent="label_reponse/Marker" index="3"]
-position = Vector2(-399, 100)
-
-[node name="M5" parent="label_reponse/Marker" index="4"]
-position = Vector2(-397, 200)
-
 [node name="DiodeRouge" type="Sprite2D" parent="."]
 self_modulate = Color(1.5, 1.1, 1.1, 1)
 z_index = 11
@@ -508,5 +477,3 @@ texture = ExtResource("26_u13ku")
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons/Yes" method="_on_pressed"]
 [connection signal="pressed" from="Bouttons/No" to="Bouttons" method="_on_no_pressed"]
 [connection signal="pressed" from="Bouttons/Pause" to="Bouttons/Pause" method="_on_pressed"]
-
-[editable path="label_reponse"]

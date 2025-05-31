@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://c08anklrr53gy"]
+[gd_scene load_steps=16 format=3 uid="uid://c08anklrr53gy"]
 
 [ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_6uwam"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_85eq8"]
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_82qva"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_h7878"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_jxppx"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_y6b3x"]
@@ -23,6 +24,24 @@ font_color = Color(0.207843, 0.219608, 0.478431, 1)
 font = ExtResource("4_h7878")
 font_size = 20
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oohvn"]
+shader = ExtResource("4_82qva")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m2coc"]
+shader = ExtResource("4_82qva")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bf5ld"]
+shader = ExtResource("4_82qva")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
 
 [node name="label_reponse" type="Control"]
 process_mode = 3
@@ -66,52 +85,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.207843, 0.219608, 0.478431, 1)
 
-[node name="Buttons" type="Control" parent="."]
-z_index = 10
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
-process_mode = 3
-z_index = 1
-layout_mode = 0
-offset_left = -575.0
-offset_top = -298.0
-offset_right = -471.0
-offset_bottom = -106.0
-rotation = 3.14159
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(54.37, 94.35)
-texture_normal = ExtResource("5_jxppx")
-script = ExtResource("6_y6b3x")
-
-[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
-process_mode = 3
-z_index = 1
-layout_mode = 0
-offset_left = -572.0
-offset_top = -86.0
-offset_right = -468.0
-offset_bottom = 106.0
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(53.57, 97.755)
-texture_normal = ExtResource("5_jxppx")
-script = ExtResource("7_lyp0v")
-
-[node name="ok" type="TextureButton" parent="Buttons"]
-z_index = 1
-layout_mode = 0
-offset_left = -572.0
-offset_top = -148.0
-offset_right = -469.0
-offset_bottom = -45.0
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(51.5, 52.185)
-texture_normal = ExtResource("8_17udk")
-script = ExtResource("9_05vp5")
-
 [node name="Marker" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -147,6 +120,55 @@ offset_right = 194.0
 offset_bottom = 61.0
 text = "Ca fonctionne ?"
 label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Buttons" type="Control" parent="."]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+material = SubResource("ShaderMaterial_oohvn")
+layout_mode = 0
+offset_left = -575.0
+offset_top = -298.0
+offset_right = -471.0
+offset_bottom = -106.0
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(54.37, 94.35)
+texture_normal = ExtResource("5_jxppx")
+script = ExtResource("6_y6b3x")
+
+[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+material = SubResource("ShaderMaterial_m2coc")
+layout_mode = 0
+offset_left = -572.0
+offset_top = -86.0
+offset_right = -468.0
+offset_bottom = 106.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(53.57, 97.755)
+texture_normal = ExtResource("5_jxppx")
+script = ExtResource("7_lyp0v")
+
+[node name="ok" type="TextureButton" parent="Buttons"]
+z_index = 1
+material = SubResource("ShaderMaterial_bf5ld")
+layout_mode = 0
+offset_left = -572.0
+offset_top = -148.0
+offset_right = -469.0
+offset_bottom = -45.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(51.5, 52.185)
+texture_normal = ExtResource("8_17udk")
+script = ExtResource("9_05vp5")
 
 [connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]

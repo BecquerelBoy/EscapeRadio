@@ -37,8 +37,33 @@ func instantiate_scene_for_text(text_id: int) -> void:
 	else:
 		push_warning("Aucune scène trouvée pour le texte #%d à %s" % [text_id, scene_path])
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if Global.is_pausing == true:
 		get_tree().paused = true
 	else:
 		get_tree().paused = false
+	
+	# Gestionnaire de curseur global
+	manage_cursor()
+
+func manage_cursor():
+	var mouse_pos = get_global_mouse_position()
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsPointQueryParameters2D.new()
+	query.position = mouse_pos
+	query.collision_mask = 0xFFFFFFFF
+	query.collide_with_areas = true
+	
+	var results = space_state.intersect_point(query)
+	var should_be_pointing = false
+	
+	for result in results:
+		var collider = result.collider
+		if collider.is_in_group("clickable_elements"):
+			should_be_pointing = true
+			break
+	
+	if should_be_pointing:
+		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+	else:
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)

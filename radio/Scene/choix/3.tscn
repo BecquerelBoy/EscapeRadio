@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://c0pt7ohpwcc0e"]
+[gd_scene load_steps=19 format=3 uid="uid://c0pt7ohpwcc0e"]
 
 [ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_pnl00"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_0renn"]
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_4ny2a"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_amxoh"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_rbxbm"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_hetln"]
@@ -34,6 +35,24 @@ font_color = Color(0.207843, 0.219608, 0.478431, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_gnsq7"]
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1xur1"]
+shader = ExtResource("4_4ny2a")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7cnus"]
+shader = ExtResource("4_4ny2a")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hktmt"]
+shader = ExtResource("4_4ny2a")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
 
 [node name="label_reponse" type="Control"]
 process_mode = 3
@@ -148,52 +167,6 @@ offset_bottom = -2.0
 text = "IX"
 label_settings = SubResource("LabelSettings_8icy1")
 
-[node name="Buttons" type="Control" parent="."]
-z_index = 10
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
-process_mode = 3
-z_index = 1
-layout_mode = 0
-offset_left = -575.0
-offset_top = -298.0
-offset_right = -471.0
-offset_bottom = -106.0
-rotation = 3.14159
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(54.37, 94.35)
-texture_normal = ExtResource("5_rbxbm")
-script = ExtResource("6_hetln")
-
-[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
-process_mode = 3
-z_index = 1
-layout_mode = 0
-offset_left = -572.0
-offset_top = -86.0
-offset_right = -468.0
-offset_bottom = 106.0
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(53.57, 97.755)
-texture_normal = ExtResource("5_rbxbm")
-script = ExtResource("7_wu6vd")
-
-[node name="ok" type="TextureButton" parent="Buttons"]
-z_index = 1
-layout_mode = 0
-offset_left = -572.0
-offset_top = -148.0
-offset_right = -469.0
-offset_bottom = -45.0
-scale = Vector2(0.6, 0.6)
-pivot_offset = Vector2(51.5, 52.185)
-texture_normal = ExtResource("8_d1g36")
-script = ExtResource("9_cq4ap")
-
 [node name="Marker" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -214,6 +187,55 @@ position = Vector2(-428, 100)
 
 [node name="M5" type="Marker2D" parent="Marker"]
 position = Vector2(-425, 200)
+
+[node name="Buttons" type="Control" parent="."]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+material = SubResource("ShaderMaterial_1xur1")
+layout_mode = 0
+offset_left = -575.0
+offset_top = -298.0
+offset_right = -471.0
+offset_bottom = -106.0
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(54.37, 94.35)
+texture_normal = ExtResource("5_rbxbm")
+script = ExtResource("6_hetln")
+
+[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+material = SubResource("ShaderMaterial_7cnus")
+layout_mode = 0
+offset_left = -572.0
+offset_top = -86.0
+offset_right = -468.0
+offset_bottom = 106.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(53.57, 97.755)
+texture_normal = ExtResource("5_rbxbm")
+script = ExtResource("7_wu6vd")
+
+[node name="ok" type="TextureButton" parent="Buttons"]
+z_index = 1
+material = SubResource("ShaderMaterial_hktmt")
+layout_mode = 0
+offset_left = -572.0
+offset_top = -148.0
+offset_right = -469.0
+offset_bottom = -45.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(51.5, 52.185)
+texture_normal = ExtResource("8_d1g36")
+script = ExtResource("9_cq4ap")
 
 [connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]
