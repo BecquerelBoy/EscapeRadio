@@ -13,12 +13,44 @@ script = ExtResource("1_imjqq")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = -168.0
-offset_top = 76.0
-offset_right = 175.0
-offset_bottom = 233.0
-text = "REtour :D"
+offset_left = -52.0
+offset_top = 122.0
+offset_right = 80.0
+offset_bottom = 182.0
+text = "Retour :D"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -127.0
+offset_top = -68.0
+offset_right = -22.0
+offset_bottom = -45.0
+text = "Prog : Mayeul"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 21.0
+offset_right = 156.0
+offset_bottom = 44.0
+text = "Art Djallel"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = -158.0
+offset_top = 17.0
+offset_right = 29.0
+offset_bottom = 40.0
+text = "Scenar / carnet : Oswald"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = -75.0
+offset_right = 238.0
+offset_bottom = -52.0
+text = "Son : Felix"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

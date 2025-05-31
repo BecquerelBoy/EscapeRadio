@@ -17,22 +17,22 @@ script = ExtResource("1_vxmgv")
 [node name="Boutton_Play" parent="." instance=ExtResource("2_hagcu")]
 process_mode = 3
 z_index = 5
-position = Vector2(-307, 109)
+position = Vector2(-544, 126)
 scale = Vector2(2, 2)
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
-offset_left = 247.0
-offset_top = 64.0
-offset_right = 289.0
-offset_bottom = 95.0
+offset_left = 466.0
+offset_top = 84.0
+offset_right = 508.0
+offset_bottom = 115.0
 scale = Vector2(4, 4)
 text = "Quit"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Boutton_credit" parent="." instance=ExtResource("3_3xav3")]
-position = Vector2(8, 127)
+position = Vector2(0, 134)
 scale = Vector2(6, 6)
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
