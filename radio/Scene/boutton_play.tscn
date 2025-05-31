@@ -1,0 +1,80 @@
+[gd_scene load_steps=15 format=3 uid="uid://cte2cj0bhms4o"]
+
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_6pt5q"]
+[ext_resource type="Script" path="res://Scene/boutton_play.gd" id="1_e0grq"]
+[ext_resource type="Texture2D" uid="uid://b1eiv2axi6j1r" path="res://Assets/animation/Bouton play/Jouer1.png" id="1_yi0xu"]
+[ext_resource type="Texture2D" uid="uid://0xvsl1g26pat" path="res://Assets/animation/Bouton play/Jouer2.png" id="2_751i8"]
+[ext_resource type="Texture2D" uid="uid://pf3wnwui6e52" path="res://Assets/animation/Bouton play/Jouer3.png" id="3_dclt8"]
+[ext_resource type="Texture2D" uid="uid://dotaj571hkv03" path="res://Assets/animation/Bouton play/Jouer4.png" id="4_uavoi"]
+[ext_resource type="Texture2D" uid="uid://c6u0bg0qqpld4" path="res://Assets/animation/Bouton play/Jouer5.png" id="5_mv0gg"]
+[ext_resource type="Texture2D" uid="uid://gmkfhbu0341v" path="res://Assets/animation/Bouton play/Jouer6.png" id="6_g77ln"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gn61c"]
+shader = ExtResource("1_6pt5q")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="Curve" id="Curve_ewqdd"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.361702, 1), 0.0, 0.0, 0, 0, Vector2(0.634043, 0.505494), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_pairo"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.103139, 0.351648), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nqoa"]
+size = Vector2(114, 76)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iuqvj"]
+shader = ExtResource("1_6pt5q")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mildr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yi0xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_751i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dclt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uavoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mv0gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g77ln")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Boutton_Play" type="Node2D"]
+position = Vector2(258, 110)
+
+[node name="Area2D" type="Area2D" parent="."]
+material = SubResource("ShaderMaterial_gn61c")
+script = ExtResource("1_e0grq")
+scale_curve = SubResource("Curve_ewqdd")
+click_curve = SubResource("Curve_pairo")
+click_speed = 15.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_8nqoa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_iuqvj")
+scale = Vector2(3.5625, 3.5625)
+sprite_frames = SubResource("SpriteFrames_mildr")
+frame_progress = 0.948083
+speed_scale = 3.0

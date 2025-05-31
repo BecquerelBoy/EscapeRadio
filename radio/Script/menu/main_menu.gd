@@ -1,9 +1,7 @@
 extends Control
 
-
-func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Scene/Main.tscn")
-	
+func _process(delta: float) -> void:
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _on_quit_pressed():
 	get_tree().quit()
