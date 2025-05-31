@@ -2,7 +2,7 @@ extends TextureButton
 
 # Animation de mise à l’échelle
 var original_scale := Vector2.ONE 
-var reduced_scale := Vector2(0.95, 0.95) * original_scale
+var reduced_scale := Vector2(0.95, 0.95) * 0.5
 var reset_delay := 0.1
 
 @onready var click: AudioStreamPlayer2D = $"../Click"

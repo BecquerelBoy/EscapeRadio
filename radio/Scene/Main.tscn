@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=46 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
@@ -38,11 +38,16 @@ font_color = Color(0.0980392, 0.133333, 0.168627, 1)
 
 [sub_resource type="Theme" id="Theme_ptuc3"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygq50"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+border_width_top = 26
+border_color = Color(0.164706, 0.164706, 0.164706, 1)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_akys4"]
 shader = ExtResource("7_iep7b")
 
 [sub_resource type="QuadMesh" id="QuadMesh_hhgdo"]
-size = Vector2(975, 600)
+size = Vector2(957.825, 600)
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8wql"]
 font = ExtResource("3_0025t")
@@ -135,23 +140,24 @@ text = "Hz"
 label_settings = SubResource("LabelSettings_yn4y2")
 
 [node name="HSlider" type="HSlider" parent="Radio"]
-z_index = 1
-offset_left = 548.0
-offset_top = 87.0
-offset_right = 1196.0
-offset_bottom = 117.0
+z_index = 11
+offset_left = 547.0
+offset_top = 88.0
+offset_right = 1212.0
+offset_bottom = 125.0
 rotation = -1.57079
 scale = Vector2(0.480909, 0.258903)
 theme = SubResource("Theme_ptuc3")
 theme_override_icons/grabber = ExtResource("4_p3bkf")
 theme_override_icons/grabber_highlight = ExtResource("4_p3bkf")
+theme_override_styles/slider = SubResource("StyleBoxFlat_ygq50")
 max_value = 99.9
 step = 0.1
 ticks_on_borders = true
 script = ExtResource("3_ro4ie")
 
 [node name="Volume" parent="Radio" instance=ExtResource("19_ayjky")]
-z_index = 1
+z_index = 11
 offset_left = -556.0
 offset_top = 89.0
 offset_right = -540.0
@@ -171,12 +177,13 @@ scale = Vector2(0.64132, 0.638889)
 texture = ExtResource("4_yhjfg")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Radio/CanvasLayer"]
+z_index = 10
 material = SubResource("ShaderMaterial_akys4")
-position = Vector2(7.11874, -2.6226e-06)
 scale = Vector2(1.00237, 0.98793)
 mesh = SubResource("QuadMesh_hhgdo")
 
-[node name="Image" type="Sprite2D" parent="Radio"]
+[node name="Image" type="Sprite2D" parent="Radio/CanvasLayer"]
+z_index = 10
 position = Vector2(0.999996, 0.25)
 scale = Vector2(0.64213, 0.64213)
 texture = ExtResource("9_5xqpo")
@@ -341,7 +348,7 @@ script = ExtResource("13_uwmsf")
 
 [node name="Pause" type="TextureButton" parent="Bouttons"]
 process_mode = 3
-z_index = 1
+z_index = 10
 layout_mode = 0
 offset_left = 666.0
 offset_top = -461.0
@@ -434,33 +441,16 @@ offset_bottom = -238.0
 text = "☼"
 label_settings = SubResource("LabelSettings_hqsx6")
 
-[node name="DiodeRouge" type="Sprite2D" parent="."]
-self_modulate = Color(1.5, 1.1, 1.1, 1)
-z_index = 1
-position = Vector2(-6, 3)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("25_1qddf")
-
-[node name="DiodeVerte" type="Sprite2D" parent="."]
-self_modulate = Color(1.1, 1.5, 1.1, 1)
-z_index = 1
-position = Vector2(-6, 3)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("26_u13ku")
-
 [node name="label_reponse" parent="." instance=ExtResource("24_sw2hk")]
 visible = false
 
-[node name="FondLabel" parent="label_reponse" index="0"]
-position = Vector2(-380, 6)
-
-[node name="FlecheG" parent="label_reponse" index="2"]
+[node name="FlecheG" parent="label_reponse" index="1"]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 40.0
 offset_bottom = 41.0
 
-[node name="FlecheD" parent="label_reponse" index="3"]
+[node name="FlecheD" parent="label_reponse" index="2"]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 40.0
@@ -480,6 +470,20 @@ position = Vector2(-399, 100)
 
 [node name="M5" parent="label_reponse/Marker" index="4"]
 position = Vector2(-397, 200)
+
+[node name="DiodeRouge" type="Sprite2D" parent="."]
+self_modulate = Color(1.5, 1.1, 1.1, 1)
+z_index = 11
+position = Vector2(-6, 3)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("25_1qddf")
+
+[node name="DiodeVerte" type="Sprite2D" parent="."]
+self_modulate = Color(1.1, 1.5, 1.1, 1)
+z_index = 11
+position = Vector2(-6, 3)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("26_u13ku")
 
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons/Yes" method="_on_pressed"]

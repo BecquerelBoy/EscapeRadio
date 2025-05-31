@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://c0pt7ohpwcc0e"]
+[gd_scene load_steps=15 format=3 uid="uid://c0pt7ohpwcc0e"]
 
 [ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_pnl00"]
-[ext_resource type="Texture2D" uid="uid://gqor0isbuapi" path="res://Assets/buttons/fond label.png" id="2_hvhk6"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_0renn"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_amxoh"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_rbxbm"]
@@ -47,11 +46,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pnl00")
 
-[node name="FondLabel" type="Sprite2D" parent="."]
-position = Vector2(-410, 4)
-scale = Vector2(0.0560519, 0.148562)
-texture = ExtResource("2_hvhk6")
-
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
@@ -76,6 +70,11 @@ offset_bottom = 307.0
 rotation = 1.5708
 text = ">"
 label_settings = SubResource("LabelSettings_auhl6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [node name="Label" type="Control" parent="."]
 layout_mode = 3
@@ -149,6 +148,7 @@ text = "IX"
 label_settings = SubResource("LabelSettings_8icy1")
 
 [node name="Buttons" type="Control" parent="."]
+z_index = 10
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
