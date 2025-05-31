@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cte2cj0bhms4o"]
 
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_6pt5q"]
-[ext_resource type="Script" path="res://Scene/boutton_play.gd" id="1_e0grq"]
+[ext_resource type="Script" path="res://Script/boutton_play.gd" id="1_e0grq"]
 [ext_resource type="Texture2D" uid="uid://b1eiv2axi6j1r" path="res://Assets/animation/Bouton play/Jouer1.png" id="1_yi0xu"]
 [ext_resource type="Texture2D" uid="uid://0xvsl1g26pat" path="res://Assets/animation/Bouton play/Jouer2.png" id="2_751i8"]
 [ext_resource type="Texture2D" uid="uid://pf3wnwui6e52" path="res://Assets/animation/Bouton play/Jouer3.png" id="3_dclt8"]

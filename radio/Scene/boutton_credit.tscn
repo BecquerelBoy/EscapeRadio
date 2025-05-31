@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://ps1isa7kpg8g"]
+
+[ext_resource type="Script" path="res://Script/boutton_credit.gd" id="1_mlt0f"]
+[ext_resource type="Texture2D" uid="uid://drqqxbcl2idkm" path="res://Assets/animation/Bouton credit/Credit.png" id="2_g28fk"]
+
+[sub_resource type="Curve" id="Curve_t07hh"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.497758, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.494505), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_lxqlg"]
+_data = [Vector2(0.0134529, 0.505494), 0.0, 0.0, 0, 0, Vector2(0.255605, 1), 0.0, 0.0, 0, 0, Vector2(0.511211, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5o1f"]
+size = Vector2(27, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clwon"]
+atlas = ExtResource("2_g28fk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h635"]
+atlas = ExtResource("2_g28fk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6dnm"]
+atlas = ExtResource("2_g28fk")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opmhm"]
+atlas = ExtResource("2_g28fk")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7k1y"]
+atlas = ExtResource("2_g28fk")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp0sd"]
+atlas = ExtResource("2_g28fk")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i3gxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clwon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h635")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6dnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opmhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7k1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp0sd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Boutton_credit" type="Node2D"]
+position = Vector2(185, 81)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_mlt0f")
+scale_curve = SubResource("Curve_t07hh")
+click_curve = SubResource("Curve_lxqlg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_n5o1f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_i3gxn")
+frame_progress = 0.392112
+speed_scale = 3.0

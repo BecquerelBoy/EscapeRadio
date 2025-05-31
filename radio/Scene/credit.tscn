@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://dktd3l3bvxas5"]
+
+[ext_resource type="Script" path="res://credit.gd" id="1_imjqq"]
+
+[node name="Credit" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_imjqq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -168.0
+offset_top = 76.0
+offset_right = 175.0
+offset_bottom = 233.0
+text = "REtour :D"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

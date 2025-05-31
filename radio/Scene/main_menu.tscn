@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd3cqsnxa2uht"]
+[gd_scene load_steps=4 format=3 uid="uid://bd3cqsnxa2uht"]
 
 [ext_resource type="Script" path="res://Script/menu/main_menu.gd" id="1_vxmgv"]
 [ext_resource type="PackedScene" uid="uid://cte2cj0bhms4o" path="res://Scene/boutton_play.tscn" id="2_hagcu"]
+[ext_resource type="PackedScene" uid="uid://ps1isa7kpg8g" path="res://Scene/boutton_credit.tscn" id="3_3xav3"]
 
 [node name="Main Menu" type="Control"]
 process_mode = 3
@@ -16,23 +17,22 @@ script = ExtResource("1_vxmgv")
 [node name="Boutton_Play" parent="." instance=ExtResource("2_hagcu")]
 process_mode = 3
 z_index = 5
-position = Vector2(619, 179)
-scale = Vector2(4, 4)
+position = Vector2(-307, 109)
+scale = Vector2(2, 2)
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -83.0
-offset_top = 26.0
-offset_right = -41.0
-offset_bottom = 57.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 247.0
+offset_top = 64.0
+offset_right = 289.0
+offset_bottom = 95.0
 scale = Vector2(4, 4)
 text = "Quit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Boutton_credit" parent="." instance=ExtResource("3_3xav3")]
+position = Vector2(8, 127)
+scale = Vector2(6, 6)
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
