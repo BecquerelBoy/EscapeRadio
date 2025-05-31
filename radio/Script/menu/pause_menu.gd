@@ -33,12 +33,12 @@ func _process(delta):
 		fleche_bas.disabled = true
 		ok.disabled = true
 
-func _on_fleche_haut_pressed() -> void:
+func _on_fleche_gauche_pressed() -> void:
 	click.play()
 	current_selection = "resume"
 	update_selection()
 
-func _on_fleche_bas_pressed() -> void:
+func _on_fleche_droite_pressed() -> void:
 	click.play()
 	current_selection = "quit"
 	update_selection()
