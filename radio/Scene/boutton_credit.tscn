@@ -1,7 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://ps1isa7kpg8g"]
+[gd_scene load_steps=32 format=3 uid="uid://ps1isa7kpg8g"]
 
 [ext_resource type="Script" path="res://Script/boutton_credit.gd" id="1_mlt0f"]
 [ext_resource type="Texture2D" uid="uid://ha3i46fmvoan" path="res://Assets/animation/bouton credit/frame_01.png" id="2_2ckmd"]
+[ext_resource type="Shader" path="res://Script/ombre.gdshader" id="2_n8dms"]
 [ext_resource type="Texture2D" uid="uid://cfgqa3uvtn7pd" path="res://Assets/animation/bouton credit/frame_02.png" id="3_u0fnp"]
 [ext_resource type="Texture2D" uid="uid://buxpwbuhk08mb" path="res://Assets/animation/bouton credit/frame_03.png" id="4_1joln"]
 [ext_resource type="Texture2D" uid="uid://dal0p2l7trcgw" path="res://Assets/animation/bouton credit/frame_04.png" id="5_4auio"]
@@ -33,6 +34,16 @@ point_count = 2
 [sub_resource type="Curve" id="Curve_lxqlg"]
 _data = [Vector2(0.0134529, 0.505494), 0.0, 0.0, 0, 0, Vector2(0.255605, 1), 0.0, 0.0, 0, 0, Vector2(0.511211, 0), 0.0, 0.0, 0, 0]
 point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4fcbo"]
+shader = ExtResource("2_n8dms")
+shader_parameter/debug = false
+shader_parameter/border_scale = 2.0
+shader_parameter/shadow_offset = Vector2(0, -40)
+shader_parameter/color = Color(0.165, 0.165, 0.165, 0.6)
+shader_parameter/blur_amount = 2.0
+shader_parameter/shadow_scale = 1.5
+shader_parameter/disable_rotating = false
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i3gxn"]
 animations = [{
@@ -115,10 +126,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5o1f"]
-size = Vector2(27, 32)
+size = Vector2(829, 1045)
 
 [node name="Boutton_credit" type="Node2D"]
-position = Vector2(185, 81)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_mlt0f")
@@ -126,13 +136,13 @@ scale_curve = SubResource("Curve_t07hh")
 click_curve = SubResource("Curve_lxqlg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_4fcbo")
 position = Vector2(1, -5)
-scale = Vector2(0.0319155, 0.0296296)
 sprite_frames = SubResource("SpriteFrames_i3gxn")
 frame = 2
 frame_progress = 0.174138
 speed_scale = 6.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 3)
+position = Vector2(-4.5, 284.5)
 shape = SubResource("RectangleShape2D_n5o1f")

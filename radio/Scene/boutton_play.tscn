@@ -1,7 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://cte2cj0bhms4o"]
+[gd_scene load_steps=34 format=3 uid="uid://cte2cj0bhms4o"]
 
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_6pt5q"]
 [ext_resource type="Script" path="res://Script/boutton_play.gd" id="1_e0grq"]
+[ext_resource type="Shader" path="res://Script/ombre.gdshader" id="3_14yj8"]
 [ext_resource type="Texture2D" uid="uid://vnk5eu4fk3ci" path="res://Assets/animation/Bouton play/frame_01.png" id="3_r7juu"]
 [ext_resource type="Texture2D" uid="uid://b1vvnxepfxron" path="res://Assets/animation/Bouton play/frame_02.png" id="4_r6kiv"]
 [ext_resource type="Texture2D" uid="uid://cibbpch8vbadx" path="res://Assets/animation/Bouton play/frame_03.png" id="5_fe1ad"]
@@ -41,11 +42,18 @@ point_count = 2
 _data = [Vector2(0, 0.483516), 0.0, 0.0, 0, 0, Vector2(0.502242, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iuqvj"]
-shader = ExtResource("1_6pt5q")
-shader_parameter/brightness_multiplier = 1.5
-shader_parameter/transition_speed = 5.0
-shader_parameter/is_hovered = false
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nqoa"]
+size = Vector2(1191, 650)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dyo20"]
+shader = ExtResource("3_14yj8")
+shader_parameter/debug = false
+shader_parameter/border_scale = 2.0
+shader_parameter/shadow_offset = Vector2(20, -50)
+shader_parameter/color = Color(0.166, 0.166, 0.166, 0.6)
+shader_parameter/blur_amount = 2.0
+shader_parameter/shadow_scale = 1.5
+shader_parameter/disable_rotating = false
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mildr"]
 animations = [{
@@ -127,11 +135,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nqoa"]
-size = Vector2(108, 60)
-
 [node name="Boutton_Play" type="Node2D"]
-position = Vector2(258, 110)
 
 [node name="Area2D" type="Area2D" parent="."]
 material = SubResource("ShaderMaterial_gn61c")
@@ -140,14 +144,14 @@ scale_curve = SubResource("Curve_ewqdd")
 click_curve = SubResource("Curve_pairo")
 click_speed = 15.0
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(26.5, 31)
+shape = SubResource("RectangleShape2D_8nqoa")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
-material = SubResource("ShaderMaterial_iuqvj")
-position = Vector2(91, -14)
-scale = Vector2(0.0913484, 0.0913484)
+material = SubResource("ShaderMaterial_dyo20")
+position = Vector2(1.90735e-06, -4.76837e-07)
 sprite_frames = SubResource("SpriteFrames_mildr")
 frame_progress = 0.283091
 speed_scale = 6.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-21, 8)
-shape = SubResource("RectangleShape2D_8nqoa")
+offset = Vector2(420, -74.72)
