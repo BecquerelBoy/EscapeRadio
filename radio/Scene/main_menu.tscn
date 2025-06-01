@@ -17,15 +17,15 @@ script = ExtResource("1_vxmgv")
 [node name="Boutton_Play" parent="." instance=ExtResource("2_hagcu")]
 process_mode = 3
 z_index = 5
-position = Vector2(-544, 126)
+position = Vector2(-421, 128)
 scale = Vector2(2, 2)
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
-offset_left = 466.0
-offset_top = 84.0
-offset_right = 508.0
-offset_bottom = 115.0
+offset_left = 358.0
+offset_top = 83.0
+offset_right = 400.0
+offset_bottom = 114.0
 scale = Vector2(4, 4)
 text = "Quit"
 

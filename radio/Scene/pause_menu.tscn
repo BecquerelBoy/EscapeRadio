@@ -42,7 +42,7 @@ shader_parameter/is_hovered = false
 
 [node name="pause_menu" type="Control"]
 process_mode = 3
-z_index = 2
+z_index = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
