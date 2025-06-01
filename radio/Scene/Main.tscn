@@ -507,14 +507,12 @@ texture = ExtResource("26_u13ku")
 visible = false
 
 [node name="FlecheG" parent="label_reponse" index="4"]
-layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 34.0
 offset_bottom = 67.0
 
 [node name="FlecheD" parent="label_reponse" index="5"]
-layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 34.0

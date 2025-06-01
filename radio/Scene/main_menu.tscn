@@ -15,26 +15,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vxmgv")
 
-[node name="Boutton_Play" parent="." instance=ExtResource("2_hagcu")]
-process_mode = 3
-z_index = 5
-position = Vector2(-421, 128)
-scale = Vector2(2, 2)
-
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
-offset_left = 358.0
-offset_top = 83.0
-offset_right = 400.0
-offset_bottom = 114.0
+offset_left = 350.74
+offset_top = 11.88
+offset_right = 392.74
+offset_bottom = 42.88
 scale = Vector2(4, 4)
 text = "Quit"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="Boutton_Play" parent="." instance=ExtResource("2_hagcu")]
+process_mode = 3
+z_index = 5
+position = Vector2(-390, 64)
+scale = Vector2(2.5, 2.5)
+
 [node name="Boutton_credit" parent="." instance=ExtResource("3_3xav3")]
-position = Vector2(0, 134)
-scale = Vector2(6, 6)
+position = Vector2(0, 56)
+scale = Vector2(8, 8)
 
 [node name="IllustrationSansTitre" type="Sprite2D" parent="."]
 z_index = -1
