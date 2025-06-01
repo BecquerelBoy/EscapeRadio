@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd3cqsnxa2uht"]
+[gd_scene load_steps=5 format=3 uid="uid://bd3cqsnxa2uht"]
 
 [ext_resource type="Script" path="res://Script/menu/main_menu.gd" id="1_vxmgv"]
 [ext_resource type="PackedScene" uid="uid://cte2cj0bhms4o" path="res://Scene/boutton_play.tscn" id="2_hagcu"]
 [ext_resource type="PackedScene" uid="uid://ps1isa7kpg8g" path="res://Scene/boutton_credit.tscn" id="3_3xav3"]
+[ext_resource type="Texture2D" uid="uid://6q3q7ddx361o" path="res://Assets/Djallel/Illustration_sans_titre.png" id="4_ir6qd"]
 
 [node name="Main Menu" type="Control"]
 process_mode = 3
@@ -34,5 +35,10 @@ text = "Quit"
 [node name="Boutton_credit" parent="." instance=ExtResource("3_3xav3")]
 position = Vector2(0, 134)
 scale = Vector2(6, 6)
+
+[node name="IllustrationSansTitre" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.698148, 0.698148)
+texture = ExtResource("4_ir6qd")
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

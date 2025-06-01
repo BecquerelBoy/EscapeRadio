@@ -130,6 +130,7 @@ texture_normal = ExtResource("8_17udk")
 script = ExtResource("9_05vp5")
 
 [node name="FlecheG" type="Label" parent="."]
+layout_mode = 0
 offset_left = -330.0
 offset_top = -264.0
 offset_right = -296.0
@@ -139,6 +140,7 @@ text = "<"
 label_settings = SubResource("LabelSettings_xqkx5")
 
 [node name="FlecheD" type="Label" parent="."]
+layout_mode = 0
 offset_left = -330.0
 offset_top = 222.0
 offset_right = -296.0
