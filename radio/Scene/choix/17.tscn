@@ -1,44 +1,56 @@
-[gd_scene load_steps=16 format=3 uid="uid://dih3rfy43oe7v"]
+[gd_scene load_steps=19 format=3 uid="uid://dylc43u413uw8"]
 
-[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_qnu3q"]
-[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_tmhpk"]
-[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="4_n8qw4"]
-[ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_shr2s"]
-[ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_eynrh"]
-[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_etd0i"]
-[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_51uon"]
-[ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="8_vxouk"]
-[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_x50jl"]
+[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_s0330"]
+[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="2_lr8x5"]
+[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="3_pfrsg"]
+[ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="4_4a0q3"]
+[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="5_grn4y"]
+[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="6_fpvvp"]
+[ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="7_e5te4"]
+[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="8_6cxj0"]
+[ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="9_a56jm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r0lgi"]
 font_size = 25
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ulnnb"]
+font_size = 25
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xkckp"]
+font_size = 25
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_032y5"]
+font_size = 25
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q4hsd"]
-shader = ExtResource("4_n8qw4")
+shader = ExtResource("3_pfrsg")
 shader_parameter/brightness_multiplier = 1.5
 shader_parameter/transition_speed = 5.0
 shader_parameter/is_hovered = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qfhng"]
-shader = ExtResource("4_n8qw4")
+shader = ExtResource("3_pfrsg")
 shader_parameter/brightness_multiplier = 1.5
 shader_parameter/transition_speed = 5.0
 shader_parameter/is_hovered = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vvxmn"]
-shader = ExtResource("4_n8qw4")
+shader = ExtResource("3_pfrsg")
 shader_parameter/brightness_multiplier = 1.5
 shader_parameter/transition_speed = 5.0
 shader_parameter/is_hovered = false
 
 [sub_resource type="LabelSettings" id="LabelSettings_7xrsh"]
-font = ExtResource("4_shr2s")
+font = ExtResource("9_a56jm")
 font_size = 50
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bm16q"]
-font = ExtResource("4_shr2s")
+font = ExtResource("9_a56jm")
 font_size = 50
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
@@ -51,12 +63,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qnu3q")
+script = ExtResource("1_s0330")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("3_tmhpk")
+stream = ExtResource("2_lr8x5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -74,7 +86,65 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 44.0
 offset_bottom = 26.0
-text = "Ca ressemble à rien dans ton carnet."
+text = "I"
+label_settings = SubResource("LabelSettings_r0lgi")
+
+[node name="Rep2" type="Label" parent="Label"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "II"
+label_settings = SubResource("LabelSettings_ulnnb")
+
+[node name="Rep3" type="Label" parent="Label"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "III"
+label_settings = SubResource("LabelSettings_xkckp")
+
+[node name="Rep4" type="Label" parent="Label"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "IV"
+label_settings = SubResource("LabelSettings_032y5")
+
+[node name="Rep5" type="Label" parent="Label"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "V"
+label_settings = SubResource("LabelSettings_r0lgi")
+
+[node name="Rep6" type="Label" parent="Label"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "VI"
+label_settings = SubResource("LabelSettings_ulnnb")
+
+[node name="Rep7" type="Label" parent="Label"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "VII"
+label_settings = SubResource("LabelSettings_xkckp")
+
+[node name="Rep8" type="Label" parent="Label"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "VIII"
+label_settings = SubResource("LabelSettings_032y5")
+
+[node name="Rep9" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -28.0
+offset_right = 42.0
+offset_bottom = -2.0
+text = "IX"
 label_settings = SubResource("LabelSettings_r0lgi")
 
 [node name="Buttons" type="Control" parent="."]
@@ -96,8 +166,8 @@ offset_bottom = -106.0
 rotation = 3.14159
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(54.37, 94.35)
-texture_normal = ExtResource("5_eynrh")
-script = ExtResource("6_etd0i")
+texture_normal = ExtResource("4_4a0q3")
+script = ExtResource("5_grn4y")
 
 [node name="Fleche_droite" type="TextureButton" parent="Buttons"]
 process_mode = 3
@@ -110,8 +180,8 @@ offset_right = -468.0
 offset_bottom = 106.0
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(53.57, 97.755)
-texture_normal = ExtResource("5_eynrh")
-script = ExtResource("7_51uon")
+texture_normal = ExtResource("4_4a0q3")
+script = ExtResource("6_fpvvp")
 
 [node name="ok" type="TextureButton" parent="Buttons"]
 z_index = 1
@@ -123,8 +193,8 @@ offset_right = -469.0
 offset_bottom = -45.0
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(51.5, 52.185)
-texture_normal = ExtResource("8_vxouk")
-script = ExtResource("9_x50jl")
+texture_normal = ExtResource("7_e5te4")
+script = ExtResource("8_6cxj0")
 
 [node name="FlecheG" type="Label" parent="."]
 layout_mode = 0
