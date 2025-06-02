@@ -1,8 +1,8 @@
 [gd_scene load_steps=34 format=3 uid="uid://cte2cj0bhms4o"]
 
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_6pt5q"]
-[ext_resource type="Script" path="res://Script/boutton_play.gd" id="1_e0grq"]
-[ext_resource type="Shader" path="res://Script/ombre.gdshader" id="3_14yj8"]
+[ext_resource type="Script" path="res://Script/buttons/boutton_play.gd" id="1_e0grq"]
+[ext_resource type="Shader" path="res://Script/Shader/ombre.gdshader" id="3_14yj8"]
 [ext_resource type="Texture2D" uid="uid://vnk5eu4fk3ci" path="res://Assets/animation/Bouton play/frame_01.png" id="3_r7juu"]
 [ext_resource type="Texture2D" uid="uid://b1vvnxepfxron" path="res://Assets/animation/Bouton play/frame_02.png" id="4_r6kiv"]
 [ext_resource type="Texture2D" uid="uid://cibbpch8vbadx" path="res://Assets/animation/Bouton play/frame_03.png" id="5_fe1ad"]

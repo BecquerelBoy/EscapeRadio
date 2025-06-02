@@ -23,7 +23,7 @@ func _ready() -> void:
 	
 	update_selection()
 
-func _process(delta):
+func _process(_delta):
 	if Global.is_pausing:
 		fleche_haut.disabled = false
 		fleche_bas.disabled = false

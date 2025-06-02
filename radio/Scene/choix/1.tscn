@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://ckudx25bk86w5"]
 
-[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_ne3m5"]
+[ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_ne3m5"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_c01ak"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_16pbr"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_668e5"]

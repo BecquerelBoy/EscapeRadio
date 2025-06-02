@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://c0pt7ohpwcc0e"]
 
-[ext_resource type="Script" path="res://Script/label_reponse.gd" id="1_pnl00"]
+[ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_pnl00"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_0renn"]
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_4ny2a"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_amxoh"]

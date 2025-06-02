@@ -21,7 +21,7 @@ func _on_pressed() -> void:
 	await get_tree().create_timer(reset_delay).timeout
 	scale = original_scale
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	update_cursor()
 
 func update_cursor() -> void:

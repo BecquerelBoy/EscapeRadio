@@ -48,7 +48,7 @@ func instantiate_scene_for_text(text_id: int) -> void:
 	else:
 		push_warning("Aucune scène trouvée pour le texte #%d à %s" % [text_id, scene_path])
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Global.is_pausing == true:
 		get_tree().paused = true
 	else:

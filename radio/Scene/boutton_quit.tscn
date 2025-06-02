@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_rknqv"]
 [ext_resource type="Script" path="res://Scene/Boutton quitter.gd" id="2_i22i8"]
-[ext_resource type="Shader" path="res://Script/ombre.gdshader" id="3_0k4aq"]
+[ext_resource type="Shader" path="res://Script/Shader/ombre.gdshader" id="3_0k4aq"]
 [ext_resource type="Texture2D" uid="uid://iy10qrddyfri" path="res://Assets/animation/bouton quitter/frame_01.png" id="4_37n82"]
 [ext_resource type="Texture2D" uid="uid://bvsd6gegbs8tw" path="res://Assets/animation/bouton quitter/frame_02.png" id="5_wyihq"]
 [ext_resource type="Texture2D" uid="uid://dkot3rui811b6" path="res://Assets/animation/bouton quitter/frame_03.png" id="6_4y0fo"]
