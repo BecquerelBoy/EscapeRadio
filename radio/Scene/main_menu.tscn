@@ -1,6 +1,114 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd3cqsnxa2uht"]
+[gd_scene load_steps=31 format=3 uid="uid://bd3cqsnxa2uht"]
 
-[ext_resource type="Script" uid="uid://cjvnic2unvtuy" path="res://Script/menu/main_menu.gd" id="1_vxmgv"]
+[ext_resource type="Script" path="res://Script/menu/main_menu.gd" id="1_vxmgv"]
+[ext_resource type="PackedScene" uid="uid://cte2cj0bhms4o" path="res://Scene/boutton_play.tscn" id="2_hagcu"]
+[ext_resource type="PackedScene" uid="uid://ps1isa7kpg8g" path="res://Scene/boutton_credit.tscn" id="3_3xav3"]
+[ext_resource type="Texture2D" uid="uid://6q3q7ddx361o" path="res://Assets/Djallel/Illustration_sans_titre.png" id="4_ir6qd"]
+[ext_resource type="PackedScene" uid="uid://dd2s0lx211gf1" path="res://Scene/boutton_quit.tscn" id="4_tfr2c"]
+[ext_resource type="Texture2D" uid="uid://xm5heidw4we" path="res://Assets/animation/lampe a huile/frame_01.png" id="6_d0ad6"]
+[ext_resource type="Texture2D" uid="uid://bu1yto521hhbg" path="res://Assets/animation/lampe a huile/frame_02.png" id="7_x1y2l"]
+[ext_resource type="Texture2D" uid="uid://bck28qwemlk7d" path="res://Assets/animation/lampe a huile/frame_03.png" id="8_uey0o"]
+[ext_resource type="Texture2D" uid="uid://he6pt00xvc20" path="res://Assets/animation/lampe a huile/frame_04.png" id="9_t4215"]
+[ext_resource type="Texture2D" uid="uid://igyev2di1cop" path="res://Assets/animation/lampe a huile/frame_05.png" id="10_wqxpt"]
+[ext_resource type="Texture2D" uid="uid://bg0b4j1ywx121" path="res://Assets/animation/lampe a huile/frame_06.png" id="11_og52p"]
+[ext_resource type="Texture2D" uid="uid://ckivxjwu5uhhv" path="res://Assets/animation/lampe a huile/frame_07.png" id="12_tgv03"]
+[ext_resource type="Texture2D" uid="uid://df86knb22b4sf" path="res://Assets/animation/lampe a huile/frame_08.png" id="13_gsgit"]
+[ext_resource type="Texture2D" uid="uid://2v3kwq56x6ol" path="res://Assets/animation/lampe a huile/frame_09.png" id="14_2ffeb"]
+[ext_resource type="Texture2D" uid="uid://2pthpfey6c4e" path="res://Assets/animation/lampe a huile/frame_10.png" id="15_kf1p0"]
+[ext_resource type="Texture2D" uid="uid://ckvksbyueba4i" path="res://Assets/animation/lampe a huile/frame_11.png" id="16_8n4wy"]
+[ext_resource type="Texture2D" uid="uid://copy2rkfeiqno" path="res://Assets/animation/lampe a huile/frame_12.png" id="17_7u7hs"]
+[ext_resource type="Texture2D" uid="uid://dax1pcody56v" path="res://Assets/animation/lampe a huile/frame_13.png" id="18_qrdt8"]
+[ext_resource type="Texture2D" uid="uid://b4yhi4ur0vh2v" path="res://Assets/animation/lampe a huile/frame_14.png" id="19_h3s6j"]
+[ext_resource type="Texture2D" uid="uid://b67bu4jxjakal" path="res://Assets/animation/lampe a huile/frame_15.png" id="20_tp1ns"]
+[ext_resource type="Texture2D" uid="uid://b0j415c0s774t" path="res://Assets/animation/lampe a huile/frame_16.png" id="21_16dsf"]
+[ext_resource type="Texture2D" uid="uid://d2uxfa5fd208i" path="res://Assets/animation/lampe a huile/frame_17.png" id="22_waaqa"]
+[ext_resource type="Texture2D" uid="uid://oxfn7fjqcb2b" path="res://Assets/animation/lampe a huile/frame_18.png" id="23_rv2ns"]
+[ext_resource type="Texture2D" uid="uid://c6ek6pgsv2uwg" path="res://Assets/animation/lampe a huile/frame_19.png" id="24_obf8b"]
+[ext_resource type="Texture2D" uid="uid://cv2havhojxysc" path="res://Assets/animation/lampe a huile/frame_20.png" id="25_7pmwl"]
+[ext_resource type="Texture2D" uid="uid://bupgcqtn1twjc" path="res://Assets/animation/lampe a huile/frame_21.png" id="26_7cydd"]
+[ext_resource type="Texture2D" uid="uid://cnv3g74xxj2r3" path="res://Assets/animation/lampe a huile/frame_22.png" id="27_2qbgx"]
+[ext_resource type="Texture2D" uid="uid://hqfctu4toua7" path="res://Assets/animation/lampe a huile/frame_23.png" id="28_jjcgw"]
+[ext_resource type="Texture2D" uid="uid://b71fy4vpw6276" path="res://Assets/animation/lampe a huile/frame_24.png" id="29_tch14"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3y3q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d0ad6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x1y2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uey0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t4215")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wqxpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_og52p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tgv03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gsgit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2ffeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kf1p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8n4wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7u7hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qrdt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_h3s6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tp1ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_16dsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_waaqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rv2ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_obf8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_7pmwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7cydd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2qbgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_jjcgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_tch14")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main Menu" type="Control"]
 process_mode = 3
@@ -12,37 +120,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vxmgv")
 
-[node name="Play" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -83.0
-offset_top = -145.0
-offset_right = -42.0
-offset_bottom = -114.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4, 4)
-text = "Play"
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Quit" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -83.0
-offset_top = 26.0
-offset_right = -41.0
-offset_bottom = 57.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4, 4)
-text = "Quit"
+[node name="Boutton_Play" parent="." instance=ExtResource("2_hagcu")]
+process_mode = 3
+z_index = 5
+position = Vector2(-390, 64)
+scale = Vector2(0.2, 0.2)
 
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[node name="Boutton_credit" parent="." instance=ExtResource("3_3xav3")]
+position = Vector2(-2, -3)
+scale = Vector2(0.2, 0.2)
+
+[node name="lampe_a_huile" type="AnimatedSprite2D" parent="."]
+position = Vector2(-95, -24)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_r3y3q")
+frame_progress = 0.77384
+speed_scale = 3.0
+
+[node name="Boutton_quit" parent="." instance=ExtResource("4_tfr2c")]
+position = Vector2(360, 59)
+scale = Vector2(0.15, 0.15)
+
+[node name="IllustrationSansTitre" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.698148, 0.698148)
+texture = ExtResource("4_ir6qd")

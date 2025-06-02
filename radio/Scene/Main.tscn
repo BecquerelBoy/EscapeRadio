@@ -1,27 +1,61 @@
-[gd_scene load_steps=33 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=51 format=3 uid="uid://csank5gdyhetm"]
 
-[ext_resource type="Script" uid="uid://bgogihggeqh3x" path="res://Script/radio/main.gd" id="1_7m2i7"]
+[ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
+[ext_resource type="Texture2D" uid="uid://cjab0s75ogqk8" path="res://Assets/Djallel/Radio.png" id="3_1lx4l"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_0025t"]
-[ext_resource type="Script" uid="uid://7qsgf5isi1lo" path="res://Script/radio/frequence.gd" id="3_rggcm"]
-[ext_resource type="Script" uid="uid://vgaubn7iwt7h" path="res://Script/buttons/h_slider.gd" id="3_ro4ie"]
-[ext_resource type="Script" uid="uid://b88bwvnjhro77" path="res://Script/radio/textebox.gd" id="6_rp72t"]
-[ext_resource type="Script" uid="uid://bjxemuxnyex8r" path="res://Script/buttons/bouttons.gd" id="7_mao8n"]
+[ext_resource type="Script" path="res://Script/radio/frequence.gd" id="3_rggcm"]
+[ext_resource type="Script" path="res://Script/buttons/h_slider.gd" id="3_ro4ie"]
+[ext_resource type="Texture2D" uid="uid://bgg7ddnxr83j" path="res://Assets/Djallel/Curseur.png" id="4_p3bkf"]
+[ext_resource type="Texture2D" uid="uid://cfi32dvdd8yno" path="res://Assets/Djallel/Juste l'ecran.png" id="4_yhjfg"]
+[ext_resource type="Script" path="res://Script/radio/textebox.gd" id="6_rp72t"]
+[ext_resource type="Shader" path="res://Script/Shader/Crt.gdshader" id="7_iep7b"]
+[ext_resource type="Script" path="res://Script/buttons/bouttons.gd" id="7_mao8n"]
 [ext_resource type="Texture2D" uid="uid://dwol7p4n45qe5" path="res://Assets/buttons/464rll7x.bmp" id="8_qlvkl"]
+[ext_resource type="Texture2D" uid="uid://bofigqav0seof" path="res://Assets/Djallel/Image.png" id="9_5xqpo"]
 [ext_resource type="Texture2D" uid="uid://c2xasu0844vmy" path="res://Assets/buttons/ed2p1csr.bmp" id="9_sicws"]
 [ext_resource type="Texture2D" uid="uid://diglcdhcuyyvv" path="res://Assets/buttons/8at27z5v.bmp" id="10_7qqw4"]
-[ext_resource type="Script" uid="uid://cyhjdr8fb38gw" path="res://Script/buttons/yes.gd" id="10_wl2yh"]
+[ext_resource type="Script" path="res://Script/buttons/yes.gd" id="10_wl2yh"]
 [ext_resource type="Texture2D" uid="uid://jxfjeu5swqwo" path="res://Assets/buttons/0z94ntf7.bmp" id="11_culd5"]
-[ext_resource type="Script" uid="uid://c8vm0h7ftkfqv" path="res://Script/buttons/no.gd" id="13_uwmsf"]
+[ext_resource type="Script" path="res://Script/buttons/no.gd" id="13_uwmsf"]
 [ext_resource type="AudioStream" uid="uid://cfbrqy0pfhntg" path="res://Assets/sound/Audio_1.wav" id="14_6dljv"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="15_cvycu"]
-[ext_resource type="Script" uid="uid://oafwywgje6os" path="res://Script/radio/date_heure.gd" id="16_qxq5r"]
+[ext_resource type="Script" path="res://Script/radio/date_heure.gd" id="16_qxq5r"]
+[ext_resource type="Texture2D" uid="uid://4amxw33q07dr" path="res://Assets/Djallel/bouton Menu.png" id="16_xsqdr"]
 [ext_resource type="PackedScene" uid="uid://c230622myff4x" path="res://Scene/volume.tscn" id="19_ayjky"]
-[ext_resource type="Texture2D" uid="uid://bke3w7wwvompn" path="res://Assets/buttons/IMG_2904.png" id="23_4m8er"]
-[ext_resource type="Script" uid="uid://tjcmuiomnj33" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="21_5rxtn"]
+[ext_resource type="Texture2D" uid="uid://d3dtmpca2ey1x" path="res://Assets/Djallel/Diode Rouge.png" id="25_1qddf"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
+[ext_resource type="Texture2D" uid="uid://rtnrwvto2nfp" path="res://Assets/Djallel/Diode verte.png" id="26_u13ku"]
+[ext_resource type="PackedScene" uid="uid://ckudx25bk86w5" path="res://Scene/choix/1.tscn" id="28_kya4d"]
+
+[sub_resource type="Environment" id="Environment_uylef"]
+background_mode = 3
+glow_enabled = true
+glow_hdr_threshold = 1.6
 
 [sub_resource type="LabelSettings" id="LabelSettings_yn4y2"]
 font_color = Color(0.0980392, 0.133333, 0.168627, 1)
+
+[sub_resource type="Theme" id="Theme_ptuc3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygq50"]
+border_width_top = 26
+border_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72ouq"]
+
+[sub_resource type="Theme" id="Theme_e0rp1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3kji"]
+bg_color = Color(0.8, 1, 1, 1)
+border_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_akys4"]
+shader = ExtResource("7_iep7b")
+
+[sub_resource type="QuadMesh" id="QuadMesh_hhgdo"]
+size = Vector2(957.825, 600)
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8wql"]
 font = ExtResource("3_0025t")
@@ -47,38 +81,44 @@ font = ExtResource("3_0025t")
 font_size = 30
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s6ble"]
+shader = ExtResource("21_5rxtn")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
 [sub_resource type="LabelSettings" id="LabelSettings_x4c1q"]
 font = ExtResource("3_0025t")
-font_size = 25
+font_size = 60
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ecd2"]
 font = ExtResource("3_0025t")
-font_size = 25
+font_size = 60
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ekmy"]
 font = ExtResource("3_0025t")
-font_size = 25
+font_size = 60
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4s5oc"]
 font = ExtResource("3_0025t")
-font_size = 25
+font_size = 60
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_l7pur"]
 font = ExtResource("3_0025t")
-font_size = 25
+font_size = 60
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kv4ux"]
 font = ExtResource("3_0025t")
-font_size = 25
+font_size = 60
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_hqsx6"]
-font_size = 20
+font_size = 60
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [node name="Main" type="Node2D"]
@@ -86,7 +126,10 @@ script = ExtResource("1_7m2i7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_mode = 3
-zoom = Vector2(1.6, 1.6)
+zoom = Vector2(1.05, 1.05)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_uylef")
 
 [node name="Radio" type="Node" parent="."]
 
@@ -94,95 +137,157 @@ zoom = Vector2(1.6, 1.6)
 scale = Vector2(0.890147, 0.890147)
 texture = ExtResource("2_ck2o1")
 
+[node name="Img2986" type="Sprite2D" parent="Radio/Radio"]
+position = Vector2(2.24682, 0)
+scale = Vector2(0.723177, 0.723177)
+texture = ExtResource("3_1lx4l")
+
 [node name="Marker2D" type="Marker2D" parent="Radio"]
 position = Vector2(0, 38)
 
-[node name="ColorRect" type="ColorRect" parent="Radio"]
-offset_left = -303.0
-offset_top = 152.0
-offset_right = 357.0
-offset_bottom = 283.0
-color = Color(0.235294, 0.321569, 0.372549, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="Radio"]
-offset_left = 58.0
-offset_top = 93.0
-offset_right = 357.0
-offset_bottom = 154.0
-color = Color(0.235294, 0.321569, 0.372549, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="Radio"]
-offset_left = -306.0
-offset_top = 93.0
-offset_right = -7.0
-offset_bottom = 154.0
-color = Color(0.235294, 0.321569, 0.372549, 1)
-
 [node name="Label" type="Label" parent="Radio"]
-offset_left = 349.0
-offset_top = 168.0
-offset_right = 369.0
-offset_bottom = 191.0
+offset_left = 499.0
+offset_top = 72.0
+offset_right = 519.0
+offset_bottom = 95.0
 text = "Hz"
 label_settings = SubResource("LabelSettings_yn4y2")
 
-[node name="HSlider" type="HSlider" parent="Radio"]
-offset_left = -302.0
-offset_top = 173.0
-offset_right = 345.0
-offset_bottom = 189.0
+[node name="HSlider" type="VSlider" parent="Radio"]
+z_index = 11
+offset_left = 543.0
+offset_top = -233.0
+offset_right = 561.0
+offset_bottom = 89.0
+theme = SubResource("Theme_ptuc3")
+theme_override_icons/grabber = ExtResource("4_p3bkf")
+theme_override_icons/grabber_highlight = ExtResource("4_p3bkf")
+theme_override_icons/grabber_disabled = ExtResource("4_p3bkf")
+theme_override_styles/slider = SubResource("StyleBoxFlat_ygq50")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_72ouq")
 max_value = 99.9
 step = 0.1
 ticks_on_borders = true
 script = ExtResource("3_ro4ie")
 
-[node name="Frequence" type="Node" parent="."]
+[node name="Volume" parent="Radio" instance=ExtResource("19_ayjky")]
+z_index = 11
+offset_left = -556.0
+offset_top = 89.0
+offset_right = -540.0
+offset_bottom = 275.0
+scale = Vector2(0.8, 1)
+theme = SubResource("Theme_e0rp1")
+theme_override_icons/grabber = ExtResource("4_p3bkf")
+theme_override_icons/grabber_highlight = ExtResource("4_p3bkf")
+theme_override_styles/slider = SubResource("StyleBoxFlat_j3kji")
+value = 1.0
+bus_name = "Master"
+
+[node name="plus" type="Button" parent="Radio"]
+z_index = 11
+anchors_preset = -1
+anchor_right = 0.015
+anchor_bottom = 0.028
+offset_left = 500.0
+offset_top = 100.0
+offset_right = 513.8
+offset_bottom = 110.84
+text = "+"
+
+[node name="moins" type="Button" parent="Radio"]
+z_index = 11
+anchors_preset = -1
+anchor_right = 0.015
+anchor_bottom = 0.028
+offset_left = 538.0
+offset_top = 100.0
+offset_right = 551.8
+offset_bottom = 110.84
+text = "-"
+
+[node name="CanvasLayer" type="Control" parent="Radio"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Img" type="Sprite2D" parent="Radio/CanvasLayer"]
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(2.33329, -1)
+scale = Vector2(0.64132, 0.638889)
+texture = ExtResource("4_yhjfg")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Radio/CanvasLayer"]
+z_index = 10
+material = SubResource("ShaderMaterial_akys4")
+scale = Vector2(1.00237, 0.98793)
+mesh = SubResource("QuadMesh_hhgdo")
+
+[node name="Image" type="Sprite2D" parent="Radio/CanvasLayer"]
+z_index = 10
+position = Vector2(0.999996, 0.25)
+scale = Vector2(0.64213, 0.64213)
+texture = ExtResource("9_5xqpo")
+
+[node name="Frequence" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 15.0
+offset_right = 8.0
+offset_bottom = 15.0
+scale = Vector2(4, 4)
 script = ExtResource("3_rggcm")
 
 [node name="Dizaine" type="Label" parent="Frequence"]
-offset_left = 355.0
-offset_top = -251.0
-offset_right = 382.0
-offset_bottom = -191.0
+layout_mode = 0
+offset_left = -48.5
+offset_top = -33.0
+offset_right = -21.5
+offset_bottom = 27.0
 theme_override_constants/line_spacing = 1
 text = "8"
 label_settings = SubResource("LabelSettings_x8wql")
 
 [node name="unité" type="Label" parent="Frequence"]
-offset_left = 381.0
-offset_top = -251.0
-offset_right = 408.0
-offset_bottom = -191.0
+layout_mode = 0
+offset_left = -22.5
+offset_top = -33.0
+offset_right = 4.5
+offset_bottom = 27.0
 theme_override_constants/line_spacing = 1
 text = "8
 "
 label_settings = SubResource("LabelSettings_x8wql")
 
 [node name="dixieme" type="Label" parent="Frequence"]
-offset_left = 413.0
-offset_top = -251.0
-offset_right = 440.0
-offset_bottom = -191.0
+layout_mode = 0
+offset_left = 9.5
+offset_top = -33.0
+offset_right = 36.5
+offset_bottom = 27.0
 theme_override_constants/line_spacing = 1
 text = "8
 "
 label_settings = SubResource("LabelSettings_x8wql")
 
 [node name="point" type="Label" parent="Frequence"]
-offset_left = 406.0
-offset_top = -251.0
-offset_right = 433.0
-offset_bottom = -191.0
+layout_mode = 0
+offset_left = 2.5
+offset_top = -33.0
+offset_right = 29.5
+offset_bottom = 27.0
 theme_override_constants/line_spacing = 1
 text = ".
 "
 label_settings = SubResource("LabelSettings_x8wql")
 
 [node name="Hz" type="Label" parent="Frequence"]
-offset_left = 441.0
-offset_top = -229.0
-offset_right = 481.0
-offset_bottom = -177.0
+layout_mode = 0
+offset_left = 37.5
+offset_top = -11.0
+offset_right = 77.5
+offset_bottom = 41.0
 text = "Hz"
 label_settings = SubResource("LabelSettings_k8dir")
 
@@ -198,16 +303,16 @@ metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="ScrollContainer" parent="Textebox"]
 layout_mode = 0
-offset_left = -467.0
-offset_top = -162.0
-offset_right = 483.0
-offset_bottom = -1.0
+offset_left = -244.0
+offset_top = -207.0
+offset_right = 470.0
+offset_bottom = 252.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Textebox/MarginContainer"]
 layout_mode = 2
 
 [node name="Text" type="Label" parent="Textebox/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(800, 0)
+custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 label_settings = SubResource("LabelSettings_qlyp8")
 autowrap_mode = 2
@@ -283,15 +388,16 @@ script = ExtResource("13_uwmsf")
 
 [node name="Pause" type="TextureButton" parent="Bouttons"]
 process_mode = 3
-z_index = 1
+z_index = 10
+material = SubResource("ShaderMaterial_s6ble")
 layout_mode = 0
-offset_left = -693.0
-offset_top = -1036.0
-offset_right = 1355.0
-offset_bottom = 1012.0
-scale = Vector2(0.022, 0.022)
-pivot_offset = Vector2(1022, 1022)
-texture_normal = ExtResource("23_4m8er")
+offset_left = 666.0
+offset_top = -461.0
+offset_right = 822.0
+offset_bottom = -364.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(77.18, 50)
+texture_normal = ExtResource("16_xsqdr")
 script = ExtResource("26_6gsyx")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="Bouttons"]
@@ -309,84 +415,112 @@ script = ExtResource("16_qxq5r")
 [node name="date" type="Label" parent="date_heure"]
 z_index = 1
 layout_mode = 0
-offset_left = 192.0
-offset_top = -243.0
-offset_right = 258.0
-offset_bottom = -217.0
+offset_left = 154.0
+offset_top = -262.0
+offset_right = 312.0
+offset_bottom = -202.0
+scale = Vector2(0.5, 0.5)
 text = "May 06"
 label_settings = SubResource("LabelSettings_x4c1q")
 
 [node name="heure_dizaine" type="Label" parent="date_heure"]
 z_index = 1
 layout_mode = 0
-offset_left = 275.0
-offset_top = -243.0
-offset_right = 286.0
-offset_bottom = -217.0
+offset_left = 248.0
+offset_top = -262.0
+offset_right = 275.0
+offset_bottom = -202.0
+scale = Vector2(0.5, 0.5)
 text = "8"
 label_settings = SubResource("LabelSettings_4ecd2")
 
 [node name="heure_unite" type="Label" parent="date_heure"]
 z_index = 1
 layout_mode = 0
-offset_left = 286.0
-offset_top = -243.0
-offset_right = 297.0
-offset_bottom = -217.0
+offset_left = 262.0
+offset_top = -262.0
+offset_right = 289.0
+offset_bottom = -202.0
+scale = Vector2(0.5, 0.5)
 text = "8"
 label_settings = SubResource("LabelSettings_2ekmy")
 
 [node name="minute_dizaine" type="Label" parent="date_heure"]
 z_index = 1
 layout_mode = 0
-offset_left = 301.0
-offset_top = -243.0
-offset_right = 312.0
-offset_bottom = -217.0
+offset_left = 279.0
+offset_top = -262.0
+offset_right = 306.0
+offset_bottom = -202.0
+scale = Vector2(0.5, 0.5)
 text = "8"
 label_settings = SubResource("LabelSettings_4s5oc")
 
 [node name="minute_unite" type="Label" parent="date_heure"]
 z_index = 1
 layout_mode = 0
-offset_left = 312.0
-offset_top = -243.0
-offset_right = 323.0
-offset_bottom = -217.0
+offset_left = 292.0
+offset_top = -262.0
+offset_right = 319.0
+offset_bottom = -202.0
+scale = Vector2(0.5, 0.5)
 text = "8"
 label_settings = SubResource("LabelSettings_l7pur")
 
 [node name="separation_heure" type="Label" parent="date_heure"]
 z_index = 1
 layout_mode = 0
-offset_left = 297.0
-offset_top = -238.0
-offset_right = 301.0
-offset_bottom = -212.0
+offset_left = 275.0
+offset_top = -258.0
+offset_right = 285.0
+offset_bottom = -198.0
+scale = Vector2(0.5, 0.5)
 text = ":"
 label_settings = SubResource("LabelSettings_kv4ux")
 
 [node name="Météo" type="Label" parent="date_heure"]
 z_index = 1
 layout_mode = 0
-offset_left = 329.0
-offset_top = -248.0
-offset_right = 346.0
-offset_bottom = -220.0
+offset_left = 323.0
+offset_top = -267.0
+offset_right = 374.0
+offset_bottom = -184.0
+scale = Vector2(0.4, 0.4)
 text = "☼"
 label_settings = SubResource("LabelSettings_hqsx6")
 
-[node name="Volume" parent="." instance=ExtResource("19_ayjky")]
+[node name="DiodeRouge" type="Sprite2D" parent="."]
+self_modulate = Color(1.5, 1.1, 1.1, 1)
+z_index = 11
+position = Vector2(-6, 3)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("25_1qddf")
+
+[node name="DiodeVerte" type="Sprite2D" parent="."]
+self_modulate = Color(1.1, 1.5, 1.1, 1)
+z_index = 11
+position = Vector2(-6, 3)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("26_u13ku")
+
+[node name="label_reponse" parent="." instance=ExtResource("28_kya4d")]
 visible = false
-z_index = 1
-offset_left = 361.0
-offset_top = 100.0
-offset_right = 509.0
-offset_bottom = 116.0
-value = 1.0
-bus_name = "Master"
+
+[node name="FlecheG" parent="label_reponse" index="4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 34.0
+offset_bottom = 67.0
+
+[node name="FlecheD" parent="label_reponse" index="5"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 34.0
+offset_bottom = 67.0
 
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons" method="_on_yes_pressed"]
 [connection signal="pressed" from="Bouttons/Yes" to="Bouttons/Yes" method="_on_pressed"]
 [connection signal="pressed" from="Bouttons/No" to="Bouttons" method="_on_no_pressed"]
 [connection signal="pressed" from="Bouttons/Pause" to="Bouttons/Pause" method="_on_pressed"]
+
+[editable path="label_reponse"]
