@@ -7,6 +7,7 @@ extends Area2D
 @export var click_curve: Curve  # Courbe pour l'animation de clic (enfoncement)
 @export var click_speed: float = 8.0  # Vitesse de l'animation de clic
 @export var click_scale: float = 0.9  # Facteur d'enfoncement (0.9 = 10% plus petit)
+@onready var writing: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
 
 # Références aux nœuds
 @onready var animated_sprite = $AnimatedSprite2D
@@ -54,7 +55,7 @@ func setup_initial_state():
 func _on_mouse_entered():
 	print("Mouse entered - DEBUG")  # Ajoutez cette ligne
 	is_hovering = true
-	
+	writing.play()
 	# Changer le curseur en main pointée
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 	
@@ -66,7 +67,7 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	is_hovering = false
-	
+	writing.stop()
 	# Remettre le curseur normal
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 	

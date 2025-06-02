@@ -10,6 +10,7 @@ extends Area2D
 
 # Références aux nœuds
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var blip: AudioStreamPlayer2D = $"../blip"
 
 # Tweens pour les animations
 var scale_tween: Tween
@@ -54,7 +55,7 @@ func setup_initial_state():
 func _on_mouse_entered():
 	print("Mouse entered - DEBUG")  # Ajoutez cette ligne
 	is_hovering = true
-	
+	blip.play(0.3)
 	# Changer le curseur en main pointée
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 	
@@ -66,7 +67,7 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	is_hovering = false
-	
+	blip.stop()
 	# Remettre le curseur normal
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 	

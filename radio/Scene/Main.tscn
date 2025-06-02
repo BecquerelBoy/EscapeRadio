@@ -12,7 +12,7 @@
 [ext_resource type="Shader" path="res://Script/Shader/Crt.gdshader" id="7_iep7b"]
 [ext_resource type="Script" path="res://Script/buttons/bouttons.gd" id="7_mao8n"]
 [ext_resource type="Texture2D" uid="uid://dwol7p4n45qe5" path="res://Assets/buttons/464rll7x.bmp" id="8_qlvkl"]
-[ext_resource type="Texture2D" uid="uid://bofigqav0seof" path="res://Assets/Djallel/Image.png" id="9_5xqpo"]
+[ext_resource type="Texture2D" uid="uid://bofigqav0seof" path="res://Assets/Djallel/Radio facade.png" id="9_5xqpo"]
 [ext_resource type="Texture2D" uid="uid://c2xasu0844vmy" path="res://Assets/buttons/ed2p1csr.bmp" id="9_sicws"]
 [ext_resource type="Texture2D" uid="uid://diglcdhcuyyvv" path="res://Assets/buttons/8at27z5v.bmp" id="10_7qqw4"]
 [ext_resource type="Script" path="res://Script/buttons/yes.gd" id="10_wl2yh"]
@@ -184,27 +184,27 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_j3kji")
 value = 1.0
 bus_name = "Master"
 
-[node name="plus" type="Button" parent="Radio"]
-z_index = 11
-anchors_preset = -1
-anchor_right = 0.015
-anchor_bottom = 0.028
-offset_left = 500.0
-offset_top = 100.0
-offset_right = 513.8
-offset_bottom = 110.84
-text = "+"
-
 [node name="moins" type="Button" parent="Radio"]
 z_index = 11
 anchors_preset = -1
 anchor_right = 0.015
 anchor_bottom = 0.028
-offset_left = 538.0
-offset_top = 100.0
-offset_right = 551.8
-offset_bottom = 110.84
+offset_left = 503.0
+offset_top = 97.0
+offset_right = 516.8
+offset_bottom = 107.84
 text = "-"
+
+[node name="plus" type="Button" parent="Radio"]
+z_index = 11
+anchors_preset = -1
+anchor_right = 0.015
+anchor_bottom = 0.028
+offset_left = 538.0
+offset_top = 97.0
+offset_right = 551.8
+offset_bottom = 107.84
+text = "+"
 
 [node name="CanvasLayer" type="Control" parent="Radio"]
 layout_mode = 3
