@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bd3cqsnxa2uht"]
+[gd_scene load_steps=34 format=3 uid="uid://bd3cqsnxa2uht"]
 
 [ext_resource type="Script" path="res://Script/menu/main_menu.gd" id="1_vxmgv"]
 [ext_resource type="PackedScene" uid="uid://cte2cj0bhms4o" path="res://Scene/boutton_play.tscn" id="2_hagcu"]
@@ -29,6 +29,9 @@
 [ext_resource type="Texture2D" uid="uid://cnv3g74xxj2r3" path="res://Assets/animation/lampe a huile/frame_22.png" id="27_2qbgx"]
 [ext_resource type="Texture2D" uid="uid://hqfctu4toua7" path="res://Assets/animation/lampe a huile/frame_23.png" id="28_jjcgw"]
 [ext_resource type="Texture2D" uid="uid://b71fy4vpw6276" path="res://Assets/animation/lampe a huile/frame_24.png" id="29_tch14"]
+[ext_resource type="Texture2D" uid="uid://v7f7c6gm4t7g" path="res://Assets/Djallel/Lunette.png" id="30_7wtql"]
+[ext_resource type="Texture2D" uid="uid://r2xpf7yk5okj" path="res://Assets/Djallel/Boussole.png" id="31_a8i3s"]
+[ext_resource type="AudioStream" uid="uid://bh5ifgc5xcio5" path="res://Assets/sound/Animal Crossing Relaxing Music No Copyright.mp3" id="32_20j5g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r3y3q"]
 animations = [{
@@ -125,25 +128,39 @@ script = ExtResource("1_vxmgv")
 [node name="Boutton_Play" parent="." instance=ExtResource("2_hagcu")]
 process_mode = 3
 z_index = 5
-position = Vector2(-390, 64)
+position = Vector2(-46, 40)
 scale = Vector2(0.2, 0.2)
 
 [node name="Boutton_credit" parent="." instance=ExtResource("3_3xav3")]
-position = Vector2(-2, -3)
+z_index = 4
+position = Vector2(-437, 67)
 scale = Vector2(0.2, 0.2)
 
 [node name="lampe_a_huile" type="AnimatedSprite2D" parent="."]
-position = Vector2(-95, -24)
-scale = Vector2(0.4, 0.4)
+position = Vector2(34, -10)
+scale = Vector2(0.334491, 0.334491)
 sprite_frames = SubResource("SpriteFrames_r3y3q")
 frame_progress = 0.77384
-speed_scale = 3.0
+speed_scale = 2.0
 
 [node name="Boutton_quit" parent="." instance=ExtResource("4_tfr2c")]
-position = Vector2(360, 59)
+position = Vector2(388, 115)
 scale = Vector2(0.15, 0.15)
 
 [node name="IllustrationSansTitre" type="Sprite2D" parent="."]
 z_index = -1
 scale = Vector2(0.698148, 0.698148)
 texture = ExtResource("4_ir6qd")
+
+[node name="Lunette" type="Sprite2D" parent="."]
+position = Vector2(-42, 13)
+scale = Vector2(0.650926, 0.650926)
+texture = ExtResource("30_7wtql")
+
+[node name="Boussole" type="Sprite2D" parent="."]
+position = Vector2(-41, 10)
+scale = Vector2(0.624074, 0.624074)
+texture = ExtResource("31_a8i3s")
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("32_20j5g")

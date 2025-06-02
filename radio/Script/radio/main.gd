@@ -10,6 +10,7 @@ extends Node2D
 var current_scene: Node = null
 @onready var textebox = get_node("/root/Main/Textebox")  # adapte le chemin
 
+
 func _ready():
 	Global.ok = false
 	yes.disabled = true

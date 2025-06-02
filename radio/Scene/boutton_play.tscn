@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cte2cj0bhms4o"]
+[gd_scene load_steps=35 format=3 uid="uid://cte2cj0bhms4o"]
 
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_6pt5q"]
 [ext_resource type="Script" path="res://Script/buttons/boutton_play.gd" id="1_e0grq"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cta2hxpvkfhgy" path="res://Assets/animation/Bouton play/frame_22.png" id="24_dlxve"]
 [ext_resource type="Texture2D" uid="uid://c7ik8xjxo0ukh" path="res://Assets/animation/Bouton play/frame_23.png" id="25_qmofo"]
 [ext_resource type="Texture2D" uid="uid://yssygf4pk87u" path="res://Assets/animation/Bouton play/frame_24.png" id="26_nr1uq"]
+[ext_resource type="AudioStream" uid="uid://10wt3f3w51km" path="res://Assets/sound/blip_radio.mp3" id="28_8xow7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gn61c"]
 shader = ExtResource("1_6pt5q")
@@ -35,7 +36,7 @@ shader_parameter/transition_speed = 5.0
 shader_parameter/is_hovered = false
 
 [sub_resource type="Curve" id="Curve_ewqdd"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.361702, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_pairo"]
@@ -49,10 +50,10 @@ size = Vector2(1191, 650)
 shader = ExtResource("3_14yj8")
 shader_parameter/debug = false
 shader_parameter/border_scale = 2.0
-shader_parameter/shadow_offset = Vector2(20, -50)
+shader_parameter/shadow_offset = Vector2(30, -70)
 shader_parameter/color = Color(0.166, 0.166, 0.166, 0.6)
 shader_parameter/blur_amount = 2.0
-shader_parameter/shadow_scale = 1.5
+shader_parameter/shadow_scale = 2.0
 shader_parameter/disable_rotating = false
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mildr"]
@@ -150,8 +151,11 @@ shape = SubResource("RectangleShape2D_8nqoa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 material = SubResource("ShaderMaterial_dyo20")
-position = Vector2(1.90735e-06, -4.76837e-07)
+position = Vector2(-408, 72)
 sprite_frames = SubResource("SpriteFrames_mildr")
 frame_progress = 0.283091
 speed_scale = 6.0
 offset = Vector2(420, -74.72)
+
+[node name="blip" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_8xow7")

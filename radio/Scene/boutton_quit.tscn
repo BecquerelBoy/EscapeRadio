@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dd2s0lx211gf1"]
+[gd_scene load_steps=35 format=3 uid="uid://dd2s0lx211gf1"]
 
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_rknqv"]
 [ext_resource type="Script" path="res://Scene/Boutton quitter.gd" id="2_i22i8"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://blohanbcfnrew" path="res://Assets/animation/bouton quitter/frame_22.png" id="25_p45fy"]
 [ext_resource type="Texture2D" uid="uid://c1nnvx0fajxm3" path="res://Assets/animation/bouton quitter/frame_23.png" id="26_reym1"]
 [ext_resource type="Texture2D" uid="uid://dxuhkhe15662g" path="res://Assets/animation/bouton quitter/frame_24.png" id="27_68hf6"]
+[ext_resource type="AudioStream" uid="uid://ba4ha42t1oi2u" path="res://Assets/sound/cle.mp3" id="28_e5ucv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gn61c"]
 shader = ExtResource("1_rknqv")
@@ -36,8 +37,8 @@ shader_parameter/is_hovered = false
 
 [sub_resource type="Curve" id="Curve_to6yy"]
 max_value = 2.0
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.753363, 2), 0.0, 0.0, 0, 0, Vector2(1, 1.2967), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Curve" id="Curve_kwfbw"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.197309, 1), 0.0, 0.0, 0, 0, Vector2(0.313901, 0.483516), 0.0, 0.0, 0, 0]
@@ -50,10 +51,10 @@ size = Vector2(1191, 650)
 shader = ExtResource("3_0k4aq")
 shader_parameter/debug = false
 shader_parameter/border_scale = 2.0
-shader_parameter/shadow_offset = Vector2(20, -50)
+shader_parameter/shadow_offset = Vector2(40, -70)
 shader_parameter/color = Color(0.166, 0.166, 0.166, 0.6)
 shader_parameter/blur_amount = 2.0
-shader_parameter/shadow_scale = 1.5
+shader_parameter/shadow_scale = 2.0
 shader_parameter/disable_rotating = false
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mildr"]
@@ -150,9 +151,13 @@ shape = SubResource("RectangleShape2D_8nqoa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 material = SubResource("ShaderMaterial_dyo20")
-position = Vector2(271, -8)
+position = Vector2(690, 22)
 sprite_frames = SubResource("SpriteFrames_mildr")
-frame = 21
-frame_progress = 0.892947
-speed_scale = 6.0
+frame = 15
+frame_progress = 0.062405
+speed_scale = 7.0
 offset = Vector2(-421.63, 0)
+
+[node name="clef" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_e5ucv")
+volume_db = 15.0
