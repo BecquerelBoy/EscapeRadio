@@ -7,7 +7,7 @@ extends Control
 @onready var label_resume: Label = $Resume
 @onready var click: AudioStreamPlayer2D = $"../Click"
 @onready var ok = $"../Buttons/ok"
-
+const MAIN_MENU = preload("res://Scene/main_menu.tscn")
 var current_selection := "resume"  # "resume" ou "quit"
 # Marge à ajouter autour du label (en pixels)
 var margin := Vector2(10, 5)  # Ajuste selon tes préférences
@@ -91,4 +91,4 @@ func _on_ok_pressed() -> void:
 		Global.is_pausing = false
 		get_tree().paused = false
 		pause_menu.queue_free()        # 3. Supprimer la scène pause
-		get_tree().change_scene_to_file("res://Scene/main_menu.tscn")
+		get_tree().change_scene_to_packed(MAIN_MENU)
