@@ -12,12 +12,13 @@ config_version=5
 
 config/name="radio"
 run/main_scene="res://Scene/main_menu.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/Vrac/icon.svg"
 
 [autoload]
 
 Global="*res://Script/Global/Global.gd"
+TransitionScreen="*res://Scene/Transition_Screen.tscn"
 
 [display]
 

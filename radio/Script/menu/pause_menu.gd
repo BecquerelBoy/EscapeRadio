@@ -7,12 +7,21 @@ extends Control
 @onready var label_resume: Label = $Resume
 @onready var click: AudioStreamPlayer2D = $"../Click"
 @onready var ok = $"../Buttons/ok"
+
 const MAIN_MENU = preload("res://Scene/main_menu.tscn")
+
+var preloaded_main_menu: PackedScene = null
+
 var current_selection := "resume"  # "resume" ou "quit"
 # Marge à ajouter autour du label (en pixels)
 var margin := Vector2(10, 5)  # Ajuste selon tes préférences
 
 func _ready() -> void:
+		# Ajoutez cette vérification
+	print("MAIN_MENU chargé: ", MAIN_MENU)
+	if MAIN_MENU == null:
+		print("ERREUR: main_menu.tscn non trouvé !")
+	
 	fleche_haut.disabled = true
 	fleche_bas.disabled = true
 	current_selection = "resume"
@@ -20,6 +29,8 @@ func _ready() -> void:
 	# Initialiser les LabelSettings pour chaque label
 	label_resume.label_settings = LabelSettings.new()
 	label_quit.label_settings = LabelSettings.new()
+
+	ResourceLoader.load_threaded_request("res://Scene/main_menu.tscn")
 	
 	update_selection()
 
@@ -82,13 +93,27 @@ func _on_ok_pressed() -> void:
 	if current_selection == "resume":
 		# Reprendre le jeu
 		Global.is_pausing = false
-		get_tree().paused = false  # 1. Dépauser le jeu
-		await get_tree().process_frame  # 2. Laisser Godot actualiser l'état
-		pause_menu.queue_free()        # 3. Supprimer la scène pause
+		get_tree().paused = false
+		await get_tree().process_frame
+		pause_menu.queue_free()
 		
 	elif current_selection == "quit":
-		# Retourner au menu principal
+		print("Début du quit")
 		Global.is_pausing = false
 		get_tree().paused = false
-		pause_menu.queue_free()        # 3. Supprimer la scène pause
-		get_tree().change_scene_to_packed(MAIN_MENU)
+		
+		var tree = get_tree()
+		
+		print("Démarrage transition")
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
+		print("Transition terminée")
+		
+		# Récupérer la scène préchargée
+		if preloaded_main_menu == null:
+			preloaded_main_menu = ResourceLoader.load_threaded_get("res://Scene/main_menu.tscn")
+		
+		print("Changement de scène avec préchargement")
+		var error = tree.change_scene_to_packed(preloaded_main_menu)
+		print("Résultat: ", error)
+		pause_menu.queue_free()

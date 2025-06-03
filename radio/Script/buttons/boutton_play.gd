@@ -12,6 +12,8 @@ extends Area2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var blip: AudioStreamPlayer2D = $"../blip"
 
+const MAIN = preload("res://Scene/Main.tscn")
+
 # Tweens pour les animations
 var scale_tween: Tween
 var click_tween: Tween
@@ -129,8 +131,9 @@ func _apply_click_curve(progress: float):
 
 func load_main_scene():
 	# Charger la scène Main
-	print("Chargement de la scène Main...")
-	get_tree().change_scene_to_file("res://Scene/Main.tscn")  # Ajustez le chemin selon votre projet
+	#TransitionScreen.transition()
+	#await TransitionScreen.on_transition_finished
+	get_tree().change_scene_to_packed(MAIN) # Ajustez le chemin selon votre projet
 
 func start_hover_animation():
 	animation_playing = true
