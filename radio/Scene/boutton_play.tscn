@@ -46,8 +46,8 @@ _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_pairo"]
-_data = [Vector2(0, 0.483516), 0.0, 0.0, 0, 0, Vector2(0.502242, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0]
+point_count = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8nqoa"]
 size = Vector2(1191, 650)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=58 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=59 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
+[ext_resource type="AudioStream" uid="uid://cnfkv4rjwysbj" path="res://Assets/sound/button-press2.wav" id="2_0umad"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
 [ext_resource type="Texture2D" uid="uid://cjab0s75ogqk8" path="res://Assets/Djallel/Radio.png" id="3_1lx4l"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_0025t"]
@@ -144,7 +145,7 @@ script = ExtResource("1_7m2i7")
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("15_cvycu")
+stream = ExtResource("2_0umad")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_mode = 3

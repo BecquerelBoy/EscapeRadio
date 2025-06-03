@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://gxvohpa4f114"]
 
-[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="1_mcuat"]
+[ext_resource type="AudioStream" uid="uid://cnfkv4rjwysbj" path="res://Assets/sound/button-press2.wav" id="1_wfeva"]
 [ext_resource type="Texture2D" uid="uid://cfi32dvdd8yno" path="res://Assets/Djallel/Juste l'ecran.png" id="2_8857q"]
 [ext_resource type="Script" path="res://Script/menu/pause_menu.gd" id="2_py5ll"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_fq7b7"]
@@ -53,7 +53,7 @@ grow_vertical = 2
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("1_mcuat")
+stream = ExtResource("1_wfeva")
 
 [node name="Img" type="Sprite2D" parent="."]
 self_modulate = Color(1.2, 1.2, 1.2, 1)

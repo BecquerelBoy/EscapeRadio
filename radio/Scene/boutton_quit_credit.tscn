@@ -1,0 +1,161 @@
+[gd_scene load_steps=35 format=3 uid="uid://cdy23toabsxjl"]
+
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_d4fgm"]
+[ext_resource type="Script" path="res://Scene/quitter_credit.gd" id="2_5qxfd"]
+[ext_resource type="Shader" path="res://Script/Shader/ombre.gdshader" id="3_e4cyl"]
+[ext_resource type="Texture2D" uid="uid://rhf1pxl35asa" path="res://Assets/animation/Clef/frame_01.png" id="4_tcalu"]
+[ext_resource type="Texture2D" uid="uid://4qb3jayochq1" path="res://Assets/animation/Clef/frame_02.png" id="5_focrp"]
+[ext_resource type="Texture2D" uid="uid://c6aoy8rwljxay" path="res://Assets/animation/Clef/frame_03.png" id="6_tcure"]
+[ext_resource type="Texture2D" uid="uid://cim6ebywpvtbx" path="res://Assets/animation/Clef/frame_04.png" id="7_sph1q"]
+[ext_resource type="Texture2D" uid="uid://d157e5yqair6p" path="res://Assets/animation/Clef/frame_05.png" id="8_6sb54"]
+[ext_resource type="Texture2D" uid="uid://xrdmtstpupey" path="res://Assets/animation/Clef/frame_06.png" id="9_o14x4"]
+[ext_resource type="Texture2D" uid="uid://b1fanwtnj7b81" path="res://Assets/animation/Clef/frame_07.png" id="10_yovn5"]
+[ext_resource type="Texture2D" uid="uid://cg1hk067xykn8" path="res://Assets/animation/Clef/frame_08.png" id="11_ick3f"]
+[ext_resource type="Texture2D" uid="uid://t6y02arwqfmo" path="res://Assets/animation/Clef/frame_09.png" id="12_a8q0i"]
+[ext_resource type="Texture2D" uid="uid://ci6g0s0wrxtem" path="res://Assets/animation/Clef/frame_10.png" id="13_1vb4w"]
+[ext_resource type="Texture2D" uid="uid://dtmi3e2hdwgei" path="res://Assets/animation/Clef/frame_11.png" id="14_khq02"]
+[ext_resource type="Texture2D" uid="uid://gp7ipd2u148n" path="res://Assets/animation/Clef/frame_12.png" id="15_ir5tt"]
+[ext_resource type="Texture2D" uid="uid://dko1jwy55e02d" path="res://Assets/animation/Clef/frame_13.png" id="16_xekac"]
+[ext_resource type="Texture2D" uid="uid://j8cfmue0js70" path="res://Assets/animation/Clef/frame_14.png" id="17_rq7qc"]
+[ext_resource type="Texture2D" uid="uid://cu62nwuns1tys" path="res://Assets/animation/Clef/frame_15.png" id="18_o1t02"]
+[ext_resource type="Texture2D" uid="uid://c8pyeyry5nblb" path="res://Assets/animation/Clef/frame_16.png" id="19_3du55"]
+[ext_resource type="Texture2D" uid="uid://jexiq0cwlgrd" path="res://Assets/animation/Clef/frame_17.png" id="20_6s38e"]
+[ext_resource type="Texture2D" uid="uid://d4fikwg35n3e0" path="res://Assets/animation/Clef/frame_18.png" id="21_i2rcf"]
+[ext_resource type="Texture2D" uid="uid://i4c85dtqljpr" path="res://Assets/animation/Clef/frame_19.png" id="22_esekc"]
+[ext_resource type="Texture2D" uid="uid://2o1gr5tl7ukm" path="res://Assets/animation/Clef/frame_20.png" id="23_32luh"]
+[ext_resource type="Texture2D" uid="uid://c6xvdlojtdtln" path="res://Assets/animation/Clef/frame_21.png" id="24_ifa80"]
+[ext_resource type="Texture2D" uid="uid://dtgwjbw52m3or" path="res://Assets/animation/Clef/frame_22.png" id="25_e86pw"]
+[ext_resource type="Texture2D" uid="uid://c77intnkuokal" path="res://Assets/animation/Clef/frame_23.png" id="26_c53s2"]
+[ext_resource type="Texture2D" uid="uid://pkyx4nfx6jyg" path="res://Assets/animation/Clef/frame_24.png" id="27_tyv7l"]
+[ext_resource type="AudioStream" uid="uid://ba4ha42t1oi2u" path="res://Assets/sound/cle.mp3" id="28_j5geq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gn61c"]
+shader = ExtResource("1_d4fgm")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="Curve" id="Curve_1lu7m"]
+_data = [Vector2(0.0179372, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_el2n5"]
+_data = [Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nqoa"]
+size = Vector2(1191, 650)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dyo20"]
+shader = ExtResource("3_e4cyl")
+shader_parameter/debug = false
+shader_parameter/border_scale = 2.0
+shader_parameter/shadow_offset = Vector2(20, -50)
+shader_parameter/color = Color(0.166, 0.166, 0.166, 0.6)
+shader_parameter/blur_amount = 2.0
+shader_parameter/shadow_scale = 2.0
+shader_parameter/disable_rotating = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6q25u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tcalu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_focrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tcure")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sph1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6sb54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o14x4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yovn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ick3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a8q0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1vb4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_khq02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ir5tt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xekac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rq7qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_o1t02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3du55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6s38e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_i2rcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_esekc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_32luh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ifa80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_e86pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_c53s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tyv7l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Boutton_Play" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+material = SubResource("ShaderMaterial_gn61c")
+script = ExtResource("2_5qxfd")
+scale_curve = SubResource("Curve_1lu7m")
+click_curve = SubResource("Curve_el2n5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(26.5, 31)
+shape = SubResource("RectangleShape2D_8nqoa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_dyo20")
+position = Vector2(2776, -149)
+scale = Vector2(2.74676, 2.74676)
+sprite_frames = SubResource("SpriteFrames_6q25u")
+speed_scale = 7.0
+offset = Vector2(-421.63, 0)
+
+[node name="clef" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_j5geq")
+volume_db = 15.0
