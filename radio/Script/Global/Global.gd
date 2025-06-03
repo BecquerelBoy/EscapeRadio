@@ -11,76 +11,128 @@ var code_correct := false
 
 var dialogues := {
 	1: {
-		"text": "Je suis dans une pièce avec quatre grandes statues. 
-		Aphrodite, Apollon, Hadès et Zeus.
-		Au centre, y'a dix boutons gravés en chiffres romains I à X. Ils s'allument quand je les touche. On dirait qu'on peut en presser quatre. Je presse lequel en premier ?",
-		"Rep1": 2, "Rep2": 2, "Rep3": 2, "Rep4": 2, "Rep5": 2, "Rep6": 2, "Rep7": 2, "Rep8": 2, "Rep9": 2
+		"text": "Allô ? Tu m'entends ? ... Ah ! Enfin. J'ai cru que j'étais seul ici.
+		\n J'suis descendu il y a un petit moment déja. Je vois enfin le temple.",
+		"Rep1": 2
 	},
 	2: {
-		"text": "Ok je met quel nombre pour le deuxieme ?",
-		"Rep1": 3, "Rep2": 3, "Rep3": 3, "Rep4": 3, "Rep5": 3, "Rep6": 3, "Rep7": 3, "Rep8": 3, "Rep9": 3
+		"text": "Il est immense… taillé directement dans la roche, avec des arches effondrées recouvertes d'algues.
+		 Y’a des colonnes… elles ont l’air grecques, mais plus massives, comme si elles avaient fusionné avec autre chose… phénicien peut-être.
+		Et là… des mosaïques. Des formes géométriques, typiquement méditerranéennes. Comme si plusieurs peuples l'avaient construit ensemble.",
+		"Rep1": 3
 	},
 	3: {
-		"text": "C'est fait, maintenant quoi pour le troisieme ?",
-		"Rep1": 4, "Rep2": 4, "Rep3": 4, "Rep4": 4, "Rep5": 4, "Rep6": 4, "Rep7": 4, "Rep8": 4, "Rep9": 4
+		"text": "Bref assez discuté, je vais m'approcher. L'eau est glacée, mais j'dois être proche de l'entrée. 
+		\n Je vois une ouverture. C'est pas très large, j'entre...",
+		"Rep1": 4
 	},
 	4: {
-		"text": "Très bien, et pour le dernier ?",
-		"Rep1": 5, "Rep2": 5, "Rep3": 5, "Rep4": 5, "Rep5": 5, "Rep6": 5, "Rep7": 5, "Rep8": 5, "Rep9": 5
+		"text": "On voit rien là-dedans. Laisse-moi sortir ma lampe... Voilà.
+		\n Ah d'accord, en fait le temple est sous le plancher marin. Y'a un escalier qui descend.
+		J'vais y aller doucement... 
+		\n *bruit sourd*",
+		"Rep1": 5
 	},
 	5: {
-		"text": "C'est bon j'ai tout activé, je vais voir si il se passe quelque chose",
-		"Rep1": 8,
+		"text": "...Bon. Mauvaise nouvelle. L'escalier vient de s'effondrer derrière moi. Pas de retour possible.",
+		"Rep1": 6,
 	},
 	6: {
-		"text": "Ça ne marche pas.",
-		"Rep1": 1
+		"text": "Bon allez on se ressaisit, J'suis dans une pièce avec quatre grandes statues numérotées de 1 à 4 dans l'ordre ça donne : Aphrodite ensuite Apollon puis Hadès et enfin Zeus.
+		 Et au centre, neuf boutons gravés en chiffres romains. I à IX. Ils s'allument quand je les touche. On dirait qu'il me faut un code à quatre chiffres...
+		 T'aurais une idée de ce que je dois entrer ?",
+		"Rep1": 7, "Rep2": 7, "Rep3": 7, "Rep4": 7, "Rep5": 7, "Rep6": 7, "Rep7": 7, "Rep8": 7, "Rep9": 7,
 	},
 	7: {
-		"text": "Je comprend pas je viens de passer par la porte, et la je suis de retour dans la salle de la rose des vents.
-		Qu'est-ce que je fais, je prend quelle porte ?",
-		"Rep1": 7,    # mauvaise
-		"Rep2": 9,    # correcte
-		"Rep3": 7     # mauvaise
+		"text": "Ok le premier chiffre s'affiche, je met quoi après ?",
+		"Rep1": 8, "Rep2": 8, "Rep3": 8, "Rep4": 8, "Rep5": 8, "Rep6": 8, "Rep7": 8, "Rep8": 8, "Rep9": 8,
 	},
 	8: {
-		"text": "Lessgo c'est bon :D\nLa pièce dans laquelle je me trouve a une rose des vents au sol.\nLe nord est indiqué face à moi.\nIl y a trois portes devant moi.\nJe prends laquelle ?",
-		"Rep1": 7,    # mauvaise
-		"Rep2": 9,    # correcte
-		"Rep3": 7     # mauvaise
+		"text": "J'ai mis le deuxième, ensuite ?",
+		"Rep1": 9, "Rep2": 9, "Rep3": 9, "Rep4": 9, "Rep5": 9, "Rep6": 9, "Rep7": 9, "Rep8": 9, "Rep9": 9,
 	},
 	9: {
-		"text": "Tres bien je suis dans la salle suivante, je vais ou maintenant ?",
-		"Rep1": 10,    # correcte
-		"Rep2": 7,     # mauvaise
-		"Rep3": 7      # mauvaise
+		"text": "Le troisième s'affiche aussi, donne moi le dernier",
+		"Rep1": 10, "Rep2": 10, "Rep3": 10, "Rep4": 10, "Rep5": 10, "Rep6": 10, "Rep7": 10, "Rep8": 10, "Rep9": 10
 	},
 	10: {
-		"text": "Tres bien je suis dans la salle suivante, je vais ou maintenant ?",
-		"Rep1": 7,     # mauvaise
-		"Rep2": 7,     # mauvaise
-		"Rep3": 11     # correcte
+		"text": "Les boutons s'allument... ça clignote...",
+		"Rep1": 12,     # mauvaise
 	},
 	11: {
-		"text": "Tres bien je suis dans la salle suivante, je vais ou maintenant ?",
-		"Rep1": 7,     # mauvaise
-		"Rep2": 7,     # mauvaise
-		"Rep3": 12     # correcte
+		"text": "Les boutons s'éteignent. Ca n'a pas marché... On réessaie ?",
+		"Rep1": 6
 	},
 	12: {
-		"text": "Tres bien je suis dans la salle suivante, je vais ou maintenant ?",
-		"Rep1": 7,     # mauvaise
-		"Rep2": 7,     # mauvaise
-		"Rep3": 13     # correcte
+		"text": "J'entends quelque chose. \n Une dalle vient de coulisser. C'est ouvert !",
+		"Rep1": 13
 	},
 	13: {
-		"text": "Tres bien je suis dans la salle suivante, je vais ou maintenant ?",
-		"Rep1": 14,    # correcte
-		"Rep2": 7,     # mauvaise
-		"Rep3": 7      # mauvaise
+		"text": "Je suis dans la nouvelle salle, avec une rose des vents dessinée au sol. Elle indique le nord droit devant. Et il y a trois portes une à gauche,  au milieu et à droite...
+		\n Il va falloir que tu m'indique le bon chemin.",
+		"Rep1": 14,     # mauvaise
+		"Rep2": 15,     # correcte
+		"Rep3": 14      # mauvaise
 	},
 	14: {
-		"text": "bien joué bg",
+		"text": "C'est étrange, je suis... revenu au point de départ. Exactement la même salle qu'au début.
+		\n Ok bon... Visiblement, ça marche pas comme un vrai couloir, on retente.",
+		"Rep1": 14,     # mauvaise
+		"Rep2": 15,     # correcte
+		"Rep3": 14      # mauvaise
+	},
+	15: {
+		"text": "Milieu ? Ok... \n Je suis dans la salle suivante. Y'a des fresques anciennes. Je reconnais aucun symbole...
+		\n Y'a trois portes de nouveau. Je prend laquelle ?",
+		"Rep1": 16,     # correcte
+		"Rep2": 14,     # mauvaise
+		"Rep3": 14      # mauvaise
+	},
+	16: {
+		"text": "Je suis dans la salle de gauche.
+		\n C'est pareil que la salle d'avant j'ai encore trois portes. Je te fais confiance donne moi la bonne.",
+		"Rep1": 14,     # mauvaise
+		"Rep2": 14,     # mauvaise
+		"Rep3": 17      # correcte
+	},
+	17: {
+		"text": "A Droite ? Ca marche... 
+		\n Je crois que c'est bon il y a a nouveau trois portes. J'attend que tu me dise ou aller.",
+		"Rep1": 14,     # mauvaise
+		"Rep2": 14,     # mauvaise
+		"Rep3": 18      # correcte
+	},
+	18: {
+		"text": "Ok je vais encore à droite...
+		\n C'est bon je vois trois nouvelles portes, dis moi laquelle prendre. ",
+		"Rep1": 14,     # correcte
+		"Rep2": 14,     # mauvaise
+		"Rep3": 19      # mauvaise
+	},
+	19: {
+		"text": "Trois fois droite, tu le fais au hasard ??
+		\n Oublie ça a marché, t'assures ! Mais il reste des portes, j'attend la suite.",
+		"Rep1": 20,     # correcte
+		"Rep2": 14,     # mauvaise
+		"Rep3": 14      # mauvaise
+	},
+	20: {
+		"text": "Je vais à droite.
+		\n Attend je crois qu'on a réussi, je vois plus de portes, juste un grand couloir...
+		\n Je suis arrivé dans une salle circulaire. Au centre y'a un objet sur un piedestal. Une sorte de sphère et elle brille.
+		Tu pense que je dois la prendre ?",
+		"Rep1": 21
+	},
+	21: {
+		"text": "Je vais la prendre pour l'étudier. Tant pis pour les conséquences.
+		\n J'ai plus trop le choix y'a qu'un seul chemin ou aller le autres sont bloqués par des pierres...
+		\n Je pensais pas voir ça ici mais les murs sont recouverts de fresques et de peintures perses, je me demande ou mène ce tunnel...",
+		"Rep1": 22
+	},
+	22: {
+		"text": "Je vois de la lumière je crois que j'arrive enfin au bout !
+		\n On a réussi je suis sorti ! Mais par contre ma montre indique que je suis en Egypte... Comment ça se fait ??
+		\n Bon c'est bizarre mais on se posera des questions plus tard d'abord on rentre fêter ça !",
 	},
 }
 
