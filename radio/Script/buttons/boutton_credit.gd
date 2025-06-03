@@ -118,7 +118,7 @@ func start_click_animation():
 	clicking = false
 	
 	# Charger la scène Main
-	load_main_scene()
+	load_credits_scene()
 
 func _apply_click_curve(progress: float):
 	var curve_value = click_curve.sample(progress)
@@ -127,12 +127,17 @@ func _apply_click_curve(progress: float):
 	var target_scale = base_scale - click_offset
 	scale = Vector2.ONE * target_scale
 
-func load_main_scene():
-	# Charger la scène Main
-	print("Chargement de la scène Main...")
+
+func load_credits_scene():
+	# Baisser le volume de la musique pendant la transition
+	MusicManager.temporary_volume_down(-15, 0.4)  # Baisse à -15dB en 0.5 sec
+	
+	# Lancer la transition d'écran
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
-	get_tree().change_scene_to_file("res://Scene/credit.tscn")  # Ajustez le chemin selon votre projet
+	
+	# Changer de scène
+	get_tree().change_scene_to_file("res://Scene/credit.tscn")
 
 func start_hover_animation():
 	animation_playing = true

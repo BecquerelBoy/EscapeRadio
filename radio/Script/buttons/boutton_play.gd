@@ -129,9 +129,12 @@ func _apply_click_curve(progress: float):
 	var target_scale = base_scale - click_offset
 	scale = Vector2.ONE * target_scale
 
+
 func load_main_scene():
-	# Charger la scène Main
+	# Lancer la transition et le fade out de la musique simultanément
 	TransitionScreen.transition()
+	MusicManager.stop_music(0.4)  # Durée du fade out (ajustez selon la durée de votre transition)
+	
 	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_packed(MAIN) # Ajustez le chemin selon votre projet
 

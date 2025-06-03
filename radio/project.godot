@@ -19,6 +19,7 @@ config/icon="res://Assets/Vrac/icon.svg"
 
 Global="*res://Script/Global/Global.gd"
 TransitionScreen="*res://Scene/Transition_Screen.tscn"
+MusicManager="*res://Script/MusicManager.gd"
 
 [display]
 

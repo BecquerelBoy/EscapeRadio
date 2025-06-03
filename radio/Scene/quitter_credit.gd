@@ -26,9 +26,8 @@ func _ready():
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
 	# Ne pas connecter input_event
-	
-	setup_initial_state()
 
+	
 # Remplacer _on_input_event par :
 func _unhandled_input(event):
 	if not is_hovering:
@@ -120,7 +119,7 @@ func start_click_animation():
 	clicking = false
 	
 	# Charger la scène Main
-	load_main_scene()
+	load_menu_scene()
 
 func _apply_click_curve(progress: float):
 	var curve_value = click_curve.sample(progress)
@@ -129,10 +128,16 @@ func _apply_click_curve(progress: float):
 	var target_scale = base_scale - click_offset
 	scale = Vector2.ONE * target_scale
 
-func load_main_scene():
+func load_menu_scene():
+	# Baisser le volume de la musique pendant la transition
+	MusicManager.temporary_volume_down(-15, 0.4)
+	
+	# Lancer la transition d'écran
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
-	get_tree().change_scene_to_packed(MAIN_MENU)
+	
+	# Changer de scène
+	get_tree().change_scene_to_packed(MAIN_MENU) # Ajustez le chemin
 
 func start_hover_animation():
 	animation_playing = true
