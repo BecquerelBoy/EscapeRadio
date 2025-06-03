@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://c0pt7ohpwcc0e"]
 
-[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_pnl00"]
+[ext_resource type="Script" uid="uid://bk7q7jnun0idr" path="res://Script/radio/label_reponse.gd" id="1_pnl00"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_0renn"]
-[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="4_4ny2a"]
+[ext_resource type="Shader" uid="uid://d2uxurjvupr0r" path="res://Script/Shader/Hover.gdshader" id="4_4ny2a"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_amxoh"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_rbxbm"]
 [ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_hetln"]

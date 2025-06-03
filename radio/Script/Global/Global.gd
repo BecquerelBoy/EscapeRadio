@@ -117,10 +117,10 @@ var dialogues := {
 		"Rep3": 14      # mauvaise
 	},
 	20: {
-		"text": "Je vais à droite.
+		"text": "Je vais à gauche.
 		\n Attend je crois qu'on a réussi, je vois plus de portes, juste un grand couloir...
 		\n Je suis arrivé dans une salle circulaire. Au centre y'a un objet sur un piedestal. Une sorte de sphère et elle brille.
-		Tu pense que je dois la prendre ?",
+		Tu penses que je dois la prendre ?",
 		"Rep1": 21
 	},
 	21: {
@@ -144,11 +144,11 @@ func _process(_delta: float) -> void:
 func afficher_texte_par_numero(numero: int) -> void:
 	if dialogues.has(numero):
 
-		if numero == 1:
+		if numero == 6:
 			reponses_joueur.clear()
 			code_correct = false
 
-		if numero == 5:
+		if numero == 10:
 			code_correct = reponses_joueur == [8, 4, 7, 6]
 			reponses_joueur.clear()
 
@@ -167,11 +167,11 @@ func afficher_texte_par_numero(numero: int) -> void:
 		var data = dialogues[numero]
 
 		# Redirection dynamique pour texte 5 selon le code
-		if numero == 5:
+		if numero == 12:
 			if code_correct:
-				data["Rep1"] = 8
+				data["Rep1"] = 13
 			else:
-				data["Rep1"] = 6
+				data["Rep1"] = 11
 
 		var text = data.get("text", "")
 		textebox.afficher(text, numero)
