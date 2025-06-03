@@ -770,7 +770,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="lampe_a_huile" type="AnimatedSprite2D" parent="."]
 position = Vector2(385, -45)
-scale = Vector2(0.704282, 0.704282)
+scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_iy4m3")
 speed_scale = 2.0
 offset = Vector2(-595.54, 0)

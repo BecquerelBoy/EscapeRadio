@@ -7,8 +7,8 @@ extends Control
 @onready var diode_rouge: Sprite2D = $"../DiodeRouge"
 @onready var diode_verte: Sprite2D = $"../DiodeVerte"
 @onready var audio_1 = $Audio_1
-@onready var plus_button: Button = $"../Radio/plus"
-@onready var minus_button: Button = $"../Radio/moins"  # Ajuste le chemin selon ta hiérarchie
+@onready var plus_button:= $"../Radio/plus"
+@onready var minus_button:= $"../Radio/moins"  # Ajuste le chemin selon ta hiérarchie
 
 var timer := 0.0
 var tracking := false

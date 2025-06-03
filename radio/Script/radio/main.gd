@@ -4,8 +4,8 @@ extends Node2D
 @onready var yes: TextureButton = $Bouttons/Yes
 @onready var no: TextureButton = $Bouttons/No
 @onready var frequence: Control = $Frequence
-@onready var plus_button: Button = $Radio/plus
-@onready var minus_button: Button = $Radio/moins
+@onready var plus_button:= $Radio/plus
+@onready var minus_button:= $Radio/moins
 
 var current_scene: Node = null
 @onready var textebox = get_node("/root/Main/Textebox")  # adapte le chemin
