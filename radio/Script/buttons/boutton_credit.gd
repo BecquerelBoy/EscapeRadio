@@ -130,6 +130,8 @@ func _apply_click_curve(progress: float):
 func load_main_scene():
 	# Charger la scène Main
 	print("Chargement de la scène Main...")
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Scene/credit.tscn")  # Ajustez le chemin selon votre projet
 
 func start_hover_animation():

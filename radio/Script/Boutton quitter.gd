@@ -128,6 +128,8 @@ func _apply_click_curve(progress: float):
 	scale = Vector2.ONE * target_scale
 
 func load_main_scene():
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().quit()
 
 func start_hover_animation():
