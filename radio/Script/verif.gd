@@ -7,10 +7,10 @@ extends Control
 @onready var label_resume: Label = $Resume
 @onready var click: AudioStreamPlayer2D = $"../Click"
 @onready var ok = $"../Buttons/ok"
-@onready var buttons: Control = $"../Buttons"
+@onready var verif: Control = $".."
+@onready var pause_menu1: Control = $"."
 
 const MAIN_MENU = preload("res://Scene/main_menu.tscn")
-const VERIF = preload("res://Scene/verif.tscn")
 
 var preloaded_main_menu: PackedScene = null
 
@@ -93,18 +93,27 @@ func _on_ok_pressed() -> void:
 	click.play()
 	
 	if current_selection == "resume":
-		# Reprendre le jeu
+		verif.queue_free()
 		Global.is_pausing = false
 		get_tree().paused = false
-		await get_tree().process_frame
-		pause_menu.queue_free()
 		
 	elif current_selection == "quit":
-		# Charger et instancier la scène VERIF
-		pause_menu.visible = false
-		var verif_scene = preload("res://Scene/verif.tscn")  # Remplacez par le bon chemin
-		var verif_instance = verif_scene.instantiate()
-		# Ajouter l'instance à l'arbre de scène
-		get_tree().current_scene.add_child(verif_instance)
-		# Ou si vous voulez l'ajouter au nœud actuel :
-		# add_child(verif_instance)
+		print("Début du quit")
+		Global.is_pausing = false
+		get_tree().paused = false
+		
+		var tree = get_tree()
+		
+		print("Démarrage transition")
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
+		print("Transition terminée")
+		
+		# Récupérer la scène préchargée
+		if preloaded_main_menu == null:
+			preloaded_main_menu = ResourceLoader.load_threaded_get("res://Scene/main_menu.tscn")
+		
+		print("Changement de scène avec préchargement")
+		var error = tree.change_scene_to_packed(preloaded_main_menu)
+		print("Résultat: ", error)
+		pause_menu.queue_free()

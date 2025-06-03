@@ -1,0 +1,159 @@
+[gd_scene load_steps=16 format=3 uid="uid://dhwa2asfvvr7l"]
+
+[ext_resource type="Texture2D" uid="uid://cfi32dvdd8yno" path="res://Assets/Djallel/Juste l'ecran.png" id="1_0ps5o"]
+[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="1_42reu"]
+[ext_resource type="Script" path="res://Script/verif.gd" id="2_l7kcf"]
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="3_6vy64"]
+[ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="4_gm613"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="5_loi20"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="6_jms60"]
+[ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="7_bljic"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="8_4xcbm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aeyq3"]
+font_size = 50
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_su0o6"]
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fah10"]
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fi0he"]
+shader = ExtResource("3_6vy64")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t71e8"]
+shader = ExtResource("3_6vy64")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w2a7y"]
+shader = ExtResource("3_6vy64")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[node name="verif" type="Control"]
+process_mode = 3
+z_index = 9
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+position = Vector2(305, -136)
+stream = ExtResource("1_42reu")
+
+[node name="fond" type="Sprite2D" parent="."]
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(2.33329, -1)
+scale = Vector2(0.64132, 0.638889)
+texture = ExtResource("1_0ps5o")
+
+[node name="Pause_Menu" type="Control" parent="."]
+process_mode = 3
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_l7kcf")
+
+[node name="Choix" type="ColorRect" parent="Pause_Menu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[node name="Label" type="Label" parent="Pause_Menu"]
+layout_mode = 0
+offset_left = -196.0
+offset_top = -163.0
+offset_right = 592.0
+offset_bottom = -22.0
+scale = Vector2(0.5, 0.5)
+text = "Est tu sûr de vouloir quitter ?
+Toute ta progression sera perdue."
+label_settings = SubResource("LabelSettings_aeyq3")
+
+[node name="Quit" type="Label" parent="Pause_Menu"]
+layout_mode = 0
+offset_left = -28.0
+offset_top = -23.0
+offset_right = 28.0
+text = "Quitter"
+label_settings = SubResource("LabelSettings_su0o6")
+
+[node name="Resume" type="Label" parent="Pause_Menu"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -64.0
+offset_right = 26.0
+offset_bottom = -41.0
+text = "Retour"
+label_settings = SubResource("LabelSettings_fah10")
+
+[node name="Buttons" type="Control" parent="."]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+material = SubResource("ShaderMaterial_fi0he")
+layout_mode = 0
+offset_left = -575.0
+offset_top = -298.0
+offset_right = -471.0
+offset_bottom = -106.0
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(54.37, 94.35)
+texture_normal = ExtResource("4_gm613")
+script = ExtResource("5_loi20")
+
+[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+material = SubResource("ShaderMaterial_t71e8")
+layout_mode = 0
+offset_left = -572.0
+offset_top = -86.0
+offset_right = -468.0
+offset_bottom = 106.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(53.57, 97.755)
+texture_normal = ExtResource("4_gm613")
+script = ExtResource("6_jms60")
+
+[node name="ok" type="TextureButton" parent="Buttons"]
+z_index = 1
+material = SubResource("ShaderMaterial_w2a7y")
+layout_mode = 0
+offset_left = -572.0
+offset_top = -148.0
+offset_right = -469.0
+offset_bottom = -45.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(51.5, 52.185)
+texture_normal = ExtResource("7_bljic")
+script = ExtResource("8_4xcbm")
+
+[connection signal="pressed" from="Buttons/Fleche_gauche" to="Pause_Menu" method="_on_fleche_gauche_pressed"]
+[connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Fleche_droite" to="Pause_Menu" method="_on_fleche_droite_pressed"]
+[connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/ok" to="Pause_Menu" method="_on_ok_pressed"]
+[connection signal="pressed" from="Buttons/ok" to="Buttons/ok" method="_on_pressed"]
