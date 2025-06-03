@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://drmc1c488r0rx"]
 
-[ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_h4tpe"]
+[ext_resource type="Script" uid="uid://bk7q7jnun0idr" path="res://Script/radio/label_reponse.gd" id="1_h4tpe"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_rw27y"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_372ij"]
-[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_snnvj"]
+[ext_resource type="Shader" uid="uid://d2uxurjvupr0r" path="res://Script/Shader/Hover.gdshader" id="4_snnvj"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_vj45u"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_l8xa1"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_0a1ba"]
+[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_l8xa1"]
+[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_0a1ba"]
 [ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="8_h2fxg"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_p3yaf"]
+[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_p3yaf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tjaxf"]
 font = ExtResource("4_372ij")
@@ -78,7 +78,87 @@ offset_top = 27.0
 offset_right = 65.0
 offset_bottom = 50.0
 pivot_offset = Vector2(64, 11)
-text = "Reessayons"
+text = "I"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "II"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep3" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "III"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep4" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "IV"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep5" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "V"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep6" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "VI"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep7" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "VII"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep8" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "VIII"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep9" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "IX"
 label_settings = SubResource("LabelSettings_tjaxf")
 
 [node name="Buttons" type="Control" parent="."]
