@@ -120,7 +120,7 @@ var dialogues := {
 		"text": "Je vais à gauche.
 		\n Attend je crois qu'on a réussi, je vois plus de portes, juste un grand couloir...
 		\n Je suis arrivé dans une salle circulaire. Au centre y'a un objet sur un piedestal. Une sorte de sphère et elle brille.
-		Tu pense que je dois la prendre ?",
+		Tu penses que je dois la prendre ?",
 		"Rep1": 21
 	},
 	21: {
