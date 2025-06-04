@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=64 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
@@ -27,12 +27,17 @@
 [ext_resource type="Script" path="res://Script/radio/date_heure.gd" id="16_qxq5r"]
 [ext_resource type="Texture2D" uid="uid://4amxw33q07dr" path="res://Assets/Djallel/bouton Menu.png" id="16_xsqdr"]
 [ext_resource type="PackedScene" uid="uid://c230622myff4x" path="res://Scene/volume.tscn" id="19_ayjky"]
+[ext_resource type="AudioStream" uid="uid://10wt3f3w51km" path="res://Assets/sound/blip_radio.mp3" id="20_tjuuh"]
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="21_5rxtn"]
+[ext_resource type="AudioStream" uid="uid://bncmg60tai7x" path="res://Assets/sound/writing.mp3" id="21_poww6"]
+[ext_resource type="AudioStream" uid="uid://bh5ifgc5xcio5" path="res://Assets/sound/Animal Crossing Relaxing Music No Copyright.mp3" id="22_6fgp0"]
 [ext_resource type="Texture2D" uid="uid://d3dtmpca2ey1x" path="res://Assets/Djallel/Diode Rouge.png" id="25_1qddf"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
 [ext_resource type="Texture2D" uid="uid://rtnrwvto2nfp" path="res://Assets/Djallel/Diode verte.png" id="26_u13ku"]
 [ext_resource type="PackedScene" uid="uid://ckudx25bk86w5" path="res://Scene/choix/1.tscn" id="28_kya4d"]
 [ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="30_mqod3"]
+[ext_resource type="Texture2D" uid="uid://dcgxcd3xnmlbn" path="res://Assets/Vrac/sun.png" id="31_slsr1"]
+[ext_resource type="Script" path="res://Script/sun.gd" id="32_wml73"]
 [ext_resource type="PackedScene" uid="uid://bu5gjxhcwrgwn" path="res://Scene/dialogues.tscn" id="35_gt8yr"]
 [ext_resource type="AudioStream" uid="uid://ympmbyekyh0t" path="res://Assets/sound/4590khz-number-stations-18008.mp3" id="36_wfn51"]
 
@@ -133,10 +138,6 @@ font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kv4ux"]
 font = ExtResource("3_0025t")
-font_size = 60
-font_color = Color(0.207843, 0.219608, 0.478431, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_hqsx6"]
 font_size = 60
 font_color = Color(0.207843, 0.219608, 0.478431, 1)
 
@@ -340,6 +341,33 @@ label_settings = SubResource("LabelSettings_k8dir")
 [node name="Audio_1" type="AudioStreamPlayer2D" parent="Frequence"]
 stream = ExtResource("14_6dljv")
 
+[node name="AudioStation1" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("20_tjuuh")
+
+[node name="AudioStation2" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("21_poww6")
+
+[node name="AudioStation3" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("22_6fgp0")
+
+[node name="AudioStation4" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("22_6fgp0")
+
+[node name="AudioStation5" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("22_6fgp0")
+
+[node name="AudioStation6" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("22_6fgp0")
+
+[node name="AudioStation7" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("22_6fgp0")
+
+[node name="AudioStation8" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("22_6fgp0")
+
+[node name="AudioStation9" type="AudioStreamPlayer2D" parent="Frequence"]
+stream = ExtResource("22_6fgp0")
+
 [node name="Textebox" type="Control" parent="."]
 z_index = 1
 layout_mode = 3
@@ -525,16 +553,14 @@ scale = Vector2(0.5, 0.5)
 text = ":"
 label_settings = SubResource("LabelSettings_kv4ux")
 
-[node name="Météo" type="Label" parent="date_heure"]
+[node name="sun" type="Sprite2D" parent="date_heure"]
+modulate = Color(0.207843, 0.219608, 0.478431, 1)
+self_modulate = Color(0.207843, 0.219608, 0.478431, 1)
 z_index = 1
-layout_mode = 0
-offset_left = 323.0
-offset_top = -267.0
-offset_right = 374.0
-offset_bottom = -184.0
-scale = Vector2(0.4, 0.4)
-text = "☼"
-label_settings = SubResource("LabelSettings_hqsx6")
+position = Vector2(332, -250)
+scale = Vector2(0.0384726, 0.0384726)
+texture = ExtResource("31_slsr1")
+script = ExtResource("32_wml73")
 
 [node name="label_reponse" parent="." instance=ExtResource("28_kya4d")]
 visible = false
