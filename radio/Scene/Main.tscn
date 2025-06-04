@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=60 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="AudioStream" uid="uid://cnfkv4rjwysbj" path="res://Assets/sound/button-press2.wav" id="2_0umad"]
@@ -34,6 +34,7 @@
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
 [ext_resource type="Texture2D" uid="uid://rtnrwvto2nfp" path="res://Assets/Djallel/Diode verte.png" id="26_u13ku"]
 [ext_resource type="PackedScene" uid="uid://ckudx25bk86w5" path="res://Scene/choix/1.tscn" id="28_kya4d"]
+[ext_resource type="PackedScene" uid="uid://bu5gjxhcwrgwn" path="res://Scene/dialogues.tscn" id="35_gt8yr"]
 
 [sub_resource type="Environment" id="Environment_uylef"]
 background_mode = 3
@@ -561,6 +562,8 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 34.0
 offset_bottom = 67.0
+
+[node name="Dialogues" parent="." instance=ExtResource("35_gt8yr")]
 
 [connection signal="pressed" from="Radio/moins" to="Radio/moins" method="_on_pressed"]
 [connection signal="pressed" from="Radio/plus" to="Radio/plus" method="_on_pressed"]

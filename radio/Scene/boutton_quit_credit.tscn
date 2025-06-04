@@ -1,7 +1,7 @@
 [gd_scene load_steps=35 format=3 uid="uid://cdy23toabsxjl"]
 
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="1_d4fgm"]
-[ext_resource type="Script" path="res://Scene/quitter_credit.gd" id="2_5qxfd"]
+[ext_resource type="Script" path="res://Script/quitter_credit.gd" id="2_5qxfd"]
 [ext_resource type="Shader" path="res://Script/Shader/ombre.gdshader" id="3_e4cyl"]
 [ext_resource type="Texture2D" uid="uid://rhf1pxl35asa" path="res://Assets/animation/Clef/frame_01.png" id="4_tcalu"]
 [ext_resource type="Texture2D" uid="uid://4qb3jayochq1" path="res://Assets/animation/Clef/frame_02.png" id="5_focrp"]
