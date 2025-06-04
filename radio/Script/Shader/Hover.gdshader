@@ -9,19 +9,19 @@ varying float current_brightness;
 void vertex() {
     // Calculer la luminosité actuelle basée sur l'état hover
     float target_brightness = is_hovered ? brightness_multiplier : 1.0;
-    
+
     // Transition fluide vers la luminosité cible
-    current_brightness = mix(1.0, target_brightness, 
+    current_brightness = mix(1.0, target_brightness,
         smoothstep(0.0, 1.0, sin(TIME * transition_speed) * 0.5 + 0.5));
 }
 
 void fragment() {
     // Obtenir la couleur de base de la texture
     vec4 base_color = texture(TEXTURE, UV);
-    
+
     // Appliquer l'éclaircissement
     vec3 brightened_color = base_color.rgb * (is_hovered ? brightness_multiplier : 1.0);
-    
+
     // Conserver l'alpha original
     COLOR = vec4(brightened_color, base_color.a);
 }

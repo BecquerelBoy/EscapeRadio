@@ -9,6 +9,7 @@ extends Control
 @onready var audio_1 = $Audio_1
 @onready var plus_button:= $"../Radio/plus"
 @onready var minus_button:= $"../Radio/moins"  # Ajuste le chemin selon ta hiérarchie
+@onready var gresillement_player: AudioStreamPlayer2D = $"../GresillementPlayer"
 
 var timer := 0.0
 var tracking := false
@@ -16,7 +17,7 @@ var tracking := false
 # Paramètres pour modification du nœud Frequence
 const POSITION_CIBLE := Vector2(0, -245)  # à ajuster
 const SCALE_CIBLE := Vector2(0.5, 0.5)    # à ajuster
-const FREQUENCE_CIBLE := 1.6
+const FREQUENCE_CIBLE := 63.3
 const MARGE := 0.05
 
 func _ready():
@@ -56,6 +57,7 @@ func _process(delta: float) -> void:
 				scale = SCALE_CIBLE
 				diode_rouge.visible = false
 				diode_verte.visible = true
+				gresillement_player.stop()
 	else:
 		diode_rouge.visible = true
 		diode_verte.visible = false
