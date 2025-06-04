@@ -13,7 +13,7 @@ var labels: Array[Label] = []
 var current_index := 0
 
 # Marge à ajouter autour du label (en pixels)
-var margin := Vector2(10, 5)  # 10px horizontal, 5px vertical
+var margin := Vector2(10, 10)  # 10px horizontal, 5px vertical
 
 func _ready():
 	reset_labels()
@@ -100,10 +100,13 @@ func update_visible_labels():
 		# Attendre que le label soit correctement dimensionné
 		await get_tree().process_frame
 		
-		# Calculer la nouvelle taille avec marge
-		var new_size = selected_label.size + margin * 2
-		
-		# Calculer la nouvelle position pour centrer le ColorRect
+		# Utiliser get_minimum_size() pour une taille plus précise
+		var text_size = selected_label.get_minimum_size()
+
+		# Ajouter une petite marge manuelle autour
+		var new_size = text_size + margin * 2
+
+		# Recalculer la position de manière plus fiable
 		var new_position = selected_label.global_position - margin
 		
 		color_rect.global_position = new_position

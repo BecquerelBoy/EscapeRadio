@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://d3lpbl6full2a"]
 
-[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_mmvwr"]
-[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="2_sudsv"]
+[ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_mmvwr"]
+[ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="2_rwihw"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_bg1yd"]
-[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="4_8w0es"]
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_8w0es"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_yw6vy"]
-[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_kicqw"]
-[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_u2kg7"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_kicqw"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_u2kg7"]
 [ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="8_nggv0"]
-[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_d444k"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_d444k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e8gwf"]
 font = ExtResource("3_bg1yd")
@@ -57,7 +57,8 @@ script = ExtResource("1_mmvwr")
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("2_sudsv")
+stream = ExtResource("2_rwihw")
+volume_db = 10.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0

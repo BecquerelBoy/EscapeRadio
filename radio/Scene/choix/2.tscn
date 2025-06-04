@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://dih3rfy43oe7v"]
 
-[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_qnu3q"]
-[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_tmhpk"]
-[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="4_n8qw4"]
+[ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_qnu3q"]
+[ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="2_cktou"]
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_n8qw4"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_shr2s"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_eynrh"]
-[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_etd0i"]
-[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_51uon"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_etd0i"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_51uon"]
 [ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="8_vxouk"]
-[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_x50jl"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_x50jl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r0lgi"]
 font_size = 25
@@ -56,7 +56,8 @@ script = ExtResource("1_qnu3q")
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("3_tmhpk")
+stream = ExtResource("2_cktou")
+volume_db = 10.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -72,10 +73,11 @@ offset_bottom = 40.0
 
 [node name="Rep1" type="Label" parent="Label"]
 layout_mode = 0
-offset_right = 237.0
-offset_bottom = 73.0
-text = "Ca ressemble à rien
- dans ton carnet."
+offset_right = 171.0
+offset_bottom = 111.0
+text = "Ca ressemble
+à rien dans
+ton carnet."
 label_settings = SubResource("LabelSettings_r0lgi")
 
 [node name="Buttons" type="Control" parent="."]
