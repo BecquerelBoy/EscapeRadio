@@ -33,8 +33,11 @@ _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_lxqlg"]
-_data = [Vector2(0.0134529, 0.505494), 0.0, 0.0, 0, 0, Vector2(0.255605, 1), 0.0, 0.0, 0, 0, Vector2(0.511211, 0), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0.511211, 0), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5o1f"]
+size = Vector2(829, 1045)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4fcbo"]
 shader = ExtResource("2_n8dms")
@@ -126,9 +129,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5o1f"]
-size = Vector2(829, 1045)
-
 [node name="Boutton_credit" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -136,16 +136,16 @@ script = ExtResource("1_mlt0f")
 scale_curve = SubResource("Curve_t07hh")
 click_curve = SubResource("Curve_lxqlg")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4.5, 284.5)
+shape = SubResource("RectangleShape2D_n5o1f")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 material = SubResource("ShaderMaterial_4fcbo")
 position = Vector2(23.5556, -27.75)
 scale = Vector2(2.04954, 2.04954)
 sprite_frames = SubResource("SpriteFrames_e1q4h")
 speed_scale = 6.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-4.5, 284.5)
-shape = SubResource("RectangleShape2D_n5o1f")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("27_hrgxy")

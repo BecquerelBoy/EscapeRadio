@@ -25,7 +25,10 @@ func _ready():
 	# Connecter seulement mouse_entered/exited
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
-	# Ne pas connecter input_event
+	
+	# Important : initialiser l'état visuel du sprite
+	setup_initial_state()
+
 
 	
 # Remplacer _on_input_event par :
