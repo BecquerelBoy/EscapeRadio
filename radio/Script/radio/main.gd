@@ -10,6 +10,7 @@ extends Node2D
 var current_scene: Node = null
 @onready var textebox = get_node("/root/Main/Textebox")  # adapte le chemin
 
+@onready var gresillement_player: AudioStreamPlayer2D = $GresillementPlayer
 
 func _ready():
 	Global.ok = false
@@ -22,6 +23,10 @@ func _ready():
 	# Connexion des boutons plus et moins
 	plus_button.pressed.connect(_on_plus_pressed)
 	minus_button.pressed.connect(_on_minus_pressed)
+
+	# ▶️ S'assurer que le grésillement joue (en cas où autoplay serait désactivé)
+	if not gresillement_player.playing:
+		gresillement_player.play()
 
 func _on_plus_pressed():
 	var new_value = slider.value + 0.1

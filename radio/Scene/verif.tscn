@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dhwa2asfvvr7l"]
 
 [ext_resource type="Texture2D" uid="uid://cfi32dvdd8yno" path="res://Assets/Djallel/Juste l'ecran.png" id="1_0ps5o"]
-[ext_resource type="AudioStream" uid="uid://cnfkv4rjwysbj" path="res://Assets/sound/button-press2.wav" id="1_it2nk"]
+[ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="1_p4bk4"]
 [ext_resource type="Script" path="res://Script/verif.gd" id="2_l7kcf"]
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="3_6vy64"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="4_gm613"]
@@ -51,7 +51,8 @@ grow_vertical = 2
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("1_it2nk")
+stream = ExtResource("1_p4bk4")
+volume_db = 10.0
 
 [node name="fond" type="Sprite2D" parent="."]
 self_modulate = Color(1.2, 1.2, 1.2, 1)

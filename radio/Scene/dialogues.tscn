@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu5gjxhcwrgwn"]
+[gd_scene load_steps=2 format=3 uid="uid://bu5gjxhcwrgwn"]
 
-[ext_resource type="AudioStream" uid="uid://cia5nkb6kxfwj" path="res://Assets/dialogue/text1.wav" id="1_2vmsc"]
 [ext_resource type="Script" path="res://Script/dialogues.gd" id="1_jsk7p"]
 
 [node name="Dialogues" type="Node2D"]
@@ -8,4 +7,3 @@ process_mode = 3
 script = ExtResource("1_jsk7p")
 
 [node name="Dialogue1" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_2vmsc")

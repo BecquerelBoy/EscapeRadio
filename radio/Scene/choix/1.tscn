@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://ckudx25bk86w5"]
 
 [ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_ne3m5"]
-[ext_resource type="AudioStream" uid="uid://cnfkv4rjwysbj" path="res://Assets/sound/button-press2.wav" id="2_3h67s"]
+[ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="2_qv26j"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_16pbr"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_668e5"]
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="6_6po8i"]
@@ -56,7 +56,8 @@ script = ExtResource("1_ne3m5")
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("2_3h67s")
+stream = ExtResource("2_qv26j")
+volume_db = 10.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0

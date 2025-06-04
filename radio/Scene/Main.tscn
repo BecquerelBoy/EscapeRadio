@@ -1,7 +1,6 @@
 [gd_scene load_steps=60 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
-[ext_resource type="AudioStream" uid="uid://cnfkv4rjwysbj" path="res://Assets/sound/button-press2.wav" id="2_0umad"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
 [ext_resource type="Texture2D" uid="uid://cjab0s75ogqk8" path="res://Assets/Djallel/Radio.png" id="3_1lx4l"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_0025t"]
@@ -25,7 +24,6 @@
 [ext_resource type="Script" path="res://Script/plus.gd" id="13_7kkdq"]
 [ext_resource type="Script" path="res://Script/buttons/no.gd" id="13_uwmsf"]
 [ext_resource type="AudioStream" uid="uid://cfbrqy0pfhntg" path="res://Assets/sound/Audio_1.wav" id="14_6dljv"]
-[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="15_cvycu"]
 [ext_resource type="Script" path="res://Script/radio/date_heure.gd" id="16_qxq5r"]
 [ext_resource type="Texture2D" uid="uid://4amxw33q07dr" path="res://Assets/Djallel/bouton Menu.png" id="16_xsqdr"]
 [ext_resource type="PackedScene" uid="uid://c230622myff4x" path="res://Scene/volume.tscn" id="19_ayjky"]
@@ -34,7 +32,9 @@
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
 [ext_resource type="Texture2D" uid="uid://rtnrwvto2nfp" path="res://Assets/Djallel/Diode verte.png" id="26_u13ku"]
 [ext_resource type="PackedScene" uid="uid://ckudx25bk86w5" path="res://Scene/choix/1.tscn" id="28_kya4d"]
+[ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="30_mqod3"]
 [ext_resource type="PackedScene" uid="uid://bu5gjxhcwrgwn" path="res://Scene/dialogues.tscn" id="35_gt8yr"]
+[ext_resource type="AudioStream" uid="uid://ympmbyekyh0t" path="res://Assets/sound/4590khz-number-stations-18008.mp3" id="36_wfn51"]
 
 [sub_resource type="Environment" id="Environment_uylef"]
 background_mode = 3
@@ -146,7 +146,8 @@ script = ExtResource("1_7m2i7")
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("2_0umad")
+stream = ExtResource("30_mqod3")
+volume_db = 10.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_mode = 3
@@ -448,7 +449,8 @@ script = ExtResource("26_6gsyx")
 [node name="Click" type="AudioStreamPlayer2D" parent="Bouttons"]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("15_cvycu")
+stream = ExtResource("30_mqod3")
+volume_db = 10.0
 
 [node name="date_heure" type="Control" parent="."]
 layout_mode = 3
@@ -534,20 +536,6 @@ scale = Vector2(0.4, 0.4)
 text = "☼"
 label_settings = SubResource("LabelSettings_hqsx6")
 
-[node name="DiodeRouge" type="Sprite2D" parent="."]
-self_modulate = Color(1.5, 1.1, 1.1, 1)
-z_index = 11
-position = Vector2(-6, 3)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("25_1qddf")
-
-[node name="DiodeVerte" type="Sprite2D" parent="."]
-self_modulate = Color(1.1, 1.5, 1.1, 1)
-z_index = 11
-position = Vector2(-6, 3)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("26_u13ku")
-
 [node name="label_reponse" parent="." instance=ExtResource("28_kya4d")]
 visible = false
 
@@ -563,7 +551,25 @@ offset_top = 0.0
 offset_right = 34.0
 offset_bottom = 67.0
 
+[node name="DiodeRouge" type="Sprite2D" parent="."]
+self_modulate = Color(1.5, 1.1, 1.1, 1)
+z_index = 11
+position = Vector2(-6, 3)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("25_1qddf")
+
+[node name="DiodeVerte" type="Sprite2D" parent="."]
+self_modulate = Color(1.1, 1.5, 1.1, 1)
+z_index = 11
+position = Vector2(-6, 3)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("26_u13ku")
+
 [node name="Dialogues" parent="." instance=ExtResource("35_gt8yr")]
+
+[node name="GresillementPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("36_wfn51")
+volume_db = -20.0
 
 [connection signal="pressed" from="Radio/moins" to="Radio/moins" method="_on_pressed"]
 [connection signal="pressed" from="Radio/plus" to="Radio/plus" method="_on_pressed"]
