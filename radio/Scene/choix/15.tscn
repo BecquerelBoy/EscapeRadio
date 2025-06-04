@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://d4nor416jq01x"]
 
-[ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_x1wjp"]
-[ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="2_0ogsw"]
+[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_x1wjp"]
+[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="2_mtwte"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_sl2fv"]
-[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_f3hc0"]
+[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="4_f3hc0"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_e2xtw"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_3en5f"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_cbfyg"]
+[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_3en5f"]
+[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_cbfyg"]
 [ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="8_f2o44"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_dcvoo"]
+[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_dcvoo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e8gwf"]
 font = ExtResource("3_sl2fv")
@@ -57,8 +57,7 @@ script = ExtResource("1_x1wjp")
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("2_0ogsw")
-volume_db = 10.0
+stream = ExtResource("2_mtwte")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0

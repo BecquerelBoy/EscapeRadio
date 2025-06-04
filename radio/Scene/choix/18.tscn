@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://duwq1b5txk26y"]
 
-[ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_up1uj"]
-[ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="2_446ve"]
+[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_up1uj"]
+[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="2_vegxp"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_o3vsl"]
-[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_70djs"]
+[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="4_70djs"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_p43ml"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_8ju52"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_yym5e"]
+[ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_8ju52"]
+[ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_yym5e"]
 [ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="8_ipiyw"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_3mj3n"]
+[ext_resource type="Script" uid="uid://b8k401qwrxe3b" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_3mj3n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e8gwf"]
 font = ExtResource("3_o3vsl")
@@ -57,8 +57,7 @@ script = ExtResource("1_up1uj")
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 position = Vector2(305, -136)
-stream = ExtResource("2_446ve")
-volume_db = 10.0
+stream = ExtResource("2_vegxp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
