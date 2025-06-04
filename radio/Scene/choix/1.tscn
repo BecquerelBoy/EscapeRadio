@@ -74,7 +74,8 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 44.0
 offset_bottom = 26.0
-text = "Décris moi le temple."
+text = "Décris moi 
+le temple."
 label_settings = SubResource("LabelSettings_fcfh3")
 
 [node name="Buttons" type="Control" parent="."]

@@ -57,15 +57,15 @@ var dialogues := {
 	},
 	10: {
 		"text": "Les boutons s'allument... ça clignote...",
-		"Rep1": 12,     # mauvaise
+		"Rep1": 12,
 	},
 	11: {
 		"text": "Les boutons s'éteignent. Ca n'a pas marché... On réessaie ?",
-		"Rep1": 6
+		"Rep1": 23,
 	},
 	12: {
 		"text": "J'entends quelque chose. \n Une dalle vient de coulisser. C'est ouvert !",
-		"Rep1": 13
+		"Rep1": 13,
 	},
 	13: {
 		"text": "Je suis dans la nouvelle salle, avec une rose des vents dessinée au sol. Elle indique le nord droit devant. Et il y a trois portes une à gauche,  au milieu et à droite...
@@ -134,6 +134,13 @@ var dialogues := {
 		\n On a réussi je suis sorti ! Mais par contre ma montre indique que je suis en Egypte... Comment ça se fait ??
 		\n Bon c'est bizarre mais on se posera des questions plus tard d'abord on rentre fêter ça !",
 	},
+	23: {
+		"text": "Bon je te rapelle ce qu'il y a dans la salle. 
+		\n Il y a des statue qui represente des dieux : Aphrodite, Apollon, Hadès et Zeus. 
+		\n J'ai l'impression que l'ordre des statue a son importance.
+		\n Je rentre quel chiffre en premier ?",
+		"Rep1": 7, "Rep2": 7, "Rep3": 7, "Rep4": 7, "Rep5": 7, "Rep6": 7, "Rep7": 7, "Rep8": 7, "Rep9": 7,
+	}
 }
 
 func _process(_delta: float) -> void:
@@ -144,7 +151,7 @@ func _process(_delta: float) -> void:
 func afficher_texte_par_numero(numero: int) -> void:
 	if dialogues.has(numero):
 
-		if numero == 6:
+		if numero == 6 or numero == 23 :
 			reponses_joueur.clear()
 			code_correct = false
 
@@ -152,7 +159,7 @@ func afficher_texte_par_numero(numero: int) -> void:
 			code_correct = reponses_joueur == [8, 4, 7, 6]
 			reponses_joueur.clear()
 
-		if numero == 6 or numero == 7 or numero == 8 or numero == 9:
+		if numero == 6 or numero == 23 or numero == 7 or numero == 8 or numero == 9:
 			current_text = numero
 		elif numero == 5 and current_text == 4:
 			current_text = 5
@@ -167,9 +174,9 @@ func afficher_texte_par_numero(numero: int) -> void:
 		var data = dialogues[numero]
 
 		# Redirection dynamique pour texte 5 selon le code
-		if numero == 12:
+		if numero == 10:
 			if code_correct:
-				data["Rep1"] = 13
+				data["Rep1"] = 12
 			else:
 				data["Rep1"] = 11
 

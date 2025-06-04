@@ -1,0 +1,256 @@
+[gd_scene load_steps=16 format=3 uid="uid://d117h8sjakm1l"]
+
+[ext_resource type="Script" path="res://Script/radio/label_reponse.gd" id="1_ibuhj"]
+[ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="2_fjbvr"]
+[ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="3_hplug"]
+[ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="4_oi33v"]
+[ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_5cmy1"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_x2scf"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="7_jcwdb"]
+[ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="8_niynl"]
+[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="9_cq500"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tjaxf"]
+font = ExtResource("3_hplug")
+font_size = 20
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhiod"]
+shader = ExtResource("4_oi33v")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iwk5w"]
+shader = ExtResource("4_oi33v")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ed3do"]
+shader = ExtResource("4_oi33v")
+shader_parameter/brightness_multiplier = 1.5
+shader_parameter/transition_speed = 5.0
+shader_parameter/is_hovered = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_1p6cw"]
+font = ExtResource("3_hplug")
+font_size = 50
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tbcnn"]
+font = ExtResource("3_hplug")
+font_size = 50
+font_color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[node name="label_reponse3" type="Control"]
+process_mode = 3
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ibuhj")
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+position = Vector2(305, -136)
+stream = ExtResource("2_fjbvr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.207843, 0.219608, 0.478431, 1)
+
+[node name="Label" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Rep1" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "I"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "II"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep3" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "III"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep4" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "IV"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep5" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "V"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep6" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "VI"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep7" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "VII"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep8" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "VIII"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Rep9" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 50.0
+pivot_offset = Vector2(64, 11)
+text = "IX"
+label_settings = SubResource("LabelSettings_tjaxf")
+
+[node name="Buttons" type="Control" parent="."]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fleche_gauche" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+material = SubResource("ShaderMaterial_bhiod")
+layout_mode = 0
+offset_left = -575.0
+offset_top = -298.0
+offset_right = -471.0
+offset_bottom = -106.0
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(54.37, 94.35)
+texture_normal = ExtResource("5_5cmy1")
+script = ExtResource("6_x2scf")
+
+[node name="Fleche_droite" type="TextureButton" parent="Buttons"]
+process_mode = 3
+z_index = 1
+material = SubResource("ShaderMaterial_iwk5w")
+layout_mode = 0
+offset_left = -572.0
+offset_top = -86.0
+offset_right = -468.0
+offset_bottom = 106.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(53.57, 97.755)
+texture_normal = ExtResource("5_5cmy1")
+script = ExtResource("7_jcwdb")
+
+[node name="ok" type="TextureButton" parent="Buttons"]
+z_index = 1
+material = SubResource("ShaderMaterial_ed3do")
+layout_mode = 0
+offset_left = -572.0
+offset_top = -148.0
+offset_right = -469.0
+offset_bottom = -45.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(51.5, 52.185)
+texture_normal = ExtResource("8_niynl")
+script = ExtResource("9_cq500")
+
+[node name="FlecheG" type="Label" parent="."]
+layout_mode = 0
+offset_left = -330.0
+offset_top = -264.0
+offset_right = -296.0
+offset_bottom = -197.0
+rotation = 1.5708
+text = "<"
+label_settings = SubResource("LabelSettings_1p6cw")
+
+[node name="FlecheD" type="Label" parent="."]
+layout_mode = 0
+offset_left = -330.0
+offset_top = 222.0
+offset_right = -296.0
+offset_bottom = 289.0
+rotation = 1.5708
+text = ">"
+label_settings = SubResource("LabelSettings_tbcnn")
+
+[node name="Marker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="M1" type="Marker2D" parent="Marker"]
+position = Vector2(-428, -180)
+
+[node name="M2" type="Marker2D" parent="Marker"]
+position = Vector2(-428, -90)
+
+[node name="M3" type="Marker2D" parent="Marker"]
+position = Vector2(-428, 0)
+
+[node name="M4" type="Marker2D" parent="Marker"]
+position = Vector2(-428, 90)
+
+[node name="M5" type="Marker2D" parent="Marker"]
+position = Vector2(-428, 180)
+
+[connection signal="pressed" from="Buttons/Fleche_gauche" to="Buttons/Fleche_gauche" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Fleche_droite" to="Buttons/Fleche_droite" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/ok" to="Buttons/ok" method="_on_pressed"]
