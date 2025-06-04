@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://btyejhl5ocycu"]
 
-[ext_resource type="Script" uid="uid://bk7q7jnun0idr" path="res://Script/radio/label_reponse.gd" id="1_wfxcm"]
+[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_wfxcm"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="2_0b2fd"]
-[ext_resource type="Shader" uid="uid://d2uxurjvupr0r" path="res://Script/Shader/Hover.gdshader" id="3_7gkp6"]
+[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="3_7gkp6"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="4_svyw8"]
 [ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="5_ekeet"]
 [ext_resource type="Script" uid="uid://blqh2h8wcfrm1" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="6_h6o3b"]
@@ -74,7 +74,9 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 44.0
 offset_bottom = 26.0
-text = "Attention aux éboulement cette fois."
+text = "Attention aux
+ éboulement 
+cette fois."
 label_settings = SubResource("LabelSettings_r0lgi")
 
 [node name="Buttons" type="Control" parent="."]

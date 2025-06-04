@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://dih3rfy43oe7v"]
 
-[ext_resource type="Script" uid="uid://bk7q7jnun0idr" path="res://Script/radio/label_reponse.gd" id="1_qnu3q"]
+[ext_resource type="Script" uid="uid://626o5x22bqca" path="res://Script/radio/label_reponse.gd" id="1_qnu3q"]
 [ext_resource type="AudioStream" uid="uid://hx5f5yoanmp4" path="res://Assets/sound/click.mp3" id="3_tmhpk"]
-[ext_resource type="Shader" uid="uid://d2uxurjvupr0r" path="res://Script/Shader/Hover.gdshader" id="4_n8qw4"]
+[ext_resource type="Shader" uid="uid://cjwi3h87cuxq8" path="res://Script/Shader/Hover.gdshader" id="4_n8qw4"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="4_shr2s"]
 [ext_resource type="Texture2D" uid="uid://ck6xt4n04h604" path="res://Assets/Djallel/Bouton fleche.png" id="5_eynrh"]
 [ext_resource type="Script" uid="uid://b33jromrv8exk" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="6_etd0i"]
@@ -72,9 +72,10 @@ offset_bottom = 40.0
 
 [node name="Rep1" type="Label" parent="Label"]
 layout_mode = 0
-offset_right = 44.0
-offset_bottom = 26.0
-text = "Ca ressemble à rien dans ton carnet."
+offset_right = 237.0
+offset_bottom = 73.0
+text = "Ca ressemble à rien
+ dans ton carnet."
 label_settings = SubResource("LabelSettings_r0lgi")
 
 [node name="Buttons" type="Control" parent="."]
