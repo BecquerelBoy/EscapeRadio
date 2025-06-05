@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cilo614c626j4"
+path="res://.godot/imported/Hollow Knight OST - Dirtmouth.mp3-8a55e4e01e3ba9fe08fb7b469b66b1fc.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound/Hollow Knight OST - Dirtmouth.mp3"
+dest_files=["res://.godot/imported/Hollow Knight OST - Dirtmouth.mp3-8a55e4e01e3ba9fe08fb7b469b66b1fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

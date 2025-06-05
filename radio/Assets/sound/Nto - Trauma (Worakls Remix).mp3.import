@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co3ondjhsmjxq"
+path="res://.godot/imported/Nto - Trauma (Worakls Remix).mp3-6fb0dc56d03de3851b68757e0d85d608.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound/Nto - Trauma (Worakls Remix).mp3"
+dest_files=["res://.godot/imported/Nto - Trauma (Worakls Remix).mp3-6fb0dc56d03de3851b68757e0d85d608.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

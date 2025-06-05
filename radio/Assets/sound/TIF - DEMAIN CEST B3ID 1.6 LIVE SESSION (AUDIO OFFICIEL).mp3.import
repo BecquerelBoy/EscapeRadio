@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cq0aowp0ppkh2"
+path="res://.godot/imported/TIF - DEMAIN CEST B3ID 1.6 LIVE SESSION (AUDIO OFFICIEL).mp3-a7e6221aae8c5fa0b16fc6163016fa14.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound/TIF - DEMAIN CEST B3ID 1.6 LIVE SESSION (AUDIO OFFICIEL).mp3"
+dest_files=["res://.godot/imported/TIF - DEMAIN CEST B3ID 1.6 LIVE SESSION (AUDIO OFFICIEL).mp3-a7e6221aae8c5fa0b16fc6163016fa14.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

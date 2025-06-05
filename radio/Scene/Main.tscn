@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://csank5gdyhetm"]
+[gd_scene load_steps=70 format=3 uid="uid://csank5gdyhetm"]
 
 [ext_resource type="Script" path="res://Script/radio/main.gd" id="1_7m2i7"]
 [ext_resource type="Texture2D" uid="uid://b8n6l8spwu3th" path="res://Assets/Vrac/mzphichy.bmp" id="2_ck2o1"]
@@ -27,14 +27,20 @@
 [ext_resource type="Script" path="res://Script/radio/date_heure.gd" id="16_qxq5r"]
 [ext_resource type="Texture2D" uid="uid://4amxw33q07dr" path="res://Assets/Djallel/bouton Menu.png" id="16_xsqdr"]
 [ext_resource type="PackedScene" uid="uid://c230622myff4x" path="res://Scene/volume.tscn" id="19_ayjky"]
-[ext_resource type="AudioStream" uid="uid://10wt3f3w51km" path="res://Assets/sound/blip_radio.mp3" id="20_tjuuh"]
+[ext_resource type="AudioStream" uid="uid://cq0aowp0ppkh2" path="res://Assets/sound/TIF - DEMAIN CEST B3ID 1.6 LIVE SESSION (AUDIO OFFICIEL).mp3" id="20_av87j"]
 [ext_resource type="Shader" path="res://Script/Shader/Hover.gdshader" id="21_5rxtn"]
-[ext_resource type="AudioStream" uid="uid://bncmg60tai7x" path="res://Assets/sound/writing.mp3" id="21_poww6"]
-[ext_resource type="AudioStream" uid="uid://bh5ifgc5xcio5" path="res://Assets/sound/Animal Crossing Relaxing Music No Copyright.mp3" id="22_6fgp0"]
+[ext_resource type="AudioStream" uid="uid://7dgs2cutp82p" path="res://Assets/sound/Calculer une intégrale (1) -Terminale.mp3" id="21_vfnwp"]
+[ext_resource type="AudioStream" uid="uid://tndunmureblu" path="res://Assets/sound/Nujabes - Luv(sic.) pt3 (feat. Shing02) [Official Audio].mp3" id="22_32vp4"]
+[ext_resource type="AudioStream" uid="uid://eojeauh16rsj" path="res://Assets/sound/[no copyright music] Dango lofi background music.mp3" id="23_ttd1g"]
+[ext_resource type="AudioStream" uid="uid://dgn3qw423tcbj" path="res://Assets/sound/Moonstone.mp3" id="24_n17as"]
 [ext_resource type="Texture2D" uid="uid://d3dtmpca2ey1x" path="res://Assets/Djallel/Diode Rouge.png" id="25_1qddf"]
+[ext_resource type="AudioStream" uid="uid://detsy13mwvc3y" path="res://Assets/sound/REDLINE OST - REDLINE DAY (feat. Rob Laufer).mp3" id="25_bxtg1"]
+[ext_resource type="AudioStream" uid="uid://cilo614c626j4" path="res://Assets/sound/Hollow Knight OST - Dirtmouth.mp3" id="26_1bjt1"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/pause.gd" id="26_6gsyx"]
 [ext_resource type="Texture2D" uid="uid://rtnrwvto2nfp" path="res://Assets/Djallel/Diode verte.png" id="26_u13ku"]
+[ext_resource type="AudioStream" uid="uid://co3ondjhsmjxq" path="res://Assets/sound/Nto - Trauma (Worakls Remix).mp3" id="27_ofwmn"]
 [ext_resource type="PackedScene" uid="uid://ckudx25bk86w5" path="res://Scene/choix/1.tscn" id="28_kya4d"]
+[ext_resource type="AudioStream" uid="uid://wuhhjb4nx15j" path="res://Assets/sound/モーショングラフィックス nostalmic.mp3" id="28_oqdvd"]
 [ext_resource type="AudioStream" uid="uid://cvwdn4804x6na" path="res://Assets/sound/bruitage-bouton.wav" id="30_mqod3"]
 [ext_resource type="Texture2D" uid="uid://dcgxcd3xnmlbn" path="res://Assets/Vrac/sun.png" id="31_slsr1"]
 [ext_resource type="Script" path="res://Script/sun.gd" id="32_wml73"]
@@ -342,31 +348,31 @@ label_settings = SubResource("LabelSettings_k8dir")
 stream = ExtResource("14_6dljv")
 
 [node name="AudioStation1" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("20_tjuuh")
+stream = ExtResource("20_av87j")
 
 [node name="AudioStation2" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("21_poww6")
+stream = ExtResource("21_vfnwp")
 
 [node name="AudioStation3" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("22_6fgp0")
+stream = ExtResource("22_32vp4")
 
 [node name="AudioStation4" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("22_6fgp0")
+stream = ExtResource("23_ttd1g")
 
 [node name="AudioStation5" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("22_6fgp0")
+stream = ExtResource("24_n17as")
 
 [node name="AudioStation6" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("22_6fgp0")
+stream = ExtResource("25_bxtg1")
 
 [node name="AudioStation7" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("22_6fgp0")
+stream = ExtResource("26_1bjt1")
 
 [node name="AudioStation8" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("22_6fgp0")
+stream = ExtResource("27_ofwmn")
 
 [node name="AudioStation9" type="AudioStreamPlayer2D" parent="Frequence"]
-stream = ExtResource("22_6fgp0")
+stream = ExtResource("28_oqdvd")
 
 [node name="Textebox" type="Control" parent="."]
 z_index = 1

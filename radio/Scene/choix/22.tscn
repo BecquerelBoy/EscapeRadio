@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_haut.gd" id="5_1mmun"]
 [ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/fleche_bas.gd" id="6_0ewis"]
 [ext_resource type="Texture2D" uid="uid://bpcg3e1fegjiq" path="res://Assets/Djallel/Bouton OK.png" id="7_xvro3"]
-[ext_resource type="Script" path="res://Script/buttons/Boutons_menu_pause/ok.gd" id="8_tqote"]
+[ext_resource type="Script" path="res://Script/ok_final.gd" id="8_tsybh"]
 [ext_resource type="FontFile" uid="uid://cmwxyvsrocy0j" path="res://Assets/Fonts/Technology.ttf" id="9_qv0qq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r0lgi"]
@@ -124,7 +124,7 @@ offset_bottom = -45.0
 scale = Vector2(0.6, 0.6)
 pivot_offset = Vector2(51.5, 52.185)
 texture_normal = ExtResource("7_xvro3")
-script = ExtResource("8_tqote")
+script = ExtResource("8_tsybh")
 
 [node name="FlecheG" type="Label" parent="."]
 layout_mode = 0

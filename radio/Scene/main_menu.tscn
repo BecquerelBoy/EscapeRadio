@@ -760,12 +760,12 @@ script = ExtResource("1_vxmgv")
 [node name="Boutton_Play" parent="." instance=ExtResource("2_hagcu")]
 process_mode = 3
 z_index = 5
-position = Vector2(-312, 147)
+position = Vector2(1.00003, 134)
 scale = Vector2(0.18, 0.18)
 
 [node name="Boutton_credit" parent="." instance=ExtResource("3_3xav3")]
 z_index = 4
-position = Vector2(287, 105)
+position = Vector2(-393, 108)
 scale = Vector2(0.18, 0.18)
 
 [node name="lampe_a_huile" type="AnimatedSprite2D" parent="."]
@@ -776,8 +776,7 @@ speed_scale = 2.0
 offset = Vector2(-595.54, 0)
 
 [node name="Boutton_quit" parent="." instance=ExtResource("4_tfr2c")]
-visible = false
-position = Vector2(428, 126)
+position = Vector2(421, 133)
 scale = Vector2(0.12, 0.12)
 
 [node name="IllustrationSansTitre" type="Sprite2D" parent="."]
